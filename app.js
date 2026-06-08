@@ -989,6 +989,150 @@ const COURSE = [
      pairs:[['steigend','растущий'],['fehlend','отсутствующий'],['entsprechend','соответствующий'],['zu lösend','подлежащий решению']]},
   ]
 },
+
+/* ── Einheit 21 ─────────────────────────────────────── B1 ── */
+{ id:'l21', tag:'Redewendungen', level:'b1',
+  title:'10 wichtige deutsche Redewendungen',
+  desc:'Idiome für den Alltag — von „Das ist mir Wurst" bis „Fix und fertig".',
+  vocab:[
+    {de:'Das ist mir Wurst!',           ru:'Мне всё равно!',                  ex:'"Was möchtest du essen?" — "Das ist mir Wurst!"'},
+    {de:'Nur Bahnhof verstehen',        ru:'ничего не понимать',              ex:'"Ich verstehe nur Bahnhof." — Er versteht gar nichts.'},
+    {de:'jemandem die Daumen drücken',  ru:'желать удачи (держать кулачки)',   ex:'"Ich drück dir die Daumen beim Vorstellungsgespräch!"'},
+    {de:'Ich glaub, mein Schwein pfeift!', ru:'Не может быть! (крайнее удивление)', ex:'"Sie hat gewonnen? Ich glaub, mein Schwein pfeift!"'},
+    {de:'Ich glaub, ich spinne!',       ru:'С ума сойти! (удивление)',         ex:'"Das kostet 500 Euro? Ich glaub, ich spinne!"'},
+    {de:'fix und fertig sein',          ru:'быть совершенно вымотанным',       ex:'"Nach dem Marathon bin ich fix und fertig."'},
+    {de:'Na?',                          ru:'Привет / Как дела? (неформально)', ex:'"Na? Alles gut bei dir?"'},
+    {de:'Bock haben auf',               ru:'хотеть, иметь желание',            ex:'"Ich hab voll Bock auf ein Eis!"'},
+    {de:'ein Buch mit sieben Siegeln',  ru:'книга за семью печатями (загадка)',ex:'"Deutsch ist für ihn ein Buch mit sieben Siegeln."'},
+    {de:'unter dem Strich',             ru:'в конечном итоге, подводя черту',  ex:'"Unter dem Strich war es ein guter Tag."'},
+  ],
+  gramHTML:`
+    <h3>Was sind Redewendungen?</h3>
+    <p>Redewendungen (Idiome) sind feste Ausdrücke, deren Bedeutung man <b>nicht wörtlich</b> übersetzen kann. Sie machen Deutsch authentischer und natürlicher.</p>
+    <h3>Übersicht</h3>
+    <table>
+      <tr><th>Redewendung</th><th>Bedeutung</th><th>Situation</th></tr>
+      <tr><td>Das ist mir Wurst!</td><td>Das ist mir egal.</td><td>keine Meinung, gleichgültig</td></tr>
+      <tr><td>Nur Bahnhof verstehen</td><td>gar nichts verstehen</td><td>zu kompliziert, fremde Sprache</td></tr>
+      <tr><td>Daumen drücken</td><td>Glück wünschen</td><td>vor Prüfungen, Bewerbungen</td></tr>
+      <tr><td>Ich glaub, mein Schwein pfeift!</td><td>Das kann nicht sein!</td><td>extreme Überraschung</td></tr>
+      <tr><td>Ich glaub, ich spinne!</td><td>Das ist unglaublich!</td><td>Überraschung (positiv/negativ)</td></tr>
+      <tr><td>fix und fertig</td><td>völlig erschöpft</td><td>nach Stress oder Arbeit</td></tr>
+      <tr><td>Na?</td><td>Hallo + Wie geht's?</td><td>lockere Begrüßung unter Freunden</td></tr>
+      <tr><td>Bock haben auf</td><td>Lust haben auf</td><td>Jugendsprache, informell</td></tr>
+    </table>
+    <div class="tip"><b>Merke:</b> „Ich drück dir die Daumen" — nicht „Ich halte dir die Daumen" oder „Ich kreuze die Finger"! Die genaue Form ist wichtig.</div>`,
+  exercises:[
+    {id:'l21e1',type:'match',q:'Ordne die Redewendung ihrer Bedeutung zu:',
+     pairs:[['Das ist mir Wurst!','Das ist mir egal.'],['fix und fertig','völlig erschöpft'],['Daumen drücken','Glück wünschen'],['Nur Bahnhof verstehen','gar nichts verstehen']]},
+    {id:'l21e2',type:'mc',q:'"Du verstehst gar nichts von dem Vortrag." — Welche Redewendung passt?',
+     options:['Ich glaub, ich spinne!','Du verstehst nur Bahnhof.','Das ist mir Wurst!'],
+     answer:1,explain:'"Nur Bahnhof verstehen" = gar nichts von etwas verstehen.'},
+    {id:'l21e3',type:'mc',q:'"Nach 12 Stunden Arbeit bin ich ___."',
+     options:['fix und fertig','Bock drauf','unter dem Strich'],
+     answer:0,explain:'"fix und fertig" = völlig erschöpft nach viel Stress oder Arbeit.'},
+    {id:'l21e4',type:'gap',q:'"Ich hab voll ___ auf ein Eis heute!" (Lust haben, Jugendsprache)',
+     accept:['bock','Bock'],hint:'Aus dem alten Rotwelsch — bedeutet Lust/Hunger.',explain:'Bock'},
+    {id:'l21e5',type:'listen',
+     audio:'Ich drück dir die Daumen für die Prüfung morgen! Na, wie war dein Tag? Ich bin fix und fertig — aber unter dem Strich lief es gut.',
+     q:'Wie viele Redewendungen hörst du?',
+     options:['2','3','4'],
+     answer:2,explain:'"Daumen drücken" · "Na" · "fix und fertig" · "unter dem Strich" — 4 Redewendungen.'},
+  ]
+},
+/* ── Einheit 22 ─────────────────────────────────────── B1 ── */
+{ id:'l22', tag:'Nebensätze', level:'b1',
+  title:'Nebensätze: dass, ob, als, wenn, weil',
+  desc:'Die wichtigsten Konjunktionen für Nebensätze — Regeln und Unterschiede.',
+  vocab:[
+    {de:'dass',    ru:'что (придаточное дополнительное)',     ex:'Ich weiß, dass er kommt.'},
+    {de:'ob',      ru:'ли (косвенный вопрос да/нет)',        ex:'Ich weiß nicht, ob er kommt.'},
+    {de:'als',     ru:'когда (однократно в прошлом)',         ex:'Als ich jung war, spielte ich viel.'},
+    {de:'wenn',    ru:'когда/если (повторно или будущее)',    ex:'Wenn ich Zeit habe, gehe ich laufen.'},
+    {de:'weil',    ru:'потому что (причина)',                 ex:'Ich bleibe zu Hause, weil ich krank bin.'},
+    {de:'denn',    ru:'потому что (главное предл., не инверсия)', ex:'Ich bleibe zu Hause, denn ich bin krank.'},
+    {de:'deshalb', ru:'поэтому (следствие, инверсия)',        ex:'Ich bin krank. Deshalb bleibe ich zu Hause.'},
+    {de:'damit',   ru:'чтобы (цель)',                         ex:'Ich lerne, damit ich Erfolg habe.'},
+    {de:'obwohl',  ru:'хотя (уступка)',                       ex:'Obwohl er müde ist, arbeitet er weiter.'},
+    {de:'dass vs. ob',ru:'что vs. ли — ключевое различие',   ex:'"Ich weiß, dass er kommt." / "Ich weiß nicht, ob er kommt."'},
+  ],
+  gramHTML:`
+    <h3>Wortstellung im Nebensatz</h3>
+    <p>Im Nebensatz steht das <b>konjugierte Verb am Ende</b>:</p>
+    <div class="ex-box"><b>Ich weiß, dass</b> er morgen <b>kommt</b>.<span class="gl">Я знаю, что он придёт завтра.</span></div>
+    <div class="ex-box"><b>Sie fragt, ob</b> das Geschäft geöffnet <b>ist</b>.<span class="gl">Она спрашивает, открыт ли магазин.</span></div>
+    <h3>dass vs. ob</h3>
+    <table>
+      <tr><th>dass</th><th>ob</th></tr>
+      <tr><td>nach Aussagesätzen (что)</td><td>nach indirekten Ja/Nein-Fragen (ли)</td></tr>
+      <tr><td>Ich hoffe, <b>dass</b> du kommst.</td><td>Ich weiß nicht, <b>ob</b> du kommst.</td></tr>
+      <tr><td>wissen, sagen, glauben + dass</td><td>fragen, wissen nicht, prüfen + ob</td></tr>
+    </table>
+    <h3>als vs. wenn</h3>
+    <table>
+      <tr><th>als</th><th>wenn</th></tr>
+      <tr><td>einmalig in der <b>Vergangenheit</b></td><td>wiederholt oder Gegenwart/Zukunft</td></tr>
+      <tr><td><b>Als</b> ich 10 Jahre alt war, …</td><td><b>Wenn</b> ich müde bin, schlafe ich früh.</td></tr>
+    </table>
+    <div class="tip"><b>Trick:</b> War die Situation einmalig und liegt sie in der Vergangenheit? → <b>als</b>. Alles andere (Gewohnheit, Bedingung, Zukunft) → <b>wenn</b>.</div>`,
+  exercises:[
+    {id:'l22e1',type:'mc',q:'"Ich hoffe, ___ die Reise angenehm sein wird." (Aussage)',
+     options:['ob','dass','weil'],
+     answer:1,explain:'"dass" leitet einen Aussagesatz ein. Ich hoffe + Aussage → dass.'},
+    {id:'l22e2',type:'mc',q:'"Sie prüft, ___ ihr Auto noch da ist." (indirekter Ja/Nein-Frage)',
+     options:['dass','als','ob'],
+     answer:2,explain:'"ob" leitet eine indirekte Ja/Nein-Frage ein: "Ist das Auto da?" → ob es da ist.'},
+    {id:'l22e3',type:'mc',q:'"___ ich ein Kind war, hatte ich eine Katze." (einmalig, Vergangenheit)',
+     options:['Wenn','Als','Ob'],
+     answer:1,explain:'"Als" für einmalige Ereignisse in der Vergangenheit. Kindheit = einmalige Phase.'},
+    {id:'l22e4',type:'gap',q:'"Als kleines Kind bekam ich Angst, ___ ich allein zu Hause war." (wiederholt)',
+     accept:['wenn'],hint:'Wiederholte Situation (immer wenn…) → ?',explain:'wenn'},
+    {id:'l22e5',type:'match',q:'Ordne Konjunktion und Regel zu:',
+     pairs:[['dass','Aussagesatz: Ich weiß, dass …'],['ob','indir. Ja/Nein: Ich weiß nicht, ob …'],['als','einmalig in der Vergangenheit'],['wenn','wiederholt / Bedingung / Zukunft']]},
+  ]
+},
+/* ── Einheit 23 ─────────────────────────────────────── B1 ── */
+{ id:'l23', tag:'Lesetext', level:'b1',
+  title:'Lesetext — Mein Hobby',
+  desc:'Authentischer Text über Freizeitaktivitäten — mit Lückentext und Verständnisfragen.',
+  vocab:[
+    {de:'das Hobby (-s)',         ru:'хобби',                  ex:'Viele junge Leute haben heutzutage ein Hobby.'},
+    {de:'heutzutage',             ru:'в наши дни',             ex:'Heutzutage ist Sport sehr modern.'},
+    {de:'die Freizeit',           ru:'свободное время',         ex:'Wie verbringst du deine Freizeit?'},
+    {de:'verbringen',             ru:'проводить (время)',       ex:'Ich verbringe meine Freizeit mit Musik.'},
+    {de:'eine große Rolle spielen',ru:'играть большую роль',   ex:'Das Hobby spielt eine große Rolle in unserem Leben.'},
+    {de:'Was mich angeht',        ru:'что касается меня',      ex:'Was mich angeht, habe ich viele Hobbys.'},
+    {de:'in moderner Bearbeitung',ru:'в современной обработке',ex:'Ich höre klassische Musik in moderner Bearbeitung.'},
+    {de:'die Quelle der Gesundheit',ru:'источник здоровья',   ex:'Sport ist eine Quelle der Gesundheit.'},
+    {de:'aktive Erholung',        ru:'активный отдых',         ex:'Sport ist für mich eine Form der aktiven Erholung.'},
+    {de:'bereichern',             ru:'обогащать',              ex:'Meine Hobbys bereichern mein Leben.'},
+    {de:'bummeln',                ru:'прогуливаться, бродить', ex:'Wir bummeln durch die Stadt.'},
+    {de:'die Bibliothek (-en)',   ru:'библиотека, книжный фонд',ex:'Zu Hause habe ich eine große Bibliothek.'},
+  ],
+  gramHTML:`
+    <h3>Lesetext: Mein Hobby</h3>
+    <div style="background:rgba(124,195,34,0.08);border-left:3px solid var(--lime);padding:12px 16px;border-radius:6px;line-height:1.7;margin-bottom:16px">
+      <p>Viele junge Leute haben heutzutage ein Hobby. Das macht Freude und das ist modern. Es gibt verschiedene Hobbys: wir wandern, fotografieren, lesen Bücher, treiben Sport, spielen Computer, tanzen, besuchen Kinos oder Theater oder sitzen tagsüber vor dem Fernseher. Das Hobby spielt eine große Rolle in unserem Leben. Dank Hobby <b>[1]</b> wir unsere Freizeit interessant.</p>
+      <p>Was mich angeht, habe ich viele Hobbys. Ich mag Musik. Ich höre sie überall: auf der Straße, im Park und auch zu Hause. Ich kann nicht schlecht Gitarre <b>[2]</b>. Ich höre verschiedene Musik: Rock-, Popmusik oder Hip-Hop. Manchmal höre ich auch gern klassische Musik, besonders in moderner Bearbeitung. Ich bin der Meinung, der Mensch kann ohne Musik nicht <b>[3]</b>.</p>
+      <p>Ich interessiere mich auch für Sport. Ich besuche ein Fitnesszentrum. Das macht mir viel Spaß. Ich bin sicher, Sport ist eine Quelle der Gesundheit. Für mich ist Sport eine Form der aktiven Erholung. Er hilft mir, immer fit zu <b>[4]</b>.</p>
+      <p>Ich habe noch ein Hobby. Ich lese gern und viel. Zu Hause habe ich eine große Bibliothek. Am liebsten lese ich Phantastik- und Abenteuerbücher. Oft <b>[5]</b> ich meine Freizeit mit meinen Freunden. Wir unterhalten uns, bummeln durch die Stadt, besuchen Cafés, gehen ins Kino oder in die Disko. Meine Hobbys <b>[6]</b> mein Leben und machen mir immer Freude und Spaß.</p>
+    </div>
+    <p><b>Lücken [1]–[6]:</b> verbringen · spielen · leben · bleiben · verbringe · bereichern</p>`,
+  exercises:[
+    {id:'l23e1',type:'gap',q:'Lücke [1]: „Dank Hobby ___ wir unsere Freizeit interessant."',
+     accept:['verbringen'],hint:'Infinitiv: verbringen — Präsens wir: ?',explain:'verbringen'},
+    {id:'l23e2',type:'gap',q:'Lücke [2]: „Ich kann nicht schlecht Gitarre ___."',
+     accept:['spielen'],hint:'Modal + Infinitiv am Satzende.',explain:'spielen'},
+    {id:'l23e3',type:'mc',q:'Was ist laut Text für den Autor Sport?',
+     options:['Eine Quelle der Erfahrung','Eine Form der aktiven Erholung und Gesundheitsquelle','Sein Lieblingsberuf'],
+     answer:1,explain:'"Sport ist eine Quelle der Gesundheit" und "eine Form der aktiven Erholung" — beides korrekt.'},
+    {id:'l23e4',type:'mc',q:'Welches Instrument spielt der Autor des Textes?',
+     options:['Klavier','Gitarre','Geige'],
+     answer:1,explain:'"Ich kann nicht schlecht Gitarre spielen." — direkt aus dem Text.'},
+    {id:'l23e5',type:'match',q:'Ordne Ausdruck und Bedeutung zu:',
+     pairs:[['heutzutage','в наши дни'],['bummeln','прогуливаться'],['bereichern','обогащать'],['Was mich angeht','что касается меня']]},
+  ]
+},
 ]; // END COURSE
 
 /* ============================================================
@@ -1209,6 +1353,26 @@ const GRAMMAR = [
     <div class="ex-box"><b>der zu prüfende Apparat</b> = der Apparat, der geprüft werden muss</div>
     <div class="ex-box"><b>die zu lösende Aufgabe</b> = die Aufgabe, die gelöst werden soll</div>
     <div class="tip"><b>Trennbare Verben:</b> aufheben → <b>auf</b>zuheben → der <b>auf</b>zuhebende Brief. Das „zu" steht zwischen Präfix und Verbstamm.</div>`,
+  }
+,{ id:'g12', icon:'🔧', title:'lassen + Infinitiv',
+    desc:'Er lässt sein Auto reparieren — kausativ, permissiv und reflexiv.',
+    html:`
+    <h3>Drei Bedeutungen von lassen + Infinitiv</h3>
+    <table>
+      <tr><th>Typ</th><th>Bedeutung</th><th>Beispiel</th></tr>
+      <tr><td>Kausativ</td><td>jemanden etw. tun lassen (von jemand anderem)</td><td>Er lässt sein Auto <b>reparieren</b>. (Werkstatt macht es)</td></tr>
+      <tr><td>Permissiv</td><td>erlauben, dass jemand etw. tut</td><td>Die Eltern lassen die Kinder <b>spielen</b>.</td></tr>
+      <tr><td>Reflexiv</td><td>sich etw. tun lassen (Passiv-ähnlich)</td><td>Sie lässt sich die Haare <b>schneiden</b>.</td></tr>
+    </table>
+    <h3>Konjugation</h3>
+    <div class="ex-box">ich lasse · du lässt · er/sie/es lässt · wir lassen · ihr lasst · sie/Sie lassen</div>
+    <h3>Perfekt: lassen bleibt Infinitiv!</h3>
+    <div class="ex-box"><b>Er hat sein Auto reparieren lassen.</b> (nicht: "gelassen"!)<span class="gl">Он отдал машину в ремонт.</span></div>
+    <div class="ex-box"><b>Sie hat sich die Haare schneiden lassen.</b><span class="gl">Она постриглась (у парикмахера).</span></div>
+    <h3>Negation / Impossibility: sich lassen</h3>
+    <div class="ex-box"><b>Das lässt sich nicht erklären.</b> = Das kann nicht erklärt werden.<span class="gl">Это невозможно объяснить.</span></div>
+    <div class="ex-box"><b>Das lässt sich leicht lösen.</b> = Das kann leicht gelöst werden.</div>
+    <div class="tip"><b>Unterschied:</b> „Er lässt das Auto reparieren" (jemand anderes repariert) ≠ „Er lässt das Auto stehen" (er fährt nicht, lässt es dort).</div>`,
   }];
 
 /* ============================================================
@@ -1247,6 +1411,11 @@ const QUIZ = [
 {q:'Partizip I von „wachsen":',o:['gewachsen','wachsend','wächst'],a:1},
 {q:'"Das Formular ___ ausgefüllt werden" = "Das Formular ist auszufüllen."',o:['kann','muss','soll'],a:1},
 {q:'"Die Temperaturen, die steigen" → Partizip I als Attribut:',o:['die gestiegenen','die steigenden','die steigend'],a:1}
+,{q:'"Das ist mir ___!" (egal, Redewendung)',o:['Bahnhof','Wurst','Bock'],a:1},
+{q:'"Ich hoffe, ___ alles gut geht." (Aussagesatz)',o:['ob','als','dass'],a:2},
+{q:'"___ ich jung war, hatte ich ein Fahrrad." (einmalig, Vergangenheit)',o:['Wenn','Als','Ob'],a:1},
+{q:'"Sie fragt, ___ das Restaurant geöffnet ist." (indir. Ja/Nein-Frage)',o:['dass','ob','weil'],a:1},
+{q:'"Er ___ sein Auto reparieren." (lassen, Präsens er)',o:['lässt','lasst','lässtet'],a:0}
 ];
 
 /* ============================================================
