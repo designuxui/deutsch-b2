@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deutsch B2 · Berufliches Deutsch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="k">Berufliches Deutsch</div>
+      <div class="t">DEUTSCH <span>· B2</span></div>
+      <div class="sub">Selbstlernkurs &amp; Lehrbuch-Reader</div>
+    </div>
+    <nav class="navlist" id="nav"></nav>
+    <div class="sidefoot">
+      <div class="xpbar">
+        <div class="star">★</div>
+        <div>
+          <div class="lvl">Niveau <span id="lvl">1</span></div>
+          <div class="num"><span id="xp">0</span> XP</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <main class="content" id="content"></main>
+</div>
+
+<!-- hidden PDF file input -->
+<input type="file" accept=".pdf" id="pdfFileInput" style="display:none" aria-hidden="true">
+
+<!-- pdf.js from CDN (crossorigin needed for COEP) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+</body>
+</html>
