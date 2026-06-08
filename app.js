@@ -1111,13 +1111,14 @@ const COURSE = [
   ],
   gramHTML:`
     <h3>Lesetext: Mein Hobby</h3>
-    <div style="background:rgba(124,195,34,0.08);border-left:3px solid var(--lime);padding:12px 16px;border-radius:6px;line-height:1.7;margin-bottom:16px">
-      <p>Viele junge Leute haben heutzutage ein Hobby. Das macht Freude und das ist modern. Es gibt verschiedene Hobbys: wir wandern, fotografieren, lesen Bücher, treiben Sport, spielen Computer, tanzen, besuchen Kinos oder Theater oder sitzen tagsüber vor dem Fernseher. Das Hobby spielt eine große Rolle in unserem Leben. Dank Hobby ___ wir unsere Freizeit interessant.</p>
-      <p>Was mich angeht, habe ich viele Hobbys. Ich mag Musik. Ich höre sie überall: auf der Straße, im Park und auch zu Hause. Ich kann nicht schlecht Gitarre ___. Ich höre verschiedene Musik: Rock-, Popmusik oder Hip-Hop. Manchmal höre ich auch gern klassische Musik, besonders in moderner Bearbeitung. Ich bin der Meinung, der Mensch kann ohne Musik nicht ___.</p>
-      <p>Ich interessiere mich auch für Sport. Ich besuche ein Fitnesszentrum. Das macht mir viel Spaß. Ich bin sicher, Sport ist eine Quelle der Gesundheit. Für mich ist Sport eine Form der aktiven Erholung. Er hilft mir, immer fit zu ___.</p>
-      <p>Ich habe noch ein Hobby. Ich lese gern und viel. Zu Hause habe ich eine große Bibliothek. Am liebsten lese ich Phantastik- und Abenteuerbücher. Oft ___ ich meine Freizeit mit meinen Freunden. Wir unterhalten uns, bummeln durch die Stadt, besuchen Cafés, gehen ins Kino oder in die Disko. Meine Hobbys ___ mein Leben und machen mir immer Freude und Spaß.</p>
+    <div class="tip" style="margin-bottom:12px">📖 Lies den Text aufmerksam — danach kannst du in <b>Übung 1</b> die fehlenden Wörter einsetzen.</div>
+    <div style="background:rgba(124,195,34,0.08);border-left:3px solid var(--lime);padding:14px 18px;border-radius:6px;line-height:1.85;margin-bottom:16px;font-size:15px">
+      <p>Viele junge Leute haben heutzutage ein Hobby. Das macht Freude und das ist modern. Es gibt verschiedene Hobbys: wir wandern, fotografieren, lesen Bücher, treiben Sport, spielen Computer, tanzen, besuchen Kinos oder Theater oder sitzen tagsüber vor dem Fernseher. Das Hobby spielt eine große Rolle in unserem Leben. Dank Hobby <b>verbringen</b> wir unsere Freizeit interessant.</p>
+      <p>Was mich angeht, habe ich viele Hobbys. Ich mag Musik. Ich höre sie überall: auf der Straße, im Park und auch zu Hause. Ich kann nicht schlecht Gitarre <b>spielen</b>. Ich höre verschiedene Musik: Rock-, Popmusik oder Hip-Hop. Manchmal höre ich auch gern klassische Musik, besonders in moderner Bearbeitung. Ich bin der Meinung, der Mensch kann ohne Musik nicht <b>leben</b>.</p>
+      <p>Ich interessiere mich auch für Sport. Ich besuche ein Fitnesszentrum. Das macht mir viel Spaß. Ich bin sicher, Sport ist eine Quelle der Gesundheit. Für mich ist Sport eine Form der aktiven Erholung. Er hilft mir, immer fit zu <b>bleiben</b>.</p>
+      <p>Ich habe noch ein Hobby. Ich lese gern und viel. Zu Hause habe ich eine große Bibliothek. Am liebsten lese ich Phantastik- und Abenteuerbücher. Oft <b>verbringe</b> ich meine Freizeit mit meinen Freunden. Wir unterhalten uns, bummeln durch die Stadt, besuchen Cafés, gehen ins Kino oder in die Disko. Meine Hobbys <b>bereichern</b> mein Leben und machen mir immer Freude und Spaß.</p>
     </div>
-    <p style="color:var(--muted);font-size:13px">💡 Übung 1 enthält alle 6 Lücken — klick die Wörter aus dem Wortkasten!</p>`,
+    <div style="color:var(--muted);font-size:13px">Die <b>fett</b> markierten Verben sind die Schlüsselwörter — teste dich in Übung 1!</div>`,
   exercises:[
     {id:'l23e1',type:'cloze',q:'Klick die richtigen Wörter aus dem Wortkasten in die Lücken!',
      parts:['Dank Hobby ',' wir unsere Freizeit interessant. Ich kann nicht schlecht Gitarre ',
