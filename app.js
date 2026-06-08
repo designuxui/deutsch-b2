@@ -1112,17 +1112,23 @@ const COURSE = [
   gramHTML:`
     <h3>Lesetext: Mein Hobby</h3>
     <div style="background:rgba(124,195,34,0.08);border-left:3px solid var(--lime);padding:12px 16px;border-radius:6px;line-height:1.7;margin-bottom:16px">
-      <p>Viele junge Leute haben heutzutage ein Hobby. Das macht Freude und das ist modern. Es gibt verschiedene Hobbys: wir wandern, fotografieren, lesen Bücher, treiben Sport, spielen Computer, tanzen, besuchen Kinos oder Theater oder sitzen tagsüber vor dem Fernseher. Das Hobby spielt eine große Rolle in unserem Leben. Dank Hobby <b>[1]</b> wir unsere Freizeit interessant.</p>
-      <p>Was mich angeht, habe ich viele Hobbys. Ich mag Musik. Ich höre sie überall: auf der Straße, im Park und auch zu Hause. Ich kann nicht schlecht Gitarre <b>[2]</b>. Ich höre verschiedene Musik: Rock-, Popmusik oder Hip-Hop. Manchmal höre ich auch gern klassische Musik, besonders in moderner Bearbeitung. Ich bin der Meinung, der Mensch kann ohne Musik nicht <b>[3]</b>.</p>
-      <p>Ich interessiere mich auch für Sport. Ich besuche ein Fitnesszentrum. Das macht mir viel Spaß. Ich bin sicher, Sport ist eine Quelle der Gesundheit. Für mich ist Sport eine Form der aktiven Erholung. Er hilft mir, immer fit zu <b>[4]</b>.</p>
-      <p>Ich habe noch ein Hobby. Ich lese gern und viel. Zu Hause habe ich eine große Bibliothek. Am liebsten lese ich Phantastik- und Abenteuerbücher. Oft <b>[5]</b> ich meine Freizeit mit meinen Freunden. Wir unterhalten uns, bummeln durch die Stadt, besuchen Cafés, gehen ins Kino oder in die Disko. Meine Hobbys <b>[6]</b> mein Leben und machen mir immer Freude und Spaß.</p>
+      <p>Viele junge Leute haben heutzutage ein Hobby. Das macht Freude und das ist modern. Es gibt verschiedene Hobbys: wir wandern, fotografieren, lesen Bücher, treiben Sport, spielen Computer, tanzen, besuchen Kinos oder Theater oder sitzen tagsüber vor dem Fernseher. Das Hobby spielt eine große Rolle in unserem Leben. Dank Hobby ___ wir unsere Freizeit interessant.</p>
+      <p>Was mich angeht, habe ich viele Hobbys. Ich mag Musik. Ich höre sie überall: auf der Straße, im Park und auch zu Hause. Ich kann nicht schlecht Gitarre ___. Ich höre verschiedene Musik: Rock-, Popmusik oder Hip-Hop. Manchmal höre ich auch gern klassische Musik, besonders in moderner Bearbeitung. Ich bin der Meinung, der Mensch kann ohne Musik nicht ___.</p>
+      <p>Ich interessiere mich auch für Sport. Ich besuche ein Fitnesszentrum. Das macht mir viel Spaß. Ich bin sicher, Sport ist eine Quelle der Gesundheit. Für mich ist Sport eine Form der aktiven Erholung. Er hilft mir, immer fit zu ___.</p>
+      <p>Ich habe noch ein Hobby. Ich lese gern und viel. Zu Hause habe ich eine große Bibliothek. Am liebsten lese ich Phantastik- und Abenteuerbücher. Oft ___ ich meine Freizeit mit meinen Freunden. Wir unterhalten uns, bummeln durch die Stadt, besuchen Cafés, gehen ins Kino oder in die Disko. Meine Hobbys ___ mein Leben und machen mir immer Freude und Spaß.</p>
     </div>
-    <p><b>Lücken [1]–[6]:</b> verbringen · spielen · leben · bleiben · verbringe · bereichern</p>`,
+    <p style="color:var(--muted);font-size:13px">💡 Übung 1 enthält alle 6 Lücken — klick die Wörter aus dem Wortkasten!</p>`,
   exercises:[
-    {id:'l23e1',type:'gap',q:'Lücke [1]: „Dank Hobby ___ wir unsere Freizeit interessant."',
-     accept:['verbringen'],hint:'Infinitiv: verbringen — Präsens wir: ?',explain:'verbringen'},
-    {id:'l23e2',type:'gap',q:'Lücke [2]: „Ich kann nicht schlecht Gitarre ___."',
-     accept:['spielen'],hint:'Modal + Infinitiv am Satzende.',explain:'spielen'},
+    {id:'l23e1',type:'cloze',q:'Klick die richtigen Wörter aus dem Wortkasten in die Lücken!',
+     parts:['Dank Hobby ',' wir unsere Freizeit interessant. Ich kann nicht schlecht Gitarre ',
+            '. Der Mensch kann ohne Musik nicht ',
+            '. Sport hilft mir, immer fit zu ','. Oft ',
+            ' ich meine Freizeit mit Freunden. Meine Hobbys ',' mein Leben.'],
+     answers:['verbringen','spielen','leben','bleiben','verbringe','bereichern'],
+     distract:['lesen','machen','treiben','helfen']},
+    {id:'l23e2',type:'mc',q:'Was bedeutet „Was mich angeht" im Text?',
+     options:['was mich stört','was mich betrifft / что касается меня','worum ich mich kümmere'],
+     answer:1,explain:'"Was mich angeht" = was mich betrifft = что касается меня.'},
     {id:'l23e3',type:'mc',q:'Was ist laut Text für den Autor Sport?',
      options:['Eine Quelle der Erfahrung','Eine Form der aktiven Erholung und Gesundheitsquelle','Sein Lieblingsberuf'],
      answer:1,explain:'"Sport ist eine Quelle der Gesundheit" und "eine Form der aktiven Erholung" — beides korrekt.'},
@@ -1425,7 +1431,7 @@ const STORE_KEY='db2v2';
 const state={
   view:'dashboard',lesson:null,tab:'vocab',deck:'all',gramUnit:null,
   xp:0,completed:new Set(),known:new Set(),personal:[],
-  order:{},match:{},
+  order:{},match:{},cloze:{},
   flash:{queue:[],pos:0,flipped:false,deckId:null},
   quiz:null,
   pdf:{doc:null,page:1,scale:1.3,name:'',rendering:false},
@@ -1638,7 +1644,7 @@ function renderGramUnit(){
    EXERCISES
 ============================================================ */
 function exHead(ex,n){const d=state.completed.has(ex.id);
-  const t={mc:'Mehrfachauswahl',gap:'Lückentext',order:'Satzbau',match:'Zuordnung',listen:'Hörübung'};
+  const t={mc:'Mehrfachauswahl',gap:'Lückentext',order:'Satzbau',match:'Zuordnung',listen:'Hörübung',cloze:'Lückentext-Chips'};
   return `<div class="kicker"><span>Übung ${n} · ${t[ex.type]||ex.type}</span>${d?'<span class="done-badge">✓ +10 XP</span>':''}</div>`;}
 
 function renderEx(ex,i){const n=i+1;
@@ -1675,12 +1681,20 @@ function renderEx(ex,i){const n=i+1;
   if(ex.type==='match') return `<div class="ex" id="ex-${ex.id}">${exHead(ex,n)}<div class="q">${ex.q}</div>
     <div class="match-grid" id="match-${ex.id}"></div>
     <div class="feedback" id="fb-${ex.id}"></div></div>`;
+
+  if(ex.type==='cloze') return `<div class="ex" id="ex-${ex.id}">${exHead(ex,n)}<div class="q">${ex.q}</div>
+    <div class="cloze-passage" id="cloze-p-${ex.id}"></div>
+    <div class="cloze-bank" id="cloze-b-${ex.id}"></div>
+    <div class="btn-row"><button class="btn" data-action="cloze-check" data-ex="${ex.id}">Prüfen</button>
+    <button class="btn ghost" data-action="cloze-reset" data-ex="${ex.id}">Reset</button></div>
+    <div class="feedback" id="fb-${ex.id}"></div></div>`;
   return '';
 }
 
 function setupEx(ex){
   if(ex.type==='order'){if(!state.order[ex.id])state.order[ex.id]={placed:[],bank:shuffle(ex.words.map((w,i)=>({w,i})))};drawOrder(ex);}
   if(ex.type==='match'){if(!state.match[ex.id])state.match[ex.id]={selLeft:null,done:new Set(),right:shuffle(ex.pairs.map((p,i)=>({txt:p[1],i})))};drawMatch(ex);}
+  if(ex.type==='cloze'){if(!state.cloze[ex.id]){const all=[...ex.answers,...(ex.distract||[])];state.cloze[ex.id]={slots:new Array(ex.answers.length).fill(null),bank:shuffle(all.map((w,i)=>({w,i}))),checked:false};}drawCloze(ex);}
 }
 const exById=id=>lById(state.lesson).exercises.find(e=>e.id===id);
 
@@ -1694,6 +1708,28 @@ function checkOrder(id){const ex=exById(id);const st=state.order[id];const fb=$(
   if(norm(st.placed.map(t=>t.w).join(' '))===norm(ex.answer)){fb.className='feedback show ok';fb.innerHTML='✓ Richtig! <span class="sol">'+ex.answer+'</span>';awardXP(id,10);markDone(id);speak(ex.answer);}
   else{fb.className='feedback show no';fb.innerHTML='Noch nicht ganz — achte auf die Wortstellung.';}}
 
+
+/* cloze */
+function drawCloze(ex){const st=state.cloze[ex.id];const p=$('#cloze-p-'+ex.id),b=$('#cloze-b-'+ex.id);if(!p||!b)return;
+  let html='';for(let i=0;i<=ex.answers.length;i++){html+=ex.parts[i]||'';
+    if(i<ex.answers.length){const filled=st.slots[i];let cls='cloze-slot';
+      if(st.checked)cls+=filled===ex.answers[i]?' slot-ok':' slot-err';
+      html+=filled?`<span class="${cls}" data-action="cloze-rm" data-ex="${ex.id}" data-slot="${i}">${filled}</span>`
+        :`<span class="${cls} slot-empty" data-action="cloze-rm" data-ex="${ex.id}" data-slot="${i}"> ? </span>`;}}
+  p.innerHTML=html;
+  b.innerHTML=st.bank.map(t=>`<button class="chip cloze-chip" data-action="cloze-word" data-ex="${ex.id}" data-wi="${t.i}">${t.w}</button>`).join('');}
+function clozeWord(id,wi){const st=state.cloze[id];const item=st.bank.find(t=>t.i==wi);if(!item)return;
+  const slot=st.slots.findIndex(x=>x===null);if(slot<0)return;
+  st.slots[slot]=item.w;st.bank=st.bank.filter(t=>t.i!=wi);drawCloze(exById(id));}
+function clozeRm(id,slot){const st=state.cloze[id];const w=st.slots[slot];if(!w)return;
+  st.slots[slot]=null;st.checked=false;
+  const ex=exById(id);const all=[...ex.answers,...(ex.distract||[])];const oi=all.indexOf(w);
+  if(!st.bank.find(t=>t.w===w))st.bank.push({w,i:oi>=0?oi:Date.now()});drawCloze(ex);}
+function checkCloze(id){const ex=exById(id);const st=state.cloze[id];
+  st.checked=true;drawCloze(ex);
+  const ok=ex.answers.every((a,i)=>st.slots[i]===a);const fb=$('#fb-'+id);
+  if(ok){fb.className='feedback show ok';fb.innerHTML='✓ Alle Lücken richtig!';awardXP(id,10);markDone(id);}
+  else{fb.className='feedback show no';fb.innerHTML='Nicht ganz — Lösung: <span class="sol">'+ex.answers.join(' · ')+'</span>';}}
 /* match */
 function drawMatch(ex){const st=state.match[ex.id];const w=$('#match-'+ex.id);if(!w)return;
   const left=ex.pairs.map((p,i)=>`<button class="match-item de ${st.done.has(i)?'matched':''} ${st.selLeft===i?'sel':''}" data-action="match-left" data-ex="${ex.id}" data-i="${i}" ${st.done.has(i)?'disabled':''}>${p[0]}</button>`).join('');
@@ -1908,6 +1944,10 @@ document.body.addEventListener('click',e=>{
     case 'order-remove': orderRem(t.dataset.ex,t.dataset.i); break;
     case 'check-order': checkOrder(t.dataset.ex); break;
     case 'reset-order': delete state.order[t.dataset.ex];setupEx(exById(t.dataset.ex));$('#fb-'+t.dataset.ex).className='feedback'; break;
+    case 'cloze-word': clozeWord(t.dataset.ex, t.dataset.wi); break;
+    case 'cloze-rm':  clozeRm(t.dataset.ex, +t.dataset.slot); break;
+    case 'cloze-check': checkCloze(t.dataset.ex); break;
+    case 'cloze-reset': delete state.cloze[t.dataset.ex];setupEx(exById(t.dataset.ex));$('#fb-'+t.dataset.ex).className='feedback'; break;
     case 'match-left': matchL(t.dataset.ex,+t.dataset.i); break;
     case 'match-right': matchR(t.dataset.ex,+t.dataset.i); break;
     case 'deck': state.deck=t.dataset.id;buildDeck();renderVocab(); break;
