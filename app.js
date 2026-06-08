@@ -711,6 +711,187 @@ const COURSE = [
      answer:1,explain:'seit · bei · mit · durch — 4 Präpositionen (ohne zählt auch: 5 insgesamt).'},
   ]
 },
+
+,
+/* ── Einheit 15 ─────────────────────────────────────── B1 ── */
+{ id:'l15', tag:'Adjektive', level:'b1',
+  title:'Adjektivdeklination',
+  desc:'Adjektivendungen nach bestimmtem, unbestimmtem und ohne Artikel.',
+  vocab:[
+    {de:'der bestimmte Artikel + Adj.',ru:'-e / -en (schwach)',ex:'der alte Mann, die alte Frau, das alte Haus'},
+    {de:'ein/eine + Adjektiv',ru:'-er/-e/-es im Nom, -en sonst',ex:'ein alter Mann, eine alte Frau, ein altes Haus'},
+    {de:'ohne Artikel + Adjektiv',ru:'starke Endung (wie der-Artikel)',ex:'alter Wein, frische Luft, kaltes Wasser'},
+    {de:'einen dicken Bauch',ru:'толстый живот (Akk M indef)',ex:'Er hat einen dicken Bauch.'},
+    {de:'den schwarzen Anzug',ru:'чёрный костюм (Akk M def)',ex:'Er zieht den schwarzen Anzug an.'},
+    {de:'ein weißes Hemd',ru:'белая рубашка (Nom/Akk N indef)',ex:'Er trägt ein weißes Hemd.'},
+    {de:'die eleganten Schuhe',ru:'элегантные туфли (Pl)',ex:'Sie nimmt die eleganten Schuhe mit.'},
+    {de:'mit einem guten Freund',ru:'с хорошим другом (Dat M)',ex:'Er geht mit einem guten Freund spazieren.'},
+    {de:'trotz des schlechten Wetters',ru:'несмотря на плохую погоду (Gen)',ex:'Trotz des schlechten Wetters gehen wir aus.'},
+  ],
+  gramHTML:`
+    <h3>Die Grundregel</h3>
+    <p>Zeigt der Artikel das Geschlecht klar (<b>der/die/das</b>) → <b>schwache</b> Endung (-e/-en). Zeigt er es nicht (<b>ein / kein Artikel</b>) → <b>starke</b> Endung (das Adjektiv übernimmt die Aufgabe).</p>
+    <h3>Nach bestimmtem Artikel</h3>
+    <table>
+      <tr><th></th><th>Mask.</th><th>Fem.</th><th>Neut.</th><th>Pl.</th></tr>
+      <tr><td>Nom</td><td>-<b>e</b></td><td>-<b>e</b></td><td>-<b>e</b></td><td>-<b>en</b></td></tr>
+      <tr><td>Akk</td><td>-<b>en</b></td><td>-<b>e</b></td><td>-<b>e</b></td><td>-<b>en</b></td></tr>
+      <tr><td>Dat/Gen</td><td>-<b>en</b></td><td>-<b>en</b></td><td>-<b>en</b></td><td>-<b>en</b></td></tr>
+    </table>
+    <h3>Nach unbestimmtem Artikel (ein/eine)</h3>
+    <table>
+      <tr><th></th><th>Mask.</th><th>Fem.</th><th>Neut.</th></tr>
+      <tr><td>Nom</td><td>-<b>er</b></td><td>-<b>e</b></td><td>-<b>es</b></td></tr>
+      <tr><td>Akk</td><td>-<b>en</b></td><td>-<b>e</b></td><td>-<b>es</b></td></tr>
+      <tr><td>Dat</td><td>-<b>en</b></td><td>-<b>en</b></td><td>-<b>en</b></td></tr>
+    </table>
+    <div class="tip"><b>Eselsbrücke Nom:</b> Mask → <b>-er</b> (wie d<b>er</b>), Neut → <b>-es</b> (wie da<b>s</b>), Fem → <b>-e</b> (wie di<b>e</b>).</div>`,
+  exercises:[
+    {id:'l15e1',type:'mc',q:'"Er hat einen ___ Bauch." (dick, Akk Mask nach einem)',
+     options:['dicke','dicken','dicker'],answer:1,explain:'Akk Mask nach ein/einen → -en: „dicken".'},
+    {id:'l15e2',type:'mc',q:'"Das ist ein ___ Anzug." (schwarz, Nom Mask nach ein)',
+     options:['schwarze','schwarzen','schwarzer'],answer:2,explain:'Nom Mask nach „ein" → starke Endung -er: „schwarzer".'},
+    {id:'l15e3',type:'gap',q:'"Er trägt ein ___ (weiß) Hemd." (Nom/Akk Neut nach ein)',
+     accept:['weißes'],hint:'Neut, Nom/Akk, nach „ein" → -es.',explain:'weißes'},
+    {id:'l15e4',type:'listen',
+     audio:'Er zieht den schwarzen Anzug an. Dazu trägt er ein weißes Hemd und elegante schwarze Schuhe.',
+     q:'Wie viele Adjektivattribute hörst du?',
+     options:['3','4','5'],answer:1,explain:'schwarzen · weißes · elegante · schwarze — 4 Adjektive.'},
+    {id:'l15e5',type:'match',q:'Ordne Form und Muster zu:',
+     pairs:[['einen alten Mann','Akk Mask nach einem'],['die alte Frau','Nom/Akk Fem nach der'],['ein altes Haus','Nom/Akk Neut nach ein'],['mit dem alten Chef','Dat nach dem']]},
+  ]
+},
+/* ── Einheit 16 ─────────────────────────────────────── B1 ── */
+{ id:'l16', tag:'Pronominaladverb', level:'b1',
+  title:'Pronominaladverbien — da(r)+ und wo(r)+',
+  desc:'daran, dafür, darüber — und sich freuen auf vs. über.',
+  vocab:[
+    {de:'daran denken',ru:'думать об этом',ex:'Ich denke oft daran.'},
+    {de:'dafür interessieren',ru:'интересоваться этим',ex:'Ich interessiere mich dafür.'},
+    {de:'darüber sprechen',ru:'говорить об этом',ex:'Wir sprechen darüber.'},
+    {de:'damit zufrieden sein',ru:'быть довольным этим',ex:'Ich bin damit zufrieden.'},
+    {de:'darauf freuen',ru:'ждать с нетерпением',ex:'Ich freue mich darauf.'},
+    {de:'woran',ru:'о чём (вопрос к вещи)',ex:'Woran denkst du?'},
+    {de:'wofür',ru:'для/за чего',ex:'Wofür interessierst du dich?'},
+    {de:'worüber',ru:'о чём (разговор)',ex:'Worüber sprecht ihr?'},
+    {de:'sich freuen auf',ru:'радоваться (будущее)',ex:'Ich freue mich auf den Urlaub.'},
+    {de:'sich freuen über',ru:'радоваться (настоящее/прошлое)',ex:'Ich freue mich über das Geschenk.'},
+    {de:'sich ärgern über',ru:'злиться из-за чего-то',ex:'Er ärgert sich über das Programm.'},
+  ],
+  gramHTML:`
+    <h3>Regel: Person vs. Sache</h3>
+    <p>Verb braucht Präposition (<i>denken an, sprechen über …</i>). Bei <b>Personen</b>: Präp + Pronomen. Bei <b>Sachen</b>: <b>da(r) + Präp</b>.</p>
+    <table>
+      <tr><th>Präp.</th><th>Person → Pronomen</th><th>Sache → Pronominaladverb</th></tr>
+      <tr><td>an</td><td>An wen? → an ihn/sie</td><td>Woran? → daran</td></tr>
+      <tr><td>für</td><td>Für wen? → für ihn</td><td>Wofür? → dafür</td></tr>
+      <tr><td>über</td><td>Über wen? → über sie</td><td>Worüber? → darüber</td></tr>
+      <tr><td>auf</td><td>Auf wen? → auf ihn</td><td>Worauf? → darauf</td></tr>
+    </table>
+    <div class="tip"><b>Vokalregel:</b> Präp. beginnt mit Vokal → -r- einfügen: da<b>r</b>an · da<b>r</b>auf · da<b>r</b>über. Kein -r-: dafür · damit · dazu.</div>
+    <h3>sich freuen auf vs. über</h3>
+    <div class="ex-box"><b>auf</b> → Zukunft: „Ich freue mich auf den Urlaub nächste Woche."</div>
+    <div class="ex-box"><b>über</b> → Jetzt/Vergangenheit: „Ich freue mich über dein Geschenk — danke!"</div>`,
+  exercises:[
+    {id:'l16e1',type:'mc',q:'"Ich freue mich ___ den Urlaub nächsten Monat."',
+     options:['über','auf','für'],answer:1,explain:'Zukünftiges Ereignis → freuen auf.'},
+    {id:'l16e2',type:'mc',q:'"Vielen Dank! Ich freue mich sehr ___ das Geschenk."',
+     options:['auf','für','über'],answer:2,explain:'Gegenwärtiges Geschenk → freuen über.'},
+    {id:'l16e3',type:'gap',q:'"___ denkst du?" (Frage nach einer Sache, Präp. an)',
+     accept:['woran'],hint:'Frage nach Sache + an → wo(r)+an.',explain:'Woran'},
+    {id:'l16e4',type:'gap',q:'"Ich interessiere mich für Musik." → Kurzantwort: "Ja, ich interessiere mich ___."',
+     accept:['dafür'],hint:'für + Sache → da+für.',explain:'dafür'},
+    {id:'l16e5',type:'match',q:'Ordne zu:',
+     pairs:[['Über wen ärgerst du dich?','Person → über ihn/sie'],['Worüber ärgerst du dich?','Sache → darüber'],['Auf wen wartest du?','Person → auf ihn'],['Worauf freust du dich?','Sache → darauf']]},
+  ]
+},
+/* ── Einheit 17 ─────────────────────────────────────── B2 ── */
+{ id:'l17', tag:'Leseverstehen', level:'b2',
+  title:'Aktuelles: KI, Homeoffice, Klimawandel',
+  desc:'Kurztexte zu aktuellen Themen — Leseverstehen mit Fragen.',
+  vocab:[
+    {de:'die Künstliche Intelligenz',ru:'искусственный интеллект',ex:'KI kann Wettervorhersagen verbessern.'},
+    {de:'das Homeoffice',ru:'удалённая работа',ex:'Homeoffice ist in vielen Firmen etabliert.'},
+    {de:'etabliert',ru:'устоявшийся, сложившийся',ex:'Homeoffice ist fest etabliert.'},
+    {de:'ausweiten',ru:'расширять',ex:'Der Anteil der Betriebe, die es ausweiten wollen, steigt.'},
+    {de:'der Klimawandel',ru:'изменение климата',ex:'Der Klimawandel betrifft auch die Alpen.'},
+    {de:'das Schmelzwasser',ru:'талая вода',ex:'Weniger Schmelzwasser erreicht das Tal.'},
+    {de:'senken',ru:'снижать',ex:'Isometrischer Sport kann den Blutdruck senken.'},
+    {de:'spürbar',ru:'ощутимый',ex:'Erste Folgen sind spürbar.'},
+    {de:'die Warteliste',ru:'лист ожидания',ex:'Die Wartelisten für Therapieplätze sind lang.'},
+    {de:'psychisch',ru:'психический',ex:'Psychische Erkrankungen nehmen zu.'},
+  ],
+  gramHTML:`
+    <h3>Lesetext A — Homeoffice und KI</h3>
+    <p>Homeoffice hat sich seit der Corona-Pandemie in vielen Unternehmen fest etabliert — besonders in der Informationswirtschaft. Gleichzeitig gewinnt Künstliche Intelligenz an Bedeutung: Neue KI-Systeme zur Wettervorhersage erreichen erstmals eine vergleichbare Qualität wie herkömmliche Methoden.</p>
+    <h3>Lesetext B — Klimawandel und Gesundheit</h3>
+    <p>Im Alpenraum liegt deutlich weniger Schnee als üblich. Dadurch erreicht im Frühling weniger Schmelzwasser das Tal — die ersten Folgen für die Tier- und Pflanzenwelt sind spürbar. Beim Thema Gesundheit zeigen Studien: Isometrisches Training kann den Blutdruck effektiv senken. Außerdem steigen die Zahlen psychischer Erkrankungen, während Therapieplätze knapp bleiben.</p>
+    <div class="tip"><b>Lesestrategie B2:</b> Lies zuerst die Fragen — so weißt du, worauf du achten musst. Schlüsselwörter markieren hilft.</div>`,
+  exercises:[
+    {id:'l17e1',type:'mc',q:'Wo hat sich Homeoffice besonders etabliert?',
+     options:['Im Handel','In der Informationswirtschaft','Im Gesundheitswesen'],
+     answer:1,explain:'„besonders in der Informationswirtschaft" — so steht es im Text.'},
+    {id:'l17e2',type:'mc',q:'Was kann isometrischer Sport laut Text bewirken?',
+     options:['Den Blutdruck senken','Das Gewicht reduzieren','Den Stress mindern'],
+     answer:0,explain:'„Isometrisches Training kann den Blutdruck effektiv senken."'},
+    {id:'l17e3',type:'mc',q:'Warum ist weniger Schmelzwasser ein Problem?',
+     options:['Es verursacht Überschwemmungen','Es hat Folgen für Tiere und Pflanzen','Es erhöht den Grundwasserspiegel'],
+     answer:1,explain:'„Erste Folgen für die Tier- und Pflanzenwelt sind spürbar."'},
+    {id:'l17e4',type:'gap',q:'"Die Zahlen psychischer Erkrankungen ___." (zunehmen, Präsens)',
+     accept:['nehmen zu','nehmen	zu'],hint:'zunehmen = trennbares Verb → nimmt/nehmen … zu.',explain:'nehmen zu'},
+    {id:'l17e5',type:'match',q:'Ordne Begriff und Bedeutung zu:',
+     pairs:[['etabliert','устоявшийся'],['senken','снижать'],['spürbar','ощутимый'],['ausweiten','расширять']]},
+  ]
+},
+/* ── Einheit 18 ─────────────────────────────────────── B1 ── */
+{ id:'l18', tag:'Gesundheit', level:'b2',
+  title:'Wortschatz — Gesund bleiben',
+  desc:'Körper, Ernährung, Schlaf und Arztbesuch.',
+  vocab:[
+    {de:'sich entspannen',ru:'расслабляться',ex:'Nach der Arbeit entspanne ich mich.'},
+    {de:'tief schlafen',ru:'крепко спать',ex:'Wenn man tief schläft, erholt man sich besser.'},
+    {de:'die Ernährung',ru:'питание',ex:'Gesunde Ernährung ist die Grundlage.'},
+    {de:'ausreichend',ru:'достаточно',ex:'Man braucht ausreichend Schlaf.'},
+    {de:'die Bewegung',ru:'движение, физическая активность',ex:'Regelmäßige Bewegung ist wichtig.'},
+    {de:'vermeiden',ru:'избегать',ex:'Man sollte zu viel Alkohol vermeiden.'},
+    {de:'erschöpft',ru:'измученный',ex:'Nach der Nachtschicht war er erschöpft.'},
+    {de:'der Schlafmangel',ru:'недостаток сна',ex:'Schlafmangel schwächt das Immunsystem.'},
+    {de:'untersuchen',ru:'обследовать',ex:'Der Arzt untersucht den Patienten.'},
+    {de:'behandeln',ru:'лечить',ex:'Die Ärztin behandelt die Wunde.'},
+    {de:'abnehmen',ru:'худеть',ex:'Mit Sport und gesunder Ernährung kann man abnehmen.'},
+    {de:'vor allem',ru:'прежде всего',ex:'Vor allem regelmäßige Bewegung ist wichtig.'},
+  ],
+  gramHTML:`
+    <h3>lassen + Infinitiv</h3>
+    <p>Man lässt jemanden etwas tun — man tut es nicht selbst.</p>
+    <div class="ex-box"><b>Ich habe meine Zähne behandeln lassen.</b><span class="gl">Я пролечил зубы (у врача — не сам).</span></div>
+    <div class="ex-box"><b>Er lässt sein Auto reparieren.</b><span class="gl">Он отдаёт машину в ремонт.</span></div>
+    <h3>Ratschläge: Modalverben im Kontext</h3>
+    <table>
+      <tr><th>Verb</th><th>Beispiel</th><th>Bedeutung</th></tr>
+      <tr><td>sollte</td><td>Man sollte mehr schlafen.</td><td>Ratschlag</td></tr>
+      <tr><td>müsste</td><td>Er müsste zum Arzt gehen.</td><td>Notwendigkeit (KII, höflich)</td></tr>
+      <tr><td>kann</td><td>Sport kann den Blutdruck senken.</td><td>Möglichkeit</td></tr>
+      <tr><td>darf nicht</td><td>Man darf nicht rauchen.</td><td>Verbot</td></tr>
+    </table>`,
+  exercises:[
+    {id:'l18e1',type:'mc',q:'Was bedeutet „erschöpft"?',
+     options:['Ausgeruht und fit','Sehr müde, ohne Kraft','Nervös und gestresst'],
+     answer:1,explain:'erschöpft = sehr müde, keine Kraft mehr.'},
+    {id:'l18e2',type:'gap',q:'"Man sollte Alkohol ___." (vermeiden)',
+     accept:['vermeiden'],hint:'Infinitiv am Satzende nach Modalverb.',explain:'vermeiden'},
+    {id:'l18e3',type:'listen',
+     audio:'Ausreichend Schlaf, gesunde Ernährung und regelmäßige Bewegung sind die drei wichtigsten Grundlagen für ein gesundes Leben. Schlafmangel dagegen schwächt das Immunsystem.',
+     q:'Welche drei Grundlagen werden genannt?',
+     options:['Schlaf, Ernährung, Bewegung','Medikamente, Sport, Entspannung','Diät, Schlaf, Arztbesuche'],
+     answer:0,explain:'„Schlaf, Ernährung, Bewegung" — direkt aus dem Text.'},
+    {id:'l18e4',type:'order',q:'Bilde den Gesundheitsratschlag:',
+     words:['Vor','allem','sollte','man','regelmäßig','Sport','treiben'],
+     answer:'Vor allem sollte man regelmäßig Sport treiben'},
+    {id:'l18e5',type:'match',q:'Ordne zu:',
+     pairs:[['sich entspannen','расслабляться'],['der Schlafmangel','недостаток сна'],['vermeiden','избегать'],['behandeln','лечить']]},
+  ]
+},
 ]; // END COURSE
 
 /* ============================================================
@@ -883,9 +1064,36 @@ const GRAMMAR = [
     <div class="ex-box"><b>Direkt:</b> „Das Produkt ist fehlerfrei."<br><b>Indirekt:</b> Er behauptete, das Produkt <b>sei</b> fehlerfrei.</div>
     <div class="ex-box"><b>Direkt:</b> „Wir haben pünktlich geliefert."<br><b>Indirekt:</b> Sie sagten, sie <b>hätten</b> pünktlich geliefert. (Perfekt KI)</div>
     <div class="tip"><b>Konjunktiv I in Rezepten und Anleitungen:</b> Man <b>nehme</b> 4 Eier … — es <b>sei</b> beachtet, dass … Diese Verwendung ist heute eher stilistisch.</div>`,
-  },
-
-];
+  },{ id:'g10', icon:'📐', title:'Adjektivdeklination — Tabellen',
+    desc:'Alle drei Deklinationstypen: nach der/die/das, ein/eine und ohne Artikel.',
+    html:`
+    <h3>1. Schwache Deklination — nach bestimmtem Artikel</h3>
+    <table>
+      <tr><th></th><th>Mask.</th><th>Fem.</th><th>Neut.</th><th>Pl.</th></tr>
+      <tr><td>Nom</td><td>-<b>e</b></td><td>-<b>e</b></td><td>-<b>e</b></td><td>-<b>en</b></td></tr>
+      <tr><td>Akk</td><td>-<b>en</b></td><td>-<b>e</b></td><td>-<b>e</b></td><td>-<b>en</b></td></tr>
+      <tr><td>Dat</td><td>-<b>en</b></td><td>-<b>en</b></td><td>-<b>en</b></td><td>-<b>en</b></td></tr>
+      <tr><td>Gen</td><td>-<b>en</b></td><td>-<b>en</b></td><td>-<b>en</b></td><td>-<b>en</b></td></tr>
+    </table>
+    <div class="ex-box"><b>der alte Mann · die alte Frau · das alte Haus · die alten Leute</b></div>
+    <h3>2. Gemischte Deklination — nach unbestimmtem Artikel</h3>
+    <table>
+      <tr><th></th><th>Mask.</th><th>Fem.</th><th>Neut.</th></tr>
+      <tr><td>Nom</td><td>-<b>er</b></td><td>-<b>e</b></td><td>-<b>es</b></td></tr>
+      <tr><td>Akk</td><td>-<b>en</b></td><td>-<b>e</b></td><td>-<b>es</b></td></tr>
+      <tr><td>Dat</td><td>-<b>en</b></td><td>-<b>en</b></td><td>-<b>en</b></td></tr>
+    </table>
+    <div class="ex-box"><b>ein alter Mann · eine alte Frau · ein altes Haus</b></div>
+    <h3>3. Starke Deklination — ohne Artikel</h3>
+    <table>
+      <tr><th></th><th>Mask.</th><th>Fem.</th><th>Neut.</th></tr>
+      <tr><td>Nom</td><td>-<b>er</b></td><td>-<b>e</b></td><td>-<b>es</b></td></tr>
+      <tr><td>Akk</td><td>-<b>en</b></td><td>-<b>e</b></td><td>-<b>es</b></td></tr>
+      <tr><td>Dat</td><td>-<b>em</b></td><td>-<b>er</b></td><td>-<b>em</b></td></tr>
+    </table>
+    <div class="ex-box"><b>alter Wein · frische Milch · kaltes Wasser</b></div>
+    <div class="tip"><b>Kurzregel:</b> Zeigt der Artikel das Geschlecht klar (der/die/das) → Adjektiv -e/-en. Zeigt er es nicht (ein/kein/ohne) → Adjektiv bekommt die Geschlechtsendung selbst.</div>`,
+  }];
 
 /* ============================================================
    QUIZ — 15 Fragen quer durch alle Einheiten
@@ -910,8 +1118,14 @@ const QUIZ = [
   {q:'Präpositionen mit Dativ:',o:['durch, für, ohne','seit, bei, mit','um, gegen, bis'],a:1},
   {q:'„Das ist ___ Haus. ___ Haus ist groß." — Artikel?',o:['ein … Das','der … Das','ein … Ein'],a:0},
   {q:'Perfekt mit sein:',o:['lesen, schreiben, essen','gehen, fahren, einschlafen','kaufen, helfen, denken'],a:1},
-  {q:'Konjunktiv I — Er sagte, er ___ müde. (sein)',o:['ist','sei','wäre'],a:1},
-
+  {q:'Konjunktiv I — Er sagte, er ___ müde. (sein)',o:['ist','sei','wäre'],a:1},{q:'"Er trägt ein ___ Hemd." (weiß, Nom/Akk Neut nach ein)',o:['weißes','weißen','weiße'],a:0},
+  {q:'"Als Kind ___ ich nicht alleine rausgehen." (dürfen, Prät.)',o:['dürfte','durfte','darf'],a:1},
+  {q:'"Ich freue mich ___ den Urlaub nächste Woche."',o:['über','auf','für'],a:1},
+  {q:'"Ich ärgere mich ___ den Lärm."',o:['für','auf','über'],a:2},
+  {q:'"___ ich klein war, hatte ich eine Katze."',o:['Wenn','Als','Da'],a:1},
+  {q:'"Worüber sprichst du?" → Kurzantwort:',o:['darüber','dafür','darum'],a:0},
+  {q:'"Die Bremsen ___ bei der Inspektion geprüft." (Passiv)',o:['sind','werden','haben'],a:1},
+  {q:'"Peter ist krank. ___ kann er nicht kommen."',o:['Weil','Denn','Deshalb'],a:2}
 ];
 
 /* ============================================================
