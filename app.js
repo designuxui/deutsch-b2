@@ -517,6 +517,202 @@ const COURSE = [
   ]
 },
 
+
+,
+/* ── Einheit 11 ─────────────────────────────────────── A2 ── */
+{ id:'l11', tag:'Fragen', level:'b1',
+  title:'W-Fragewörter & Fragen stellen',
+  desc:'Alle Fragewörter im Überblick — wer, was, wo, wohin und mehr.',
+  vocab:[
+    {de:'wer',        ru:'кто',                     ex:'Wer ist das? – Das ist mein Kollege.'},
+    {de:'was',        ru:'что',                      ex:'Was machst du? – Ich lerne Deutsch.'},
+    {de:'wo',         ru:'где',                      ex:'Wo wohnst du? – In München.'},
+    {de:'wohin',      ru:'куда',                     ex:'Wohin fährst du? – Nach Berlin.'},
+    {de:'woher',      ru:'откуда',                   ex:'Woher kommst du? – Aus Polen.'},
+    {de:'wann',       ru:'когда',                    ex:'Wann kommst du? – Um drei Uhr.'},
+    {de:'warum',      ru:'почему',                   ex:'Warum lernst du Deutsch? – Für die Arbeit.'},
+    {de:'wie',        ru:'как',                      ex:'Wie heißt du? – Ich heiße Anna.'},
+    {de:'wie lange',  ru:'как долго',                ex:'Wie lange lernst du Deutsch? – Seit zwei Jahren.'},
+    {de:'wie viel',   ru:'сколько',                  ex:'Wie viel kostet das? – Zehn Euro.'},
+    {de:'seit wann',  ru:'с какого времени',         ex:'Seit wann lebst du hier? – Seit 2020.'},
+    {de:'wessen',     ru:'чей',                      ex:'Wessen Tasche ist das? – Meiner Freundin.'},
+  ],
+  gramHTML:`
+    <h3>Aufbau einer W-Frage</h3>
+    <p>W-Fragen beginnen mit einem Fragewort. Das konjugierte Verb steht auf Position 2, danach das Subjekt (falls nicht das Fragewort schon das Subjekt ist).</p>
+    <div class="ex-box"><b>Wer</b> [Subj.] <b>arbeitet</b> hier?<span class="gl">Кто здесь работает? (wer = Subjekt → kein separates Subjekt nötig)</span></div>
+    <div class="ex-box"><b>Wo</b> <b>wohnst</b> du?<span class="gl">Где ты живёшь? (du = Subjekt)</span></div>
+    <h3>Häufige Verwechslungen</h3>
+    <table>
+      <tr><th>Fragewort</th><th>Frage</th><th>Antwort</th></tr>
+      <tr><td>wo</td><td>Wo ist er? (Ort)</td><td>In Berlin.</td></tr>
+      <tr><td>wohin</td><td>Wohin fährt er? (Ziel)</td><td>Nach Berlin.</td></tr>
+      <tr><td>woher</td><td>Woher kommt er? (Herkunft)</td><td>Aus Berlin.</td></tr>
+    </table>
+    <div class="tip"><b>Merke:</b> <b>wo</b> = statisch (sein, wohnen); <b>wohin</b> = Bewegung zum Ziel (gehen, fahren); <b>woher</b> = Herkunft (kommen).</div>`,
+  exercises:[
+    {id:'l11e1',type:'match',q:'Ordne das Fragewort seiner Bedeutung zu:',
+     pairs:[['wer','кто'],['wohin','куда'],['warum','почему'],['seit wann','с какого времени']]},
+    {id:'l11e2',type:'mc',q:'„___ wohnst du?" — Frage nach dem Ort.',
+     options:['Wohin','Woher','Wo'],answer:2,explain:'„Wo" fragt nach dem Aufenthaltsort (statisch).'},
+    {id:'l11e3',type:'gap',q:'„___ fährst du in Urlaub?" — Frage nach dem Ziel der Reise.',
+     accept:['wohin'],hint:'Bewegung zum Ziel → ?',explain:'Wohin'},
+    {id:'l11e4',type:'listen',
+     audio:'Woher kommst du? Ich komme aus Russland. Und wie lange lebst du schon in Deutschland? Seit drei Jahren.',
+     q:'Welche zwei Fragewörter hörst du?',
+     options:['wo und wann','woher und wie lange','wohin und warum'],
+     answer:1,explain:'„Woher" fragt nach Herkunft, „wie lange" nach der Zeitdauer.'},
+    {id:'l11e5',type:'order',q:'Bilde die W-Frage:',
+     words:['Seit','wann','lernst','du','Deutsch'],answer:'Seit wann lernst du Deutsch'},
+  ]
+},
+
+/* ── Einheit 12 ─────────────────────────────────────── A2 ── */
+{ id:'l12', tag:'Artikelgebrauch', level:'b1',
+  title:'Der Artikel — bestimmt, unbestimmt, ohne',
+  desc:'Wann der/die/das, wann ein/eine, wann gar kein Artikel — mit Regeln und Ausnahmen.',
+  vocab:[
+    {de:'der bestimmte Artikel',   ru:'определённый артикль',   ex:'Der Mann ist Arzt. (Wir wissen, welcher Mann.)'},
+    {de:'der unbestimmte Artikel', ru:'неопределённый артикль', ex:'Ein Mann kommt. (Wir wissen nicht, welcher.)'},
+    {de:'kein Artikel',            ru:'нулевой артикль',        ex:'Er ist Arzt. (Beruf ohne Artikel!)'},
+    {de:'erneut erwähnen',         ru:'упоминать повторно',     ex:'Ich sehe einen Hund. Der Hund ist groß.'},
+    {de:'einzigartig',             ru:'уникальный',             ex:'Die Sonne scheint. (es gibt nur eine Sonne)'},
+    {de:'abstrakt',                ru:'абстрактный',            ex:'Ich habe Hunger. / Er trinkt Kaffee.'},
+    {de:'der Beruf',               ru:'профессия',              ex:'Sie ist Ärztin. (kein Artikel!)'},
+    {de:'die Nationalität',        ru:'национальность',         ex:'Er ist Russe. (kein Artikel!)'},
+    {de:'Länder & Städte',         ru:'страны и города',        ex:'Deutschland liegt in Europa. (kein Artikel)'},
+    {de:'die Schweiz/die Türkei',  ru:'Швейцария/Турция',       ex:'Die Schweiz liegt in Europa. (Ausnahme — mit Artikel!)'},
+    {de:'erstes / zweites Nennen', ru:'первое / второе упоминание', ex:'Ein Auto steht dort. Das Auto ist neu.'},
+    {de:'das Material',            ru:'материал',               ex:'Das Haus ist aus Holz. (kein Artikel)'},
+  ],
+  gramHTML:`
+    <h3>Die drei Fälle im Überblick</h3>
+    <table>
+      <tr><th>Artikel</th><th>Wann?</th><th>Beispiel</th></tr>
+      <tr><td>ein / eine</td><td>1. Erwähnung; nach haben/brauchen/es gibt</td><td>Ich sehe <b>einen</b> Mann.</td></tr>
+      <tr><td>der / die / das</td><td>Wiederholung; einzigartiger Gegenstand; Superlativ</td><td><b>Der</b> Mann heißt Koch.</td></tr>
+      <tr><td>— (kein Artikel)</td><td>Beruf/Nationalität; Abstrakta; Länder/Städte; Material; nach als</td><td>Er ist <b>Arzt</b>. Er kommt aus <b>Deutschland</b>.</td></tr>
+    </table>
+    <h3>Ausnahmen — Länder mit Artikel</h3>
+    <div class="ex-box"><b>die Schweiz, die Türkei, die Ukraine, der Iran, die USA (Pl.), die Niederlande (Pl.)</b><span class="gl">→ Diese Länder brauchen immer einen Artikel.</span></div>
+    <h3>Beruf / Nationalität: kein Artikel — außer mit Adjektiv</h3>
+    <div class="ex-box"><b>Er ist Arzt.</b> (kein Artikel) &nbsp;→&nbsp; <b>Er ist ein guter Arzt.</b> (Adjektiv → unbestimmt!)</div>`,
+  exercises:[
+    {id:'l12e1',type:'mc',q:'„Das ist ___ Haus. ___ Haus ist sehr schön." Was passt?',
+     options:['ein … Das','ein … Ein','der … Der'],answer:0,explain:'Erstes Nennen → unbestimmter Artikel; zweites Nennen → bestimmter Artikel „Das".'},
+    {id:'l12e2',type:'gap',q:'„Sie ist ___ Ärztin." (Beruf — welcher Artikel?)',
+     accept:['','–','kein','---'],hint:'Beruf ohne Adjektiv → kein Artikel. Leer lassen!',explain:'kein Artikel'},
+    {id:'l12e3',type:'mc',q:'„___ Türkei liegt in Kleinasien." — Welcher Artikel?',
+     options:['kein Artikel','Die','Eine'],answer:1,explain:'Die Türkei ist eine der Ausnahmen — immer mit bestimmtem Artikel.'},
+    {id:'l12e4',type:'mc',q:'„Er ist ___ guter Lehrer." — Adjektiv dabei!',
+     options:['kein Artikel','ein','der'],answer:1,explain:'Mit Adjektiv: unbestimmter Artikel. Ohne Adjektiv wäre es: „Er ist Lehrer."'},
+    {id:'l12e5',type:'match',q:'Ordne die Regel dem Beispiel zu:',
+     pairs:[['kein Artikel: Beruf','Er ist Pilot.'],['bestimmter Artikel: Einzigartiges','Die Sonne scheint.'],['kein Artikel: Länder','Deutschland liegt in Europa.'],['unbestimmter Artikel: 1. Nennung','Ich sehe eine Frau.']]},
+  ]
+},
+
+/* ── Einheit 13 ─────────────────────────────────────── B2 ── */
+{ id:'l13', tag:'Genitiv', level:'b2',
+  title:'Разделительный Genitiv — Partitiver Genitiv',
+  desc:'„Einer der …, einige der …, keiner der …" — Auswahl aus einer Gruppe.',
+  vocab:[
+    {de:'einer / eine / eines',     ru:'один/одна/одно из',         ex:'Einer der Studenten hat gewonnen.'},
+    {de:'keiner / keine / keines',  ru:'ни один/одна/одно из',      ex:'Keiner der Vorschläge gefiel ihm.'},
+    {de:'viele der …',              ru:'многие из …',               ex:'Viele der Bücher sind sehr teuer.'},
+    {de:'einige der …',             ru:'некоторые из …',            ex:'Einige der Themen habe ich nicht verstanden.'},
+    {de:'manche der …',             ru:'некоторые из …',            ex:'Manche der Züge verspäten sich.'},
+    {de:'alle der …',               ru:'все из …',                  ex:'Alle der geprüften Arbeiten waren gut.'},
+    {de:'wenige der …',             ru:'немногие из …',             ex:'Wenige der Schüler kannten die Antwort.'},
+    {de:'zwei / drei meiner …',     ru:'двое/трое моих …',          ex:'Zwei meiner Freunde kommen heute.'},
+    {de:'das schnellste der Autos', ru:'самый быстрый из машин',    ex:'Das schnellste der Autos gehört ihm.'},
+    {de:'einer der schönsten',      ru:'один из красивейших',       ex:'Bamberg ist eine der schönsten Städte.'},
+    {de:'jede der Frauen',          ru:'каждая из женщин',          ex:'Jede der Frauen erhielt eine Einladung.'},
+    {de:'das Genitivattribut',      ru:'генитивное определение',    ex:'Die Hilfe des Zeugen war wichtig.'},
+  ],
+  gramHTML:`
+    <h3>Was ist der partitive Genitiv?</h3>
+    <p>Der partitive Genitiv drückt aus, dass jemand oder etwas <b>aus einer Gruppe herausgegriffen</b> wird. Auf Russisch übersetzt man ihn meist mit dem Präfix <b>„из"</b>.</p>
+    <table>
+      <tr><th>Muster</th><th>Deutsch</th><th>Russisch</th></tr>
+      <tr><td>Maskulinum</td><td>einer der Studenten</td><td>один из студентов</td></tr>
+      <tr><td>Femininum</td><td>eine der Frauen</td><td>одна из женщин</td></tr>
+      <tr><td>Neutrum</td><td>eines der Autos</td><td>одна из машин</td></tr>
+      <tr><td>+ Superlativ</td><td>einer der besten Filme</td><td>один из лучших фильмов</td></tr>
+      <tr><td>Negation</td><td>keiner der Vorschläge</td><td>ни одно из предложений</td></tr>
+      <tr><td>Menge</td><td>viele der Bücher</td><td>многие из книг</td></tr>
+    </table>
+    <div class="ex-box"><b>Bamberg ist eine der schönsten Städte Bayerns.</b><span class="gl">Бамберг — один из красивейших городов Баварии.</span></div>
+    <div class="ex-box"><b>Keines der Geschenke hat ihr gefallen.</b><span class="gl">Ни один из подарков ей не понравился.</span></div>
+    <div class="ex-box"><b>Zwei meiner Freunde wohnen in der Schweiz.</b><span class="gl">Двое моих друзей живут в Швейцарии.</span></div>
+    <div class="tip"><b>Merke:</b> Das Pronomen (einer/eine/eines/keiner…) richtet sich nach dem <b>Geschlecht des Substantivs</b> — nicht nach der Logik! Das Auto → eines der Autos (Neutrum!).</div>`,
+  exercises:[
+    {id:'l13e1',type:'mc',q:'„Bamberg ist ___ schönsten Städte Bayerns." (die Stadt)',
+     options:['einer der','eine der','eines der'],
+     answer:1,explain:'die Stadt → Femininum → „eine der schönsten Städte"'},
+    {id:'l13e2',type:'mc',q:'„Das ist ___ besten Konzerte, das ich je gehört habe." (das Konzert)',
+     options:['einer der','eine der','eines der'],
+     answer:2,explain:'das Konzert → Neutrum → „eines der besten Konzerte"'},
+    {id:'l13e3',type:'gap',q:'„___ der Vorschläge hat uns überzeugt." (kein Vorschlag / der Vorschlag, M)',
+     accept:['keiner'],hint:'kein + -er für Maskulinum in dieser Position.',explain:'Keiner'},
+    {id:'l13e4',type:'listen',
+     audio:'Eines der Geschenke liegt auf dem Tisch. Viele der eingeladenen Gäste sind schon da. Zwei meiner Kollegen haben auch mitgemacht.',
+     q:'Welche drei Partitiv-Konstruktionen hörst du?',
+     options:['eines / viele / zwei meiner','einer / alle / drei','keines / manche / viele'],
+     answer:0,explain:'„Eines der Geschenke", „Viele der Gäste", „Zwei meiner Kollegen" — drei klassische Formen.'},
+    {id:'l13e5',type:'match',q:'Ordne zu — Russisch auf Deutsch:',
+     pairs:[['один из студентов','einer der Studenten'],['ни одна из задач','keine der Aufgaben'],['некоторые из коллег','einige der Kollegen'],['самый быстрый из поездов','der schnellste der Züge']]},
+  ]
+},
+
+/* ── Einheit 14 ─────────────────────────────────────── B1 ── */
+{ id:'l14', tag:'Präpositionen', level:'b1',
+  title:'Präpositionen — Fälle und Bedeutungen',
+  desc:'Akkusativ- und Dativpräpositionen sicher erkennen und anwenden.',
+  vocab:[
+    {de:'durch',       ru:'через, сквозь, благодаря',  ex:'Wir gehen durch den Park.'},
+    {de:'für',         ru:'для, за, на (время)',        ex:'Das Geschenk ist für dich.'},
+    {de:'ohne',        ru:'без',                        ex:'Er kam ohne seinen Freund.'},
+    {de:'um',          ru:'вокруг, в (время)',          ex:'Um den Tisch stehen Stühle.'},
+    {de:'gegen',       ru:'против, около',              ex:'Er kommt gegen 10 Uhr.'},
+    {de:'bis',         ru:'до',                         ex:'Er arbeitet bis 20 Uhr.'},
+    {de:'entlang',     ru:'вдоль (после сущ.)',         ex:'Wir gehen den Fluss entlang.'},
+    {de:'bei',         ru:'у, при, во время',           ex:'Sie wohnt bei ihrer Tante.'},
+    {de:'seit',        ru:'с (какого-то времени)',      ex:'Ich lerne seit drei Jahren Deutsch.'},
+    {de:'außer',       ru:'кроме',                      ex:'Außer ihm kam niemand.'},
+    {de:'mit',         ru:'с (совместно)',               ex:'Ich fahre mit dem Bus.'},
+    {de:'nach',        ru:'после, в (направление)',     ex:'Nach der Arbeit gehe ich spazieren.'},
+    {de:'aus',         ru:'из',                         ex:'Er kommt aus München.'},
+    {de:'zu',          ru:'к, на',                      ex:'Ich gehe zum Arzt.'},
+    {de:'von',         ru:'от, о',                      ex:'Das Buch ist von Schiller.'},
+  ],
+  gramHTML:`
+    <h3>Zwei Gruppen: Akkusativ oder Dativ</h3>
+    <table>
+      <tr><th>+ Akkusativ</th><th>+ Dativ</th></tr>
+      <tr><td>durch, für, ohne, um, gegen, bis, entlang</td><td>bei, seit, außer, mit, nach, aus, zu, von, gegenüber, entgegen</td></tr>
+    </table>
+    <div class="tip"><b>Eselsbrücke Akkusativ:</b> <b>d</b>urch – <b>f</b>ür – <b>o</b>hne – <b>u</b>m – <b>g</b>egen – <b>b</b>is – <b>e</b>ntlang → „<b>dfougbe</b>" oder merke: „durch für ohne um gegen bis entlang"</div>
+    <div class="tip"><b>Eselsbrücke Dativ:</b> <b>b</b>ei – <b>s</b>eit – <b>a</b>ußer – <b>m</b>it – <b>n</b>ach – <b>a</b>us – <b>z</b>u – <b>v</b>on → „<b>bsamnavz</b>"</div>
+    <h3>Häufige Kombinationen</h3>
+    <div class="ex-box"><b>Ich fahre mit dem Zug durch die Stadt.</b><span class="gl">mit = Dativ; durch = Akkusativ</span></div>
+    <div class="ex-box"><b>Seit wann arbeitest du bei dieser Firma?</b><span class="gl">seit + Dativ; bei + Dativ</span></div>`,
+  exercises:[
+    {id:'l14e1',type:'mc',q:'Welche Präpositionen stehen immer mit dem AKKUSATIV?',
+     options:['mit, nach, von','durch, für, ohne','bei, seit, aus'],
+     answer:1,explain:'durch – für – ohne – um – gegen – bis – entlang → alle mit Akkusativ.'},
+    {id:'l14e2',type:'match',q:'Ordne: Präposition → Kasus',
+     pairs:[['seit','Dativ'],['durch','Akkusativ'],['zu','Dativ'],['für','Akkusativ']]},
+    {id:'l14e3',type:'gap',q:'„Ich lerne ___ drei Jahren Deutsch." (seit/für?)',
+     accept:['seit'],hint:'Zeitspanne, die bis heute andauert → ?',explain:'seit'},
+    {id:'l14e4',type:'gap',q:'„Das Geschenk ist ___ meine Mutter." (für/von/zu?)',
+     accept:['für'],hint:'„für" = für jemanden bestimmt.',explain:'für'},
+    {id:'l14e5',type:'listen',
+     audio:'Seit drei Jahren arbeite ich bei einer Firma in München. Jeden Tag fahre ich mit dem Bus durch die Stadt ohne Stress.',
+     q:'Wie viele Präpositionen hörst du insgesamt?',
+     options:['3','4','5'],
+     answer:1,explain:'seit · bei · mit · durch — 4 Präpositionen (ohne zählt auch: 5 insgesamt).'},
+  ]
+},
 ]; // END COURSE
 
 /* ============================================================
@@ -635,7 +831,62 @@ const GRAMMAR = [
     <h3>Erweitertes Partizipialattribut (B2+)</h3>
     <div class="ex-box"><b>der gestern vom Kunden eingereichte Antrag</b><span class="gl">заявление, поданное вчера клиентом</span></div>
     <div class="tip"><b>Stil-Hinweis:</b> Erweiterte Partizipialattribute sind typisch für formelle Schrifttexte (Behörden, Verträge). Im Gespräch vermeidet man sie.</div>`,
+  },,
+  { id:'g7', icon:'🧩', title:'Partitiver Genitiv — „einer der …"',
+    desc:'Auswahl aus einer Gruppe: einer/eine/eines der …, keiner/viele der …',
+    html:`
+    <h3>Das Muster</h3>
+    <p>Der partitive Genitiv greift jemanden oder etwas aus einer Gruppe heraus. Das Pronomen richtet sich nach dem Genus des Hauptsubstantivs.</p>
+    <table>
+      <tr><th>Genus</th><th>positiv</th><th>negativ</th><th>Beispiel</th></tr>
+      <tr><td>Maskulinum (der)</td><td>einer der</td><td>keiner der</td><td>einer der Kollegen</td></tr>
+      <tr><td>Femininum (die)</td><td>eine der</td><td>keine der</td><td>eine der Städte</td></tr>
+      <tr><td>Neutrum (das)</td><td>eines der</td><td>keines der</td><td>eines der Konzerte</td></tr>
+      <tr><td>Plural</td><td>viele / einige / manche der</td><td>—</td><td>viele der Bücher</td></tr>
+    </table>
+    <h3>Mit Superlativ</h3>
+    <div class="ex-box"><b>Bamberg ist eine der schönsten Städte Bayerns.</b><span class="gl">Бамберг — один из красивейших городов Баварии.</span></div>
+    <div class="ex-box"><b>Das ist eines der besten Konzerte, das er je gehört hat.</b><span class="gl">Это один из лучших концертов, который он когда-либо слышал.</span></div>
+    <h3>Mit Possessivpronomen</h3>
+    <div class="ex-box"><b>Zwei meiner Freunde arbeiten dort.</b><span class="gl">Двое моих друзей работают там.</span></div>
+    <div class="ex-box"><b>Keiner seiner Bekannten wusste davon.</b><span class="gl">Никто из его знакомых не знал об этом.</span></div>
+    <div class="tip"><b>Häufiger Fehler:</b> das Auto → <b>eines</b> (nicht „eine"!) der schnellsten Autos. Das Neutrum verlangt -es!</div>`,
   },
+  { id:'g8', icon:'⏱️', title:'Perfekt: haben oder sein?',
+    desc:'Welche Verben bilden das Perfekt mit sein, welche mit haben?',
+    html:`
+    <h3>Grundregel</h3>
+    <p>Die meisten Verben bilden das Perfekt mit <b>haben</b>. Mit <b>sein</b> bilden es:</p>
+    <table>
+      <tr><th>Gruppe</th><th>Verben (Beispiele)</th></tr>
+      <tr><td>Bewegung von A nach B</td><td>gehen, fahren, laufen, fliegen, kommen, reisen</td></tr>
+      <tr><td>Zustandsänderung</td><td>werden, sterben, aufwachen, einschlafen, fallen, wachsen</td></tr>
+      <tr><td>Sondergruppe</td><td>sein, bleiben, passieren, gelingen, geschehen, folgen</td></tr>
+    </table>
+    <div class="ex-box"><b>Er ist gestern nach Berlin gefahren.</b> (Bewegung → sein)<span class="gl">Он вчера поехал в Берлин.</span></div>
+    <div class="ex-box"><b>Das Kind ist eingeschlafen.</b> (Zustandsänderung → sein)<span class="gl">Ребёнок заснул.</span></div>
+    <div class="ex-box"><b>Wir haben ein Buch gelesen.</b> (transitiv → haben)<span class="gl">Мы прочитали книгу.</span></div>
+    <div class="tip"><b>Test:</b> Kann man den Satz mit „nach/in/zu …" ergänzen? Oder beschreibt er eine Veränderung? → <b>sein</b>. Sonst meist <b>haben</b>.</div>`,
+  },
+  { id:'g9', icon:'💬', title:'Konjunktiv I — косвенная речь',
+    desc:'Chefin sagte, sie sei zufrieden — fremde Aussagen neutral weitergeben.',
+    html:`
+    <h3>Wozu brauche ich Konjunktiv I?</h3>
+    <p>Im Deutschen gibt es zwei Wege, fremde Aussagen wiederzugeben. Der <b>Konjunktiv I</b> signalisiert klar: „Das sind nicht meine Worte." Er ist typisch für Zeitungsartikel, formelle Berichte und Zitate.</p>
+    <h3>Bildung: Präsens Konjunktiv I</h3>
+    <p>Grundformel: Verbstamm + <b>-e</b> (keine Umlaute!). Außnahme: <b>sein → sei</b></p>
+    <table>
+      <tr><th>Person</th><th>sagen</th><th>haben</th><th>sein</th></tr>
+      <tr><td>er/sie/es</td><td>sage</td><td>habe</td><td><b>sei</b></td></tr>
+      <tr><td>sie/Sie (Pl.)</td><td>sagen*</td><td>haben*</td><td>seien</td></tr>
+    </table>
+    <p>* Falls KI = Indikativ → man nimmt Konjunktiv II (würden) als Ersatz.</p>
+    <h3>In der Praxis</h3>
+    <div class="ex-box"><b>Direkt:</b> „Das Produkt ist fehlerfrei."<br><b>Indirekt:</b> Er behauptete, das Produkt <b>sei</b> fehlerfrei.</div>
+    <div class="ex-box"><b>Direkt:</b> „Wir haben pünktlich geliefert."<br><b>Indirekt:</b> Sie sagten, sie <b>hätten</b> pünktlich geliefert. (Perfekt KI)</div>
+    <div class="tip"><b>Konjunktiv I in Rezepten und Anleitungen:</b> Man <b>nehme</b> 4 Eier … — es <b>sei</b> beachtet, dass … Diese Verwendung ist heute eher stilistisch.</div>`,
+  },
+
 ];
 
 /* ============================================================
@@ -657,6 +908,12 @@ const QUIZ = [
   {q:'Funktionsverbgefüge für „entscheiden":',o:['eine Entscheidung treffen','eine Frage stellen','Hilfe leisten'],a:0},
   {q:'Trend beschreiben: „Im ___ zum Vorjahr stiegen die Umsätze."',o:['Gegensatz','Vergleich','Unterschied'],a:1},
   {q:'Modalpartikel für Vermutung:',o:['ja','halt','wohl'],a:2},
+  ,{q:'„Bamberg ist ___ schönsten Städte Bayerns." (die Stadt)',o:['einer der','eine der','eines der'],a:1},
+  {q:'Präpositionen mit Dativ:',o:['durch, für, ohne','seit, bei, mit','um, gegen, bis'],a:1},
+  {q:'„Das ist ___ Haus. ___ Haus ist groß." — Artikel?',o:['ein … Das','der … Das','ein … Ein'],a:0},
+  {q:'Perfekt mit sein:',o:['lesen, schreiben, essen','gehen, fahren, einschlafen','kaufen, helfen, denken'],a:1},
+  {q:'Konjunktiv I — Er sagte, er ___ müde. (sein)',o:['ist','sei','wäre'],a:1},
+
 ];
 
 /* ============================================================
