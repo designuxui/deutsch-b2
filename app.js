@@ -517,8 +517,6 @@ const COURSE = [
   ]
 },
 
-
-,
 /* ── Einheit 11 ─────────────────────────────────────── A2 ── */
 { id:'l11', tag:'Fragen', level:'b1',
   title:'W-Fragewörter & Fragen stellen',
@@ -831,7 +829,7 @@ const GRAMMAR = [
     <h3>Erweitertes Partizipialattribut (B2+)</h3>
     <div class="ex-box"><b>der gestern vom Kunden eingereichte Antrag</b><span class="gl">заявление, поданное вчера клиентом</span></div>
     <div class="tip"><b>Stil-Hinweis:</b> Erweiterte Partizipialattribute sind typisch für formelle Schrifttexte (Behörden, Verträge). Im Gespräch vermeidet man sie.</div>`,
-  },,
+  },
   { id:'g7', icon:'🧩', title:'Partitiver Genitiv — „einer der …"',
     desc:'Auswahl aus einer Gruppe: einer/eine/eines der …, keiner/viele der …',
     html:`
@@ -908,7 +906,7 @@ const QUIZ = [
   {q:'Funktionsverbgefüge für „entscheiden":',o:['eine Entscheidung treffen','eine Frage stellen','Hilfe leisten'],a:0},
   {q:'Trend beschreiben: „Im ___ zum Vorjahr stiegen die Umsätze."',o:['Gegensatz','Vergleich','Unterschied'],a:1},
   {q:'Modalpartikel für Vermutung:',o:['ja','halt','wohl'],a:2},
-  ,{q:'„Bamberg ist ___ schönsten Städte Bayerns." (die Stadt)',o:['einer der','eine der','eines der'],a:1},
+  {q:'„Bamberg ist ___ schönsten Städte Bayerns." (die Stadt)',o:['einer der','eine der','eines der'],a:1},
   {q:'Präpositionen mit Dativ:',o:['durch, für, ohne','seit, bei, mit','um, gegen, bis'],a:1},
   {q:'„Das ist ___ Haus. ___ Haus ist groß." — Artikel?',o:['ein … Das','der … Das','ein … Ein'],a:0},
   {q:'Perfekt mit sein:',o:['lesen, schreiben, essen','gehen, fahren, einschlafen','kaufen, helfen, denken'],a:1},
@@ -949,7 +947,7 @@ const lById=id=>COURSE.find(l=>l.id===id);
 const gById=id=>GRAMMAR.find(g=>g.id===id);
 const cWord=w=>w.replace(/\s*\(.*?\)/,'').replace(/^(der|die|das|sich)\s+/i,'');
 function lPct(l){const d=l.exercises.filter(e=>state.completed.has(e.id)).length;return{done:d,total:l.exercises.length,pct:Math.round(d/l.exercises.length*100)};}
-function totalPct(){const tot=COURSE.reduce((s,l)=>s+l.exercises.length,0);return Math.round(state.completed.size/tot*100);}
+function totalPct(){const tot=COURSE.filter(Boolean).reduce((s,l)=>s+l.exercises.length,0);return Math.round(state.completed.size/tot*100);}
 
 let _v=[];
 function loadV(){_v=window.speechSynthesis?speechSynthesis.getVoices():[];}
@@ -1220,7 +1218,7 @@ function markDone(id){const k=$('#ex-'+id+' .kicker');if(k&&!k.querySelector('.d
 /* ============================================================
    VOCAB TRAINER
 ============================================================ */
-function allW(){const o=[];COURSE.forEach(l=>l.vocab.forEach(v=>o.push({...v,key:l.id+'·'+v.de})));return o;}
+function allW(){const o=[];COURSE.filter(Boolean).forEach(l=>l.vocab.forEach(v=>o.push({...v,key:l.id+'·'+v.de})));return o;}
 function deckW(){
   if(state.deck==='all')return allW();
   if(state.deck==='personal')return state.personal.map(p=>({de:p.de,ru:p.ru,ex:p.ex||'',key:'p·'+p.id}));
