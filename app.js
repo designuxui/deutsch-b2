@@ -712,7 +712,6 @@ const COURSE = [
   ]
 },
 
-,
 /* ── Einheit 15 ─────────────────────────────────────── B1 ── */
 { id:'l15', tag:'Adjektive', level:'b1',
   title:'Adjektivdeklination',
