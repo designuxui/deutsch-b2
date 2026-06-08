@@ -891,6 +891,104 @@ const COURSE = [
      pairs:[['sich entspannen','расслабляться'],['der Schlafmangel','недостаток сна'],['vermeiden','избегать'],['behandeln','лечить']]},
   ]
 },
+
+/* ── Einheit 19 ─────────────────────────────────────── B1 ── */
+{ id:'l19', tag:'Konzessiv', level:'b1',
+  title:'trotz / trotzdem / obwohl',
+  desc:'Drei Wege, einen Gegensatz auszudrücken — mit den richtigen Fällen.',
+  vocab:[
+    {de:'trotz + Genitiv',     ru:'несмотря на (с Род. п.)',      ex:'Trotz des schlechten Wetters fuhr sie.'},
+    {de:'trotzdem',            ru:'тем не менее (гл. предлож.)',   ex:'Es regnete. Trotzdem gingen wir spazieren.'},
+    {de:'obwohl',              ru:'хотя (придаточное, V-End)',     ex:'Obwohl es regnete, gingen wir aus.'},
+    {de:'obgleich',            ru:'хотя (книжный стиль)',          ex:'Obgleich er müde war, arbeitete er weiter.'},
+    {de:'dennoch',             ru:'тем не менее (= trotzdem)',     ex:'Er war krank. Dennoch kam er zur Arbeit.'},
+    {de:'zwar … aber',         ru:'конечно … но',                 ex:'Das ist zwar teuer, aber sehr gut.'},
+    {de:'ungeachtet (+Gen)',   ru:'невзирая на',                   ex:'Ungeachtet aller Warnungen reiste er ab.'},
+    {de:'die Warnung',         ru:'предупреждение',                ex:'Trotz der eindringlichen Warnung fuhr er.'},
+    {de:'der Protest',         ru:'протест',                       ex:'Trotz heftiger Proteste wurde es gebaut.'},
+    {de:'das Zeugnis (-se)',   ru:'аттестат, свидетельство',       ex:'Obwohl er gute Zeugnisse hat, findet er keine Stelle.'},
+  ],
+  gramHTML:`
+    <h3>Drei Strukturen im Vergleich</h3>
+    <table>
+      <tr><th>Mittel</th><th>Wortart</th><th>Kasus/Position</th><th>Beispiel</th></tr>
+      <tr><td>trotz</td><td>Präposition</td><td>+ Genitiv</td><td>Trotz des Regens gingen wir.</td></tr>
+      <tr><td>trotzdem</td><td>Adverb</td><td>Pos.1 → Inversion</td><td>Es regnete. Trotzdem gingen wir.</td></tr>
+      <tr><td>obwohl</td><td>Konjunktion</td><td>Nebensatz, V-End</td><td>Obwohl es regnete, gingen wir.</td></tr>
+    </table>
+    <div class="ex-box"><b>Obwohl</b> Bernd sehr gute Zeugnisse hat, <b>findet</b> er keine Stelle.<span class="gl">Хотя у Бернда хорошие аттестаты, он не может найти место.</span></div>
+    <div class="ex-box">Frau Winter ist krank. <b>Trotzdem</b> geht sie ins Büro.<span class="gl">Госпожа Винтер больна. Тем не менее она идёт в офис.</span></div>
+    <div class="ex-box"><b>Trotz</b> heftiger Proteste der Anwohner wurde die Anlage gebaut.<span class="gl">Несмотря на протесты жителей, установку построили.</span></div>
+    <div class="tip"><b>Wichtig bei trotz:</b> Genitiv! „Trotz des schlechten Wetters" — <b>des</b> (Genitiv Mask./Neut.); „trotz der Müdigkeit" — <b>der</b> (Genitiv Fem.).</div>`,
+  exercises:[
+    {id:'l19e1',type:'mc',q:'"Carola feiert eine Party, ___ sie Fieber hat."',
+     options:['trotz','trotzdem','obwohl'],
+     answer:2,explain:'"obwohl" leitet einen Nebensatz ein (Verb ans Ende): „…, obwohl sie Fieber hat."'},
+    {id:'l19e2',type:'mc',q:'"Es regnete den ganzen Abend. ___ war die Gartenparty gut besucht."',
+     options:['Obwohl','Trotzdem','Trotz'],
+     answer:1,explain:'"Trotzdem" steht auf Position 1, danach Inversion: „Trotzdem war die Party …"'},
+    {id:'l19e3',type:'gap',q:'"___ des schlechten Wetters ist sie nach Frankfurt gefahren." (Präposition)',
+     accept:['trotz'],hint:'Präposition + Genitiv.',explain:'Trotz'},
+    {id:'l19e4',type:'listen',
+     audio:'Obwohl Uwe sehr gute Zeugnisse hat, findet er keine Stelle. Thomas besucht seinen Freund trotzdem, obwohl er wenig Zeit hat.',
+     q:'Wie viele "obwohl"-Sätze hörst du?',
+     options:['1','2','3'],
+     answer:1,explain:'"Obwohl Uwe …" und "obwohl er wenig Zeit hat" — zwei obwohl-Sätze.'},
+    {id:'l19e5',type:'order',q:'Bilde den Nebensatz:',
+     words:['Obwohl','Susanne','wenig','geschlafen','hatte','fühlte','sie','sich','erholt'],
+     answer:'Obwohl Susanne wenig geschlafen hatte fühlte sie sich erholt'},
+  ]
+},
+/* ── Einheit 20 ─────────────────────────────────────── B2 ── */
+{ id:'l20', tag:'Partizip I', level:'b2',
+  title:'Partizip I — Bildung, Attribut und zu-Konstruktion',
+  desc:'Die tanzende Frau · der zu prüfende Apparat · sein/haben + zu + Inf.',
+  vocab:[
+    {de:'tanzend',              ru:'танцующий',                    ex:'die tanzende Frau (Frau, die tanzt)'},
+    {de:'fehlend',              ru:'отсутствующий',                ex:'die fehlenden Wörter (Wörter, die fehlen)'},
+    {de:'steigend',             ru:'растущий',                     ex:'steigende Temperaturen'},
+    {de:'wachsend',             ru:'растущий, нарастающий',        ex:'wachsende Probleme'},
+    {de:'entsprechend',         ru:'соответствующий',              ex:'die entsprechenden Unterlagen'},
+    {de:'folgend',              ru:'следующий',                    ex:'im folgenden Abschnitt'},
+    {de:'humpelnd',             ru:'прихрамывающий',               ex:'die humpelnde Frau'},
+    {de:'der zu prüfende Apparat', ru:'аппарат, который должен быть проверен', ex:'Das ist der zu prüfende Apparat.'},
+    {de:'die zu lösende Aufgabe',  ru:'задание, которое следует решить',       ex:'Das ist eine schwierige, zu lösende Aufgabe.'},
+    {de:'die zu übersetzenden Wörter', ru:'слова, которые надо перевести',     ex:'Notieren Sie die zu übersetzenden Wörter.'},
+  ],
+  gramHTML:`
+    <h3>Bildung: Partizip I</h3>
+    <p><b>Infinitiv + -d</b> → tanzen → <b>tanzend</b>. Als Attribut bekommt es Adjektivendungen.</p>
+    <table>
+      <tr><th>Relativsatz</th><th>Partizip I als Attribut</th></tr>
+      <tr><td>die Frau, die tanzt</td><td>die <b>tanzende</b> Frau</td></tr>
+      <tr><td>das Kind, das liest</td><td>das <b>lesende</b> Kind</td></tr>
+      <tr><td>Temperaturen, die steigen</td><td><b>steigende</b> Temperaturen</td></tr>
+    </table>
+    <h3>Partizip I + zu (obligatorisch)</h3>
+    <p>Partizip I mit <b>zu</b> drückt aus, dass etwas <b>getan werden muss/soll</b>:</p>
+    <div class="ex-box"><b>der zu prüfende Apparat</b> = das Gerät, das geprüft werden muss<span class="gl">аппарат, который должен быть проверен</span></div>
+    <div class="ex-box"><b>die zu lösende Aufgabe</b> = die Aufgabe, die gelöst werden muss<span class="gl">задание, которое следует решить</span></div>
+    <h3>sein/haben + zu + Infinitiv</h3>
+    <p>Drückt Pflicht oder Notwendigkeit aus:</p>
+    <div class="ex-box"><b>Das Gedicht ist zu lernen.</b> = Das Gedicht muss gelernt werden.<span class="gl">Стихотворение необходимо выучить.</span></div>
+    <div class="ex-box"><b>Die Studenten haben alle Prüfungen zu bestehen.</b> = müssen bestehen.<span class="gl">Студенты должны сдать все экзамены.</span></div>
+    <div class="tip"><b>Trennbare Verben:</b> aufheben → der <b>aufzuhebende</b> Brief (zu steht zwischen Präfix und Verbstamm).</div>`,
+  exercises:[
+    {id:'l20e1',type:'mc',q:'Partizip I von „schreiben":',
+     options:['geschrieben','schreibend','geschreibt'],
+     answer:1,explain:'Infinitiv + -d: schreiben + d = „schreibend".'},
+    {id:'l20e2',type:'gap',q:'"Siehst du die ___ (tanzen) Frau?" (Partizip I als Attribut, Nom Fem)',
+     accept:['tanzende'],hint:'tanzend + -e (Nom Fem nach die).',explain:'tanzende'},
+    {id:'l20e3',type:'mc',q:'"Das sind die Temperaturen, die steigen." → Partizip I als Attribut:',
+     options:['die gestiegenen Temperaturen','die steigenden Temperaturen','die gestiegen Temperaturen'],
+     answer:1,explain:'Partizip I (Gegenwart, aktiv) → „steigend" + -en (Plural): die steigenden Temperaturen.'},
+    {id:'l20e4',type:'mc',q:'"Das Gedicht ___ gelernt werden" — mit sein+zu gleichbedeutend:',
+     options:['Das Gedicht ist zu lernen.','Das Gedicht war zu lernen.','Das Gedicht wird zu lernen.'],
+     answer:0,explain:'"ist zu lernen" = "muss gelernt werden" — Präsens, Obligation.'},
+    {id:'l20e5',type:'match',q:'Ordne Partizip I seiner Bedeutung zu:',
+     pairs:[['steigend','растущий'],['fehlend','отсутствующий'],['entsprechend','соответствующий'],['zu lösend','подлежащий решению']]},
+  ]
+},
 ]; // END COURSE
 
 /* ============================================================
@@ -1092,6 +1190,25 @@ const GRAMMAR = [
     </table>
     <div class="ex-box"><b>alter Wein · frische Milch · kaltes Wasser</b></div>
     <div class="tip"><b>Kurzregel:</b> Zeigt der Artikel das Geschlecht klar (der/die/das) → Adjektiv -e/-en. Zeigt er es nicht (ein/kein/ohne) → Adjektiv bekommt die Geschlechtsendung selbst.</div>`,
+  }
+,{ id:'g11', icon:'⚙️', title:'sein/haben + zu + Infinitiv',
+    desc:'Pflicht und Notwendigkeit ausdrücken — als Alternative zum Passiv mit müssen.',
+    html:`
+    <h3>Bildung und Bedeutung</h3>
+    <p><b>sein + zu + Infinitiv</b> und <b>haben + zu + Infinitiv</b> drücken aus, dass etwas getan werden <b>muss/soll</b>.</p>
+    <table>
+      <tr><th>Konstruktion</th><th>Bedeutung</th><th>Beispiel</th></tr>
+      <tr><td>sein + zu + Inf.</td><td>muss/kann getan werden (Passiv-ähnlich)</td><td>Das Formular ist auszufüllen.</td></tr>
+      <tr><td>haben + zu + Inf.</td><td>jemand muss etw. tun (aktiv)</td><td>Er hat das Formular auszufüllen.</td></tr>
+    </table>
+    <div class="ex-box"><b>Das Gedicht ist zu lernen.</b> = Das Gedicht muss gelernt werden.<span class="gl">Стихотворение необходимо выучить.</span></div>
+    <div class="ex-box"><b>Die Studenten haben alle Prüfungen zu bestehen.</b> = müssen bestehen.<span class="gl">Студенты должны сдать все экзамены.</span></div>
+    <div class="ex-box"><b>Dieser Prozess ist genau zu kontrollieren.</b> = muss kontrolliert werden.</div>
+    <h3>Partizip I + zu als Attribut</h3>
+    <p>Dieselbe Bedeutung — aber als erweitertes Adjektiv vor dem Substantiv:</p>
+    <div class="ex-box"><b>der zu prüfende Apparat</b> = der Apparat, der geprüft werden muss</div>
+    <div class="ex-box"><b>die zu lösende Aufgabe</b> = die Aufgabe, die gelöst werden soll</div>
+    <div class="tip"><b>Trennbare Verben:</b> aufheben → <b>auf</b>zuheben → der <b>auf</b>zuhebende Brief. Das „zu" steht zwischen Präfix und Verbstamm.</div>`,
   }];
 
 /* ============================================================
@@ -1125,6 +1242,11 @@ const QUIZ = [
   {q:'"Worüber sprichst du?" → Kurzantwort:',o:['darüber','dafür','darum'],a:0},
   {q:'"Die Bremsen ___ bei der Inspektion geprüft." (Passiv)',o:['sind','werden','haben'],a:1},
   {q:'"Peter ist krank. ___ kann er nicht kommen."',o:['Weil','Denn','Deshalb'],a:2}
+,{q:'"Er kommt, ___ er sehr müde ist." (konzessiv)',o:['trotzdem','obwohl','trotz'],a:1},
+{q:'"Es regnete. ___ gingen wir spazieren." (pos. 1, Inversion)',o:['Obwohl','Trotz','Trotzdem'],a:2},
+{q:'Partizip I von „wachsen":',o:['gewachsen','wachsend','wächst'],a:1},
+{q:'"Das Formular ___ ausgefüllt werden" = "Das Formular ist auszufüllen."',o:['kann','muss','soll'],a:1},
+{q:'"Die Temperaturen, die steigen" → Partizip I als Attribut:',o:['die gestiegenen','die steigenden','die steigend'],a:1}
 ];
 
 /* ============================================================
