@@ -1741,6 +1741,138 @@ const COURSE = [
      pairs:[['1.','erst-'],['3.','dritt-'],['7.','siebt-'],['20.','zwanzigst-']]},
   ]
 },
+
+/* ── Einheit 36 ─────────────────────────────────────── B1 ── */
+{ id:'l36', tag:'lieber/besser', level:'b1',
+  title:'lieber, besser oder mehr? — „Ich mag lieber …"',
+  desc:'Die häufigste Verwechslung für russische Lerner: три способа сказать "больше".',
+  vocab:[
+    {de:'gern → lieber → am liebsten', ru:'охотно → охотнее → охотнее всего (с mögen)',    ex:'Ich mag lieber Kaffee als Tee.'},
+    {de:'gut → besser → am besten',    ru:'хорошо → лучше → лучше всего (с gefallen)',      ex:'Mir gefällt der Mantel besser als die Jacke.'},
+    {de:'viel → mehr → am meisten',   ru:'много → больше → больше всего (количество)',     ex:'Ich esse mehr Obst als Gemüse.'},
+    {de:'Ich mag lieber A als B.',     ru:'Я больше люблю A, чем B. (mögen + lieber)',       ex:'Ich mag lieber Hund als Katze.'},
+    {de:'Mir gefällt A besser als B.', ru:'Мне больше нравится A, чем B. (gefallen + besser)', ex:'Mir gefällt Wien besser als Berlin.'},
+    {de:'Ich esse/trinke mehr A als B.',ru:'Я ем/пью больше A, чем B. (количество + mehr)',  ex:'Er trinkt mehr Wasser als Saft.'},
+    {de:'lieber + Infinitiv',          ru:'лучше/предпочтительнее (делать что-то)',           ex:'Ich gehe lieber zu Fuß als mit dem Bus.'},
+    {de:'besser + Adjektiv',           ru:'лучше (прилагательное)',                           ex:'Das Auto ist besser als das alte.'},
+    {de:'noch mehr',                   ru:'ещё больше (количество)',                          ex:'Ich möchte noch mehr Erfahrung sammeln.'},
+  ],
+  gramHTML:`
+    <h3>Das Problem: Drei Bedeutungen von „больше"</h3>
+    <table>
+      <tr><th>Russisch</th><th>Mit welchem Verb?</th><th>Deutsches Wort</th><th>Beispiel</th></tr>
+      <tr><td>Я больше люблю</td><td>mögen / lieben</td><td><b>lieber</b></td><td>Ich mag lieber Fußball als Tennis.</td></tr>
+      <tr><td>Мне больше нравится</td><td>gefallen</td><td><b>besser</b></td><td>Mir gefällt der Film <b>besser</b> als das Buch.</td></tr>
+      <tr><td>Я ем/пью больше</td><td>essen, trinken, haben…</td><td><b>mehr</b></td><td>Ich esse <b>mehr</b> Fleisch als Fisch.</td></tr>
+    </table>
+    <div class="ex-box"><b>Falsch:</b> Ich mag <b>mehr</b> Kaffee als Tee.<br><b>Richtig:</b> Ich mag <b>lieber</b> Kaffee als Tee.<span class="gl">Mögen + lieber (не mehr!)</span></div>
+    <div class="ex-box"><b>Falsch:</b> Mir gefällt München <b>lieber</b> als Wien.<br><b>Richtig:</b> Mir gefällt München <b>besser</b> als Wien.<span class="gl">Gefallen + besser (не lieber!)</span></div>
+    <div class="tip"><b>Eselsbrücke:</b> mögen → <b>gern/lieber</b> (Vorliebe). gefallen → <b>gut/besser</b> (Geschmack). essen/trinken/haben → <b>viel/mehr</b> (Menge).</div>`,
+  exercises:[
+    {id:'l36e1',type:'mc',q:'"Ich mag ___ Fußball als Tennis." (mögen → ?)',
+     options:['mehr','besser','lieber'],
+     answer:2,explain:'"mögen" braucht "lieber" für Vergleiche: "Ich mag lieber Fußball als Tennis."'},
+    {id:'l36e2',type:'mc',q:'"Mir gefällt das rote Kleid ___ als das blaue." (gefallen → ?)',
+     options:['lieber','mehr','besser'],
+     answer:2,explain:'"gefallen" → "besser": "Mir gefällt das rote Kleid besser als das blaue."'},
+    {id:'l36e3',type:'mc',q:'"Er trinkt ___ Kaffee als Tee." (Menge → ?)',
+     options:['lieber','besser','mehr'],
+     answer:2,explain:'Menge (trinken) → "mehr": "Er trinkt mehr Kaffee als Tee."'},
+    {id:'l36e4',type:'listen',
+     audio:'Ich mag lieber Jazz als Rock. Mir gefällt München besser als Berlin. Ich esse mehr Gemüse als Fleisch.',
+     q:'Welche drei Vergleichswörter hörst du?',
+     options:['lieber, mehr, besser','besser, lieber, mehr','mehr, besser, lieber'],
+     answer:0,explain:'"lieber" nach mögen · "besser" nach gefallen · "mehr" für Menge — in dieser Reihenfolge.'},
+    {id:'l36e5',type:'match',q:'Ordne Verb und Vergleichswort zu:',
+     pairs:[['mögen (Vorliebe)','lieber'],['gefallen (Geschmack)','besser'],['essen / trinken (Menge)','mehr'],['gut → besser → …','am besten']]},
+  ]
+},
+/* ── Einheit 37 ─────────────────────────────────────── B1 ── */
+{ id:'l37', tag:'derselbe', level:'b1',
+  title:'derselbe / dieselbe / dasselbe',
+  desc:'Тот же самый (не просто похожий, а именно тот!) — Demonstrativpronomen.',
+  vocab:[
+    {de:'derselbe',    ru:'тот же самый (M Nom.)',    ex:'Wir haben denselben Humor.'},
+    {de:'dieselbe',    ru:'та же самая (F Nom.)',      ex:'Sie trägt dieselbe Jacke wie gestern.'},
+    {de:'dasselbe',    ru:'то же самое (N Nom.)',      ex:'Das ist dasselbe Smartphonemodell.'},
+    {de:'dieselben',   ru:'те же самые (Plural)',      ex:'Meine Töchter spielen mit denselben Puppen.'},
+    {de:'denselben',   ru:'того же самого (M Akk.)',   ex:'Ich mag denselben Film wie du.'},
+    {de:'demselben',   ru:'тому же самому (M/N Dat.)', ex:'Jürgen wohnt in demselben Land.'},
+    {de:'desselben',   ru:'того же самого (M/N Gen.)', ex:'Sie sind Mitglieder desselben Vereins.'},
+    {de:'derselbe ≠ der gleiche', ru:'тот же ≠ такой же (но другой)',ex:'Wir haben dasselbe Buch. (exakt dieses Buch) vs. Wir haben das gleiche Buch. (identisches Modell)'},
+  ],
+  gramHTML:`
+    <h3>Bildung: der/die/das + -selbe(-n)</h3>
+    <p>Der erste Teil (<b>der-/die-/das-</b>) wird wie der <b>bestimmte Artikel</b> dekliniert. Der zweite Teil (<b>-selbe</b>) bekommt die <b>schwachen Adjektivendungen</b> (nach bestimmtem Artikel).</p>
+    <table>
+      <tr><th>Fall</th><th>Mask.</th><th>Fem.</th><th>Neut.</th><th>Plural</th></tr>
+      <tr><td>Nom.</td><td>derselbe</td><td>dieselbe</td><td>dasselbe</td><td>dieselben</td></tr>
+      <tr><td>Akk.</td><td><b>den</b>selben</td><td>dieselbe</td><td>dasselbe</td><td>dieselben</td></tr>
+      <tr><td>Dat.</td><td><b>dem</b>selben</td><td><b>der</b>selben</td><td>demselben</td><td><b>den</b>selben</td></tr>
+      <tr><td>Gen.</td><td><b>des</b>selben</td><td><b>der</b>selben</td><td>desselben</td><td>derselben</td></tr>
+    </table>
+    <h3>derselbe vs. der gleiche</h3>
+    <div class="ex-box"><b>Wir lesen dasselbe Buch.</b> = genau dieses eine Buch (z.B. wir teilen es)<span class="gl">Мы читаем ту же (одну и ту же) книгу.</span></div>
+    <div class="ex-box"><b>Wir lesen das gleiche Buch.</b> = identisches Buch, aber jeder hat sein eigenes Exemplar<span class="gl">Мы читаем одинаковую книгу (каждый свой экземпляр).</span></div>
+    <div class="tip"><b>Merke:</b> derselbe = exakt dasselbe Objekt. der gleiche = nur gleiche Art/Modell.</div>`,
+  exercises:[
+    {id:'l37e1',type:'mc',q:'"Wir haben ___ Humor." (derselbe, Akk. Mask.)',
+     options:['derselben','denselben','dasselbe'],
+     answer:1,explain:'Akkusativ Maskulin → "den-" + -selben: "denselben Humor".'},
+    {id:'l37e2',type:'mc',q:'"Sie sind Mitglieder ___ Vereins." (Gen. Mask.)',
+     options:['desselben','demselben','derselben'],
+     answer:0,explain:'Genitiv Maskulin → "des-" + -selben: "desselben Vereins".'},
+    {id:'l37e3',type:'gap',q:'"Max und Alan spielen in ___ Fußballmannschaft." (Dat. Fem.)',
+     accept:['derselben'],hint:'Dativ Femininum → "der-" + -selben.',explain:'derselben'},
+    {id:'l37e4',type:'mc',q:'"Das ist ___ Auto, das ich gestern gesehen habe." (Nom. Neut.)',
+     options:['derselbe','dieselbe','dasselbe'],
+     answer:2,explain:'Nominativ Neutrum → "das-" + -selbe: "dasselbe Auto".'},
+    {id:'l37e5',type:'match',q:'Ordne Fall und Form zu (Maskulinum):',
+     pairs:[['Nom. M','derselbe'],['Akk. M','denselben'],['Dat. M','demselben'],['Gen. M','desselben']]},
+  ]
+},
+/* ── Einheit 38 ─────────────────────────────────────── B1 ── */
+{ id:'l38', tag:'Lesetext B1', level:'b1',
+  title:'Lesetext — Ein Besuch bei der Großmutter',
+  desc:'Ein authentischer Text mit Relativsätzen und Präteritum — Lesen und Verstehen.',
+  vocab:[
+    {de:'riechen (roch)',         ru:'пахнуть',                     ex:'Das Essen riecht gut!'},
+    {de:'aufessen',               ru:'съесть всё',                  ex:'Sie hat schon alles aufgegessen.'},
+    {de:'nicken',                 ru:'кивать',                      ex:'Oma nickt. "Ja, nimm das Buch."'},
+    {de:'auf jeder Seite',        ru:'на каждой странице',          ex:'Auf jeder Seite sind Fotos.'},
+    {de:'besonders',              ru:'особенно',                    ex:'Zwei Fotos sehen besonders interessant aus.'},
+    {de:'der Schrank (-"e)',       ru:'шкаф',                       ex:'Das Buch liegt im Schrank.'},
+    {de:'sich ansehen',           ru:'рассматривать, смотреть на',  ex:'Darf ich mir das ansehen?'},
+    {de:'die Reise (-n)',          ru:'путешествие, поездка',        ex:'Oma erzählt von ihren Reisen.'},
+    {de:'der Elefant (-en)',       ru:'слон',                       ex:'In Afrika sah sie wilde Elefanten.'},
+    {de:'das Foto (-s)',           ru:'фотография',                  ex:'Auf manchen Bildern ist Oma jung.'},
+    {de:'zurücklehnen',           ru:'откидываться назад',          ex:'Sie lehnt sich zurück und erzählt.'},
+    {de:'neugierig',              ru:'любопытный',                  ex:'Das Kind ist sehr neugierig.'},
+  ],
+  gramHTML:`
+    <h3>Lesetext: Ein Besuch bei Oma</h3>
+    <div style="background:rgba(124,195,34,0.08);border-left:3px solid var(--lime);padding:14px 18px;border-radius:6px;line-height:1.9;margin-bottom:16px;font-size:15px">
+      <p>Maya besucht heute ihre Großmutter Frieda. Oma kocht Kartoffeln mit Spargel — es <b>riecht</b> wunderbar. „Du hast alles <b>aufgegessen</b>! Möchtest du noch etwas?", fragt Frieda. „Nein danke", sagt Maya. Sie hat wirklich zu viel gegessen.</p>
+      <p>Nach dem Essen <b>setzt</b> sich Maya auf das Sofa. Sie sieht ein großes Buch im Schrank, das sie noch nie gesehen hat. „Darf ich mir das <b>ansehen</b>?", fragt sie. Oma nickt. Maya nimmt das Buch — auf jeder Seite sind Fotos. Auf manchen Fotos ist Oma noch sehr jung, auf anderen schon älter.</p>
+      <p>„<b>Erzähl</b> mir etwas über deine Reisen!", sagt Maya neugierig. Oma lächelt und lehnt sich zurück. „In Afrika habe ich einen Elefanten gesehen, dem ich fast ins Auge geschaut habe. In Irland hat es jeden Tag geregnet, aber die grünen Wiesen, die ich dort gesehen habe, waren wunderschön."</p>
+      <p>Maya hört aufmerksam zu. Sie denkt: „Die Fotos, die in diesem Buch sind, zeigen ein wirklich aufregendes Leben!"</p>
+    </div>
+    <div style="color:var(--muted);font-size:13px">💡 Achte auf die Relativsätze im Text: „das Buch, das sie noch nie gesehen hat" / „die Wiesen, die ich dort gesehen habe"</div>`,
+  exercises:[
+    {id:'l38e1',type:'mc',q:'Was macht Maya als Erstes bei Oma?',
+     options:['Sie schaut sich Fotos an.','Sie isst Kartoffeln mit Spargel.','Sie liest ein Buch.'],
+     answer:1,explain:'"Oma kocht Kartoffeln mit Spargel" — das ist das Mittagessen, das Maya zuerst isst.'},
+    {id:'l38e2',type:'mc',q:'Was ist auf den Fotos in dem großen Buch zu sehen?',
+     options:['Nur Oma als junges Mädchen','Oma in verschiedenen Lebensphasen','Bilder aus Deutschland'],
+     answer:1,explain:'"Auf manchen Fotos ist Oma noch sehr jung, auf anderen schon älter" — verschiedene Lebensabschnitte.'},
+    {id:'l38e3',type:'gap',q:'"Das Buch, ___ sie noch nie gesehen hatte, lag im Schrank." (Neut. Akk.)',
+     accept:['das'],hint:'das Buch → Neutrum, Akkusativ → Relativpronomen?',explain:'das'},
+    {id:'l38e4',type:'gap',q:'"Die Wiesen, ___ sie in Irland gesehen hat, waren wunderschön." (Pl. Akk.)',
+     accept:['die'],hint:'die Wiesen → Plural, Akkusativ → Relativpronomen?',explain:'die'},
+    {id:'l38e5',type:'match',q:'Ordne Wort und Bedeutung zu:',
+     pairs:[['neugierig','любопытный'],['aufessen','съесть всё'],['nicken','кивать'],['sich ansehen','рассматривать']]},
+  ]
+},
 ]; // END COURSE
 
 /* ============================================================
@@ -2086,6 +2218,29 @@ const GRAMMAR = [
     </table>
     <div class="ex-box"><b>Nach der Prüfung durfte er in Urlaub fahren.</b> → <b>Nach der Prüfung durfte in Urlaub gefahren werden.</b><span class="gl">После экзамена можно было уехать в отпуск.</span></div>
     <div class="tip"><b>Wortstellung:</b> Modalverb (Position 2) + … + Partizip II + werden (am Satzende).<br>"Der Hund <b>muss</b> sofort <b>operiert werden</b>."</div>`,
+  }
+,{ id:'g17', icon:'🔄', title:'lieber / besser / mehr — три "больше"',
+    desc:'Как сказать "больше" в разных контекстах — типичная ловушка.',
+    html:`
+    <h3>Три слова для "больше"</h3>
+    <table>
+      <tr><th>Русское значение</th><th>Немецкий Kontext</th><th>Wort</th></tr>
+      <tr><td>больше люблю (Vorliebe)</td><td>nach <b>mögen, lieben, gerne</b></td><td><b>lieber</b></td></tr>
+      <tr><td>больше нравится (Geschmack)</td><td>nach <b>gefallen, aussehen</b></td><td><b>besser</b></td></tr>
+      <tr><td>больше (Menge)</td><td>essen, trinken, haben, arbeiten…</td><td><b>mehr</b></td></tr>
+    </table>
+    <h3>Beispiele</h3>
+    <div class="ex-box"><b>mögen → lieber:</b> Ich mag <b>lieber</b> Jazz als Rock.<span class="gl">Я больше люблю джаз, чем рок.</span></div>
+    <div class="ex-box"><b>gefallen → besser:</b> Mir gefällt München <b>besser</b> als Köln.<span class="gl">Мне больше нравится Мюнхен, чем Кёльн.</span></div>
+    <div class="ex-box"><b>Menge → mehr:</b> Er isst <b>mehr</b> Obst als Gemüse.<span class="gl">Он ест больше фруктов, чем овощей.</span></div>
+    <h3>Steigerungsstufen</h3>
+    <table>
+      <tr><th>Grundform</th><th>Komparativ</th><th>Superlativ</th></tr>
+      <tr><td>gern</td><td><b>lieber</b></td><td>am liebsten</td></tr>
+      <tr><td>gut</td><td><b>besser</b></td><td>am besten</td></tr>
+      <tr><td>viel</td><td><b>mehr</b></td><td>am meisten</td></tr>
+    </table>
+    <div class="tip"><b>Test für dich selbst:</b> Kannst du das russische Wort ersetzen? "любить" → lieber. "нравиться" → besser. "количество" → mehr.</div>`,
   }];
 
 /* ============================================================
@@ -2149,6 +2304,13 @@ const QUIZ = [
 {q:'"Ich ___ das Bild an die Wand." (Aktion — Wohin?)',o:['hänge','hängt','liege'],a:0},
 {q:'"Heute ist der ___ März." (3.)',o:['dritte','drite','dreite'],a:0},
 {q:'"Der Hund ___ sofort operiert ___." (müssen, Passiv)',o:['muss … werden','wird … müssen','hat … werden'],a:0}
+,{q:'"Hier ___ man nicht rauchen." (Verbot)',o:['kann','darf','soll'],a:1},
+{q:'"Ich komme ___ Polen." (Herkunft)',o:['nach','aus','von'],a:1},
+{q:'"Was machst du ___ Wochenende?" (Zeit)',o:['im','am','beim'],a:1},
+{q:'"Er hat ein Auto, aber ___ Auto ist kaputt." (sein)',o:['sein','ihres','seiner'],a:0},
+{q:'"Ich mag ___ Kaffee als Tee." (mögen + Vergleich)',o:['mehr','besser','lieber'],a:2},
+{q:'"Mir gefällt München ___ als Berlin." (gefallen + Vergleich)',o:['lieber','besser','mehr'],a:1},
+{q:'"Das ist ___ Buch, das er mir empfohlen hat." (Nom. Neut.)',o:['derselbe','dieselbe','dasselbe'],a:2}
 ];
 
 /* ============================================================
