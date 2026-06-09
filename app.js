@@ -1140,6 +1140,153 @@ const COURSE = [
      pairs:[['heutzutage','в наши дни'],['bummeln','прогуливаться'],['bereichern','обогащать'],['Was mich angeht','что касается меня']]},
   ]
 },
+
+/* ── Einheit 24 ─────────────────────────────────────── B1 ── */
+{ id:'l24', tag:'Temporalsatz', level:'b1',
+  title:'Temporale Nebensätze — bevor, nachdem, während, seitdem, solange',
+  desc:'Zeitliche Abfolge und Gleichzeitigkeit ausdrücken.',
+  vocab:[
+    {de:'bevor',    ru:'прежде чем, до того как',   ex:'Bevor sie isst, wäscht sie die Hände.'},
+    {de:'nachdem',  ru:'после того как',             ex:'Nachdem er gegessen hatte, las er.'},
+    {de:'während',  ru:'пока, в то время как',       ex:'Während er schläft, räume ich auf.'},
+    {de:'seitdem',  ru:'с тех пор как',              ex:'Seitdem sie mehr lernt, ist sie froh.'},
+    {de:'solange',  ru:'пока, до тех пор пока',      ex:'Solange du lügst, helfe ich dir nicht.'},
+    {de:'sobald',   ru:'как только',                 ex:'Sobald er ankommt, rufe ich an.'},
+    {de:'bis',      ru:'до тех пор пока (не)',        ex:'Warte, bis ich zurückkomme.'},
+    {de:'als',      ru:'когда (однократно, прошлое)', ex:'Als ich jung war, spielte ich viel.'},
+    {de:'wenn',     ru:'когда/если (повторно/будущее)', ex:'Wenn es regnet, bleiben wir zu Hause.'},
+    {de:'weil vs. damit', ru:'потому что vs. чтобы', ex:'Ich lerne, weil es wichtig ist. / damit ich gut werde.'},
+  ],
+  gramHTML:`
+    <h3>Übersicht: Temporale Konjunktionen</h3>
+    <table>
+      <tr><th>Konjunktion</th><th>Bedeutung</th><th>Tense-Regel</th><th>Beispiel</th></tr>
+      <tr><td>bevor</td><td>прежде чем</td><td>beide Sätze: gleiche Zeit</td><td>Bevor er isst, wäscht er die Hände.</td></tr>
+      <tr><td>nachdem</td><td>после того как</td><td>Nebensatz: eine Stufe früher!</td><td>Nachdem er gegessen <b>hatte</b>, schlief er.</td></tr>
+      <tr><td>während</td><td>пока (одновременно)</td><td>gleiche Zeit</td><td>Während sie kocht, lese ich.</td></tr>
+      <tr><td>seitdem</td><td>с тех пор как</td><td>Nebensatz: Vergangenheit</td><td>Seitdem er Sport treibt, fühlt er sich wohl.</td></tr>
+      <tr><td>solange</td><td>пока (условие)</td><td>gleiche Zeit</td><td>Solange du schläfst, bleibe ich hier.</td></tr>
+    </table>
+    <h3>Besonderheit: nachdem → eine Zeitstufe zurück</h3>
+    <div class="ex-box"><b>Nachdem</b> ich aufgestanden <b>bin</b>, frühstücke ich. <span class="gl">(Hauptsatz Präsens → Nebensatz Perfekt)</span></div>
+    <div class="ex-box"><b>Nachdem</b> Hans Rita angerufen <b>hatte</b>, besuchte er sie. <span class="gl">(Hauptsatz Präteritum → Nebensatz Plusquamperfekt)</span></div>
+    <h3>weil vs. damit</h3>
+    <div class="ex-box"><b>weil</b> = Ursache: Ich lerne, <b>weil</b> die Prüfung morgen ist.<span class="gl">потому что — говорим о причине</span></div>
+    <div class="ex-box"><b>damit</b> = Absicht/Ziel: Ich lerne, <b>damit</b> ich die Prüfung bestehe.<span class="gl">чтобы — говорим о цели</span></div>`,
+  exercises:[
+    {id:'l24e1',type:'mc',q:'"___ Heike ihr Buch liest, macht sie einen Kaffee." (зuerst Kaffee, dann lesen)',
+     options:['Nachdem','Bevor','Seitdem'],
+     answer:1,explain:'"bevor" = прежде чем: сначала кофе, потом чтение. Verb ans Ende: liest.'},
+    {id:'l24e2',type:'mc',q:'"___ Florian schläft, räume ich auf." (gleichzeitig)',
+     options:['Bevor','Nachdem','Während'],
+     answer:2,explain:'"während" = пока/в то время как: оба действия одновременны.'},
+    {id:'l24e3',type:'gap',q:'"___ Hans Rita angerufen hatte, besuchte er sie." (сначала звонок, потом визит)',
+     accept:['nachdem','Nachdem'],hint:'Plusquamperfekt im Nebensatz → welche Konjunktion?',explain:'Nachdem'},
+    {id:'l24e4',type:'mc',q:'"Barbara arbeitet am Wochenende, ___ sie Geld braucht." (Ursache, nicht Ziel)',
+     options:['damit','weil','seitdem'],
+     answer:1,explain:'"weil" = причина (потому что). "damit" выражало бы цель.'},
+    {id:'l24e5',type:'match',q:'Ordne Konjunktion und Bedeutung zu:',
+     pairs:[['bevor','прежде чем (до того как)'],['seitdem','с тех пор как'],['solange','пока (условие)'],['nachdem','после того как']]},
+  ]
+},
+/* ── Einheit 25 ─────────────────────────────────────── A2 ── */
+{ id:'l25', tag:'Reflexive Verben', level:'b1',
+  title:'Reflexive Verben — sich fühlen, sich beeilen und mehr',
+  desc:'Die wichtigsten reflexiven Verben mit Übungen.',
+  vocab:[
+    {de:'sich fühlen',            ru:'чувствовать себя',         ex:'Ich fühle mich heute gut.'},
+    {de:'sich erholen',           ru:'отдыхать, восстанавливаться', ex:'Im Urlaub erhole ich mich vom Stress.'},
+    {de:'sich interessieren für', ru:'интересоваться чем-то',    ex:'Ich interessiere mich für Musik.'},
+    {de:'sich ärgern über',       ru:'злиться из-за чего-то',    ex:'Er ärgert sich über den Lärm.'},
+    {de:'sich beeilen',           ru:'торопиться, спешить',       ex:'Wir müssen uns beeilen!'},
+    {de:'sich vorstellen',        ru:'представляться, знакомиться', ex:'Darf ich mich vorstellen? Ich heiße Anton.'},
+    {de:'sich erinnern an',       ru:'вспоминать о чём-то',      ex:'Ich erinnere mich gern an meine Kindheit.'},
+    {de:'sich verabschieden von', ru:'прощаться с кем-то',       ex:'Er verabschiedet sich von seiner Familie.'},
+    {de:'sich verspäten',         ru:'опаздывать',                ex:'Der Bus verspätet sich um 10 Minuten.'},
+    {de:'sich beschweren über',   ru:'жаловаться на что-то',     ex:'Er beschwert sich über den Lärm.'},
+    {de:'sich beteiligen an',     ru:'участвовать в чём-то',     ex:'Alle beteiligen sich an der Diskussion.'},
+    {de:'sich treffen mit',       ru:'встречаться с кем-то',     ex:'Wir treffen uns heute mit Freunden.'},
+  ],
+  gramHTML:`
+    <h3>Reflexivpronomen — Übersicht</h3>
+    <table>
+      <tr><th>Person</th><th>Akkusativ (меня/себя)</th><th>Dativ (мне/себе)</th></tr>
+      <tr><td>ich</td><td>mich</td><td>mir</td></tr>
+      <tr><td>du</td><td>dich</td><td>dir</td></tr>
+      <tr><td>er/sie/es</td><td>sich</td><td>sich</td></tr>
+      <tr><td>wir</td><td>uns</td><td>uns</td></tr>
+      <tr><td>ihr</td><td>euch</td><td>euch</td></tr>
+      <tr><td>sie/Sie</td><td>sich</td><td>sich</td></tr>
+    </table>
+    <h3>Häufige Verben im Kontext</h3>
+    <div class="ex-box"><b>Ich fühle mich</b> heute nicht gut — ich habe Kopfschmerzen.<span class="gl">Я сегодня плохо себя чувствую.</span></div>
+    <div class="ex-box"><b>Beeilt euch!</b> Der Zug fährt in 5 Minuten ab.<span class="gl">Торопитесь! Поезд отправляется через 5 минут.</span></div>
+    <div class="ex-box"><b>Er erinnert sich</b> gern an seine Zeit in Berlin.<span class="gl">Он с удовольствием вспоминает своё время в Берлине.</span></div>
+    <div class="tip"><b>Merke:</b> Die meisten reflexiven Verben brauchen <b>Akkusativ</b> (mich/dich/sich…). Nur wenige brauchen <b>Dativ</b>: sich etw. vorstellen (представлять что-то), sich etw. wünschen (желать чего-то).</div>`,
+  exercises:[
+    {id:'l25e1',type:'match',q:'Ordne Verb und Bedeutung zu:',
+     pairs:[['sich beeilen','торопиться'],['sich verspäten','опаздывать'],['sich erholen','отдыхать'],['sich vorstellen','представляться']]},
+    {id:'l25e2',type:'mc',q:'"Er ___ sich über den Lärm." (sich ärgern, er)',
+     options:['ärgern','ärgert','ärgerst'],
+     answer:1,explain:'er/sie/es → ärgert. Reflexivpronomen: „sich ärgert sich über" — er ärgert sich.'},
+    {id:'l25e3',type:'gap',q:'"Wir müssen ___ beeilen — der Zug fährt gleich!" (wir)',
+     accept:['uns'],hint:'Reflexivpronomen für "wir" im Akkusativ.',explain:'uns'},
+    {id:'l25e4',type:'listen',
+     audio:'Ich fühle mich heute nicht gut. Ich erinnere mich gern an unseren Urlaub in Wien. Haben Sie sich schon von Ihrer Erkältung erholt?',
+     q:'Welche drei reflexiven Verben hörst du?',
+     options:['fühlen, vorstellen, beeilen','fühlen, erinnern, erholen','ärgern, fühlen, verspäten'],
+     answer:1,explain:'"sich fühlen" · "sich erinnern" · "sich erholen" — alle drei im Text.'},
+    {id:'l25e5',type:'order',q:'Bilde den Satz:',
+     words:['Er','verabschiedet','sich','von','seiner','Familie'],
+     answer:'Er verabschiedet sich von seiner Familie'},
+  ]
+},
+/* ── Einheit 26 ─────────────────────────────────────── B1 ── */
+{ id:'l26', tag:'Weihnachten', level:'b1',
+  title:'Lesetext — Weihnachten in Deutschland',
+  desc:'Traditionen, Adventskranz und der Heilige Abend — Lesen und Verstehen.',
+  vocab:[
+    {de:'Weihnachten',           ru:'Рождество',                  ex:'Weihnachten ist das wichtigste Fest in Deutschland.'},
+    {de:'der Adventskranz',      ru:'адвентский венок',           ex:'Auf dem Adventskranz brennen vier Kerzen.'},
+    {de:'die Adventszeit',       ru:'адвент, предрождественский период', ex:'Die Adventszeit beginnt vier Wochen vor Weihnachten.'},
+    {de:'der Heilige Abend',     ru:'Сочельник (24 декабря)',     ex:'Am Heiligen Abend öffnet man die Geschenke.'},
+    {de:'anzünden',              ru:'зажигать',                   ex:'Man zündet jede Woche eine Kerze an.'},
+    {de:'schmücken',             ru:'украшать',                   ex:'Die Familie schmückt den Weihnachtsbaum.'},
+    {de:'schenken',              ru:'дарить',                     ex:'Man schenkt sich gegenseitig Geschenke.'},
+    {de:'das Weihnachtslied',    ru:'рождественская песня',       ex:'Im Dezember singt man Weihnachtslieder.'},
+    {de:'vorbereiten auf',       ru:'готовиться к чему-то',       ex:'Die Deutschen bereiten sich auf Weihnachten vor.'},
+    {de:'die Süßigkeit (-en)',   ru:'сладости',                   ex:'Die Kinder bekommen unbedingt Süßigkeiten.'},
+    {de:'das Gebäck',            ru:'выпечка, печенье',           ex:'Weihnachtsgebäck ist sehr beliebt.'},
+    {de:'einzigartig',           ru:'неповторимый, уникальный',   ex:'Die Weihnachtsmärkte sind einzigartig.'},
+  ],
+  gramHTML:`
+    <h3>Lesetext: Weihnachten in Deutschland</h3>
+    <div style="background:rgba(124,195,34,0.08);border-left:3px solid var(--lime);padding:14px 18px;border-radius:6px;line-height:1.85;margin-bottom:16px;font-size:15px">
+      <p>Weihnachten ist ein Feiertag — man feiert es am 25. Dezember. Das ist das Fest der Geburt Christi und die Feier des Friedens und der Freude. Weihnachten ist für die Deutschen das <b>wichtigste</b> Fest für die ganze Familie.</p>
+      <p>Die Deutschen beginnen, sich im November auf Weihnachten <b>vorzubereiten</b>. Vier Sonntage vor dem Fest beginnt die <b>Adventszeit</b>. Überall hängt man <b>Adventskränze</b> mit vier Kerzen. Jede Woche <b>zündet</b> man eine Kerze <b>an</b>. Am letzten Sonntag brennen alle vier Kerzen.</p>
+      <p>Vor Weihnachten <b>schmücken</b> die Menschen ihre Wohnungen und Weihnachtsbäume mit Kugeln und Kerzen. Der Vorabend des Festes, der 24. Dezember, heißt <b>der Heilige Abend</b>. In dieser Zeit zünden die Deutschen Kerzen an und singen <b>Weihnachtslieder</b>. Mit Beginn der Weihnacht gratulieren die Menschen einander und <b>schenken</b> sich Geschenke. Die Kinder bekommen unbedingt <b>Süßigkeiten</b>.</p>
+    </div>
+    <div style="color:var(--muted);font-size:13px">💡 Lies den Text — dann löse die Übungen!</div>`,
+  exercises:[
+    {id:'l26e1',type:'cloze',q:'Klick die richtigen Wörter in die Lücken!',
+     parts:['Die Deutschen bereiten sich im November auf Weihnachten ',' . Vier Sonntage vor dem Fest beginnt die ',' . Jede Woche ',' man eine Kerze an. Der 24. Dezember heißt der ',' .'],
+     answers:['vor','Adventszeit','zündet','Heilige Abend'],
+     distract:['nach','Weihnachtszeit','brennt','Stille Nacht']},
+    {id:'l26e2',type:'mc',q:'Wann beginnt die Adventszeit?',
+     options:['Am 1. Dezember','Vier Sonntage vor Weihnachten','Am 24. November'],
+     answer:1,explain:'"Vier Sonntage vor dem Fest beginnt die Adventszeit." — aus dem Text.'},
+    {id:'l26e3',type:'mc',q:'Was ist der "Heilige Abend"?',
+     options:['Der 25. Dezember — der erste Weihnachtstag','Der 24. Dezember — der Vorabend des Festes','Der letzte Adventssonntag'],
+     answer:1,explain:'"Der Vorabend des Festes, der 24. Dezember, heißt der Heilige Abend."'},
+    {id:'l26e4',type:'listen',
+     audio:'Weihnachten ist für die Deutschen das wichtigste Fest für die ganze Familie. Jede Woche zündet man eine Kerze am Adventskranz an. Am Heiligen Abend singen die Deutschen Weihnachtslieder und schenken sich Geschenke.',
+     q:'Wie viele Kerzen brennen am letzten Adventssonntag?',
+     options:['1','2','4'],
+     answer:2,explain:'Vier Kerzen auf dem Adventskranz — jede Woche eine mehr, also vier am letzten Sonntag.'},
+    {id:'l26e5',type:'match',q:'Ordne die Wörter zu:',
+     pairs:[['der Adventskranz','адвентский венок'],['schmücken','украшать'],['schenken','дарить'],['anzünden','зажигать']]},
+  ]
+},
 ]; // END COURSE
 
 /* ============================================================
@@ -1380,6 +1527,33 @@ const GRAMMAR = [
     <div class="ex-box"><b>Das lässt sich nicht erklären.</b> = Das kann nicht erklärt werden.<span class="gl">Это невозможно объяснить.</span></div>
     <div class="ex-box"><b>Das lässt sich leicht lösen.</b> = Das kann leicht gelöst werden.</div>
     <div class="tip"><b>Unterschied:</b> „Er lässt das Auto reparieren" (jemand anderes repariert) ≠ „Er lässt das Auto stehen" (er fährt nicht, lässt es dort).</div>`,
+  }
+,{ id:'g13', icon:'🔑', title:'Modalverben — können, dürfen, müssen, sollen, wollen, mögen',
+    desc:'Vollständige Übersicht aller Modalverben im Präsens und Präteritum.',
+    html:`
+    <h3>Präsens</h3>
+    <table>
+      <tr><th>Person</th><th>können</th><th>dürfen</th><th>müssen</th><th>sollen</th><th>wollen</th><th>mögen/möchten</th></tr>
+      <tr><td>ich</td><td>kann</td><td>darf</td><td>muss</td><td>soll</td><td>will</td><td>mag / möchte</td></tr>
+      <tr><td>du</td><td>kannst</td><td>darfst</td><td>musst</td><td>sollst</td><td>willst</td><td>magst / möchtest</td></tr>
+      <tr><td>er/sie/es</td><td>kann</td><td>darf</td><td>muss</td><td>soll</td><td>will</td><td>mag / möchte</td></tr>
+      <tr><td>wir</td><td>können</td><td>dürfen</td><td>müssen</td><td>sollen</td><td>wollen</td><td>mögen / möchten</td></tr>
+    </table>
+    <h3>Präteritum</h3>
+    <table>
+      <tr><th>Infinitiv</th><th>Präteritum (ich/er)</th><th>Beispiel</th></tr>
+      <tr><td>können</td><td>konnte</td><td>Er konnte nicht kommen.</td></tr>
+      <tr><td>dürfen</td><td>durfte</td><td>Als Kind durfte ich nicht spät aufbleiben.</td></tr>
+      <tr><td>müssen</td><td>musste</td><td>Sie musste früh aufstehen.</td></tr>
+      <tr><td>sollen</td><td>sollte</td><td>Er sollte das Buch lesen.</td></tr>
+      <tr><td>wollen</td><td>wollte</td><td>Otto wollte Schauspieler werden.</td></tr>
+    </table>
+    <h3>können vs. dürfen</h3>
+    <div class="ex-box"><b>können</b> = Fähigkeit: Ich <b>kann</b> gut schwimmen.<span class="gl">умею, могу (способность)</span></div>
+    <div class="ex-box"><b>dürfen</b> = Erlaubnis: Hier <b>darf</b> man nicht rauchen.<span class="gl">разрешено/запрещено</span></div>
+    <h3>müssen vs. sollen</h3>
+    <div class="ex-box"><b>müssen</b> = innere Notwendigkeit: Ich <b>muss</b> jetzt gehen — es ist spät.<span class="gl">должен (внутренняя необходимость)</span></div>
+    <div class="ex-box"><b>sollen</b> = Auftrag von außen: Du <b>sollst</b> das Buch lesen (sagt der Lehrer).<span class="gl">должен (чужое поручение)</span></div>`,
   }];
 
 /* ============================================================
@@ -1423,6 +1597,11 @@ const QUIZ = [
 {q:'"___ ich jung war, hatte ich ein Fahrrad." (einmalig, Vergangenheit)',o:['Wenn','Als','Ob'],a:1},
 {q:'"Sie fragt, ___ das Restaurant geöffnet ist." (indir. Ja/Nein-Frage)',o:['dass','ob','weil'],a:1},
 {q:'"Er ___ sein Auto reparieren." (lassen, Präsens er)',o:['lässt','lasst','lässtet'],a:0}
+,{q:'"___ er gegessen hatte, schlief er." (Sequenz, Verb am Ende)',o:['Bevor','Während','Nachdem'],a:2},
+{q:'"___ du lügst, helfe ich dir nicht." (Bedingung, gleichzeitig)',o:['Seitdem','Solange','Bevor'],a:1},
+{q:'"Er ___ sich über den Lärm." (sich ärgern, er)',o:['ärgert','ärgern','ärgerst'],a:0},
+{q:'"Als Kind ___ ich nicht spät aufbleiben." (Erlaubnis, Prät)',o:['konnte','dürfte','durfte'],a:2},
+{q:'"Hier ___ man nicht rauchen." (Erlaubnis/Verbot)',o:['kann','darf','muss'],a:1}
 ];
 
 /* ============================================================
