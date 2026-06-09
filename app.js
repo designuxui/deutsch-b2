@@ -1287,6 +1287,160 @@ const COURSE = [
      pairs:[['der Adventskranz','адвентский венок'],['schmücken','украшать'],['schenken','дарить'],['anzünden','зажигать']]},
   ]
 },
+
+/* ── Einheit 27 ─────────────────────────────────────── B1 ── */
+{ id:'l27', tag:'Komparativ', level:'b1',
+  title:'Komparativ und Superlativ — Vergleiche',
+  desc:'Steigerungsformen, unregelmäßige Formen und Vergleiche mit als / so…wie.',
+  vocab:[
+    {de:'jung → jünger → am jüngsten',   ru:'молодой → моложе → самый молодой', ex:'Er ist jünger als ich.'},
+    {de:'alt → älter → am ältesten',      ru:'старый → старше → самый старый',   ex:'Sie ist viel älter als er.'},
+    {de:'groß → größer → am größten',     ru:'большой → больше → самый большой', ex:'Berlin ist größer als Wien.'},
+    {de:'gut → besser → am besten',       ru:'хороший → лучше → лучший',         ex:'Ihr Deutsch wird immer besser!'},
+    {de:'viel → mehr → am meisten',       ru:'много → больше → больше всего',    ex:'Er hat am meisten Erfahrung.'},
+    {de:'gern → lieber → am liebsten',    ru:'охотно → охотнее → охотнее всего', ex:'Ich reise am liebsten im Sommer.'},
+    {de:'hoch → höher → am höchsten',     ru:'высокий → выше → самый высокий',   ex:'Der Himalaya ist am höchsten.'},
+    {de:'nah → näher → am nächsten',      ru:'близкий → ближе → ближайший',      ex:'Das nächste Café ist um die Ecke.'},
+    {de:'teuer → teurer → am teuersten',  ru:'дорогой → дороже → самый дорогой', ex:'Dieses Hotel ist am teuersten.'},
+    {de:'als',                            ru:'чем (неравенство)',                 ex:'Er ist größer als sie.'},
+    {de:'so … wie / genauso … wie',       ru:'такой же … как (равенство)',        ex:'Er ist genauso groß wie sie.'},
+    {de:'viel + Komparativ',              ru:'намного + сравнительная степень',   ex:'Diese Tasche ist viel teurer als die.'},
+  ],
+  gramHTML:`
+    <h3>Bildung der Steigerungsformen</h3>
+    <table>
+      <tr><th>Grundform</th><th>Komparativ</th><th>Superlativ</th></tr>
+      <tr><td>klein</td><td>kleiner</td><td>am kleinsten / der/die/das kleinste</td></tr>
+      <tr><td>schnell</td><td>schneller</td><td>am schnellsten</td></tr>
+      <tr><td>alt</td><td>ält<b>er</b> (Umlaut!)</td><td>am ält<b>est</b>en</td></tr>
+      <tr><td>jung</td><td>jünger</td><td>am jüngsten</td></tr>
+      <tr><td>groß</td><td>größer</td><td>am größten</td></tr>
+      <tr><td>hoch</td><td>höher</td><td>am höchsten</td></tr>
+    </table>
+    <h3>Unregelmäßige Formen — auswendig lernen!</h3>
+    <table>
+      <tr><th>Grundform</th><th>Komparativ</th><th>Superlativ</th></tr>
+      <tr><td><b>gut</b></td><td><b>besser</b></td><td><b>am besten</b></td></tr>
+      <tr><td><b>viel</b></td><td><b>mehr</b></td><td><b>am meisten</b></td></tr>
+      <tr><td><b>gern</b></td><td><b>lieber</b></td><td><b>am liebsten</b></td></tr>
+      <tr><td>nah</td><td>näher</td><td>am nächsten</td></tr>
+    </table>
+    <h3>Vergleiche</h3>
+    <div class="ex-box"><b>Er ist größer als sie.</b> — Ungleichheit: <b>als</b><span class="gl">Он выше, чем она.</span></div>
+    <div class="ex-box"><b>Er ist genauso groß wie sie.</b> — Gleichheit: <b>so/genauso … wie</b><span class="gl">Он такого же роста, как и она.</span></div>
+    <div class="ex-box"><b>Diese Tasche ist viel teurer als die.</b> — <b>viel</b> verstärkt den Komparativ<span class="gl">Эта сумка намного дороже, чем та.</span></div>
+    <div class="tip"><b>Umlaute im Komparativ:</b> alt→älter, jung→jünger, kalt→kälter, warm→wärmer, lang→länger, stark→stärker. Merke: nur einsilbige Adjektive mit a/o/u!</div>`,
+  exercises:[
+    {id:'l27e1',type:'mc',q:'"Er ist ___ als ich." (alt — Komparativ)',
+     options:['alter','älter','am ältesten'],
+     answer:1,explain:'Komparativ von "alt" → Umlaut: ä + -er = "älter".'},
+    {id:'l27e2',type:'mc',q:'"Das ist mein ___ Freund." (gut — Superlativ als Attribut)',
+     options:['besserer','am besten','bester'],
+     answer:2,explain:'Superlativ als Attribut (vor dem Nomen): gut → best- + Adjektivendung → "bester Freund".'},
+    {id:'l27e3',type:'gap',q:'"Sie ist genauso alt ___ er." (Gleichheit)',
+     accept:['wie'],hint:'Gleichheit: so/genauso + Adj + ___',explain:'wie'},
+    {id:'l27e4',type:'listen',
+     audio:'Berlin ist größer als Wien, aber Tokyo ist am größten. Ich esse lieber Fisch als Fleisch, aber am liebsten esse ich Gemüse.',
+     q:'Welche Steigerungsformen hörst du? (Komparativ / Superlativ)',
+     options:['2 Komparativ, 2 Superlativ','1 Komparativ, 2 Superlativ','2 Komparativ, 1 Superlativ'],
+     answer:0,explain:'"größer" und "lieber" = Komparativ; "am größten" und "am liebsten" = Superlativ — je 2.'},
+    {id:'l27e5',type:'match',q:'Ordne die unregelmäßigen Formen zu:',
+     pairs:[['gut → besser','лучше'],['viel → mehr','больше'],['gern → lieber','охотнее'],['nah → näher','ближе']]},
+  ]
+},
+/* ── Einheit 28 ─────────────────────────────────────── B1 ── */
+{ id:'l28', tag:'Infinitivsätze', level:'b1',
+  title:'um…zu / damit / ohne…zu / statt…zu',
+  desc:'Ziel, Mittel und Gegensatz mit Infinitivkonstruktionen ausdrücken.',
+  vocab:[
+    {de:'um … zu + Infinitiv',   ru:'чтобы (один субъект)',                ex:'Ich lerne, um die Prüfung zu bestehen.'},
+    {de:'damit',                  ru:'чтобы (разные субъекты)',             ex:'Ich lerne, damit meine Eltern stolz sind.'},
+    {de:'ohne … zu + Infinitiv', ru:'не делая, без того чтобы',            ex:'Er fährt, ohne Karten zu kaufen.'},
+    {de:'statt … zu + Infinitiv',ru:'вместо того чтобы',                   ex:'Statt uns anzurufen, ging er ins Kino.'},
+    {de:'anstatt … zu',          ru:'= statt … zu',                        ex:'Anstatt zu lernen, spielt er Computer.'},
+    {de:'damit + Subjekt',        ru:'чтобы (другой субъект)',              ex:'Ich erkläre es, damit du es verstehst.'},
+    {de:'um zu — gleicher Akteur',ru:'один и тот же субъект → um…zu',      ex:'Sie fährt nach München, um Freunde zu besuchen.'},
+    {de:'trennbare Verben + zu',  ru:'zu стоит между префиксом и глаголом', ex:'Er versucht, früh <b>auf</b>zustehen.'},
+  ],
+  gramHTML:`
+    <h3>um…zu vs. damit — der wichtigste Unterschied</h3>
+    <table>
+      <tr><th>Konstruktion</th><th>Subjekte</th><th>Beispiel</th></tr>
+      <tr><td>um … zu + Inf.</td><td>gleich!</td><td>Ich lerne, <b>um</b> die Prüfung <b>zu</b> bestehen.</td></tr>
+      <tr><td>damit + Nebensatz</td><td>verschieden oder gleich</td><td>Ich lerne, <b>damit</b> ich bestehe. / Ich erkläre, <b>damit</b> du verstehst.</td></tr>
+    </table>
+    <div class="ex-box"><b>Er kam zu mir, um mir zu helfen.</b> (Er kam — er hilft → gleich → um…zu)<span class="gl">Он пришёл ко мне, чтобы помочь.</span></div>
+    <div class="ex-box"><b>Ich erkläre es, damit du es verstehst.</b> (ich erkläre — du verstehst → verschieden → damit)<span class="gl">Я объясняю, чтобы ты понял.</span></div>
+    <h3>ohne … zu und statt … zu</h3>
+    <div class="ex-box"><b>Er fährt mit dem Bus, ohne Fahrkarten zu kaufen.</b><span class="gl">Он едет на автобусе, не покупая билеты.</span></div>
+    <div class="ex-box"><b>Statt uns anzurufen, ging er ins Kino.</b> (trennbar: an|rufen → an<b>zu</b>rufen)<span class="gl">Вместо того чтобы позвонить нам, он пошёл в кино.</span></div>
+    <div class="tip"><b>Trennbare Verben:</b> zu steht zwischen Präfix und Verbstamm: aufzustehen, anzurufen, einzukaufen.</div>`,
+  exercises:[
+    {id:'l28e1',type:'mc',q:'"Ich kam zu dir, ___ dir bei der Übersetzung zu helfen." (gleicher Akteur)',
+     options:['damit','um','statt'],
+     answer:1,explain:'Gleicher Akteur (ich) → "um … zu": Ich kam, um zu helfen.'},
+    {id:'l28e2',type:'mc',q:'"Ich erkläre es langsam, ___ du es verstehst." (verschiedene Akteure)',
+     options:['um zu','ohne zu','damit'],
+     answer:2,explain:'"damit" + Nebensatz wenn der Akteur wechselt (ich → du).'},
+    {id:'l28e3',type:'gap',q:'"Er fährt mit dem Bus, ___ Fahrkarten zu kaufen." (кein Kauf!)',
+     accept:['ohne'],hint:'Er kauft keine Karten — er fährt trotzdem. Ohne ___?',explain:'ohne'},
+    {id:'l28e4',type:'mc',q:'"___ uns anzurufen, ging er ins Kino." (вместо звонка)',
+     options:['Um','Ohne','Statt'],
+     answer:2,explain:'"statt … zu" = вместо того чтобы. Trennbares Verb: an|rufen → an<b>zu</b>rufen.'},
+    {id:'l28e5',type:'match',q:'Ordne Konstruktion und Bedeutung zu:',
+     pairs:[['um … zu','чтобы (один субъект)'],['damit','чтобы (любой субъект, Nebensatz)'],['ohne … zu','не делая / без того чтобы'],['statt … zu','вместо того чтобы']]},
+  ]
+},
+/* ── Einheit 29 ─────────────────────────────────────── B2 ── */
+{ id:'l29', tag:'Bedingungssätze', level:'b2',
+  title:'Konjunktiv II — irreale Bedingungssätze',
+  desc:'Wenn ich mehr Zeit hätte, würde ich reisen — Wünsche und Hypothesen.',
+  vocab:[
+    {de:'Wenn ich Zeit hätte, würde ich reisen.',    ru:'Если бы у меня было время, я бы путешествовал.',   ex:'hätte = KII von haben'},
+    {de:'Wenn sie käme, wäre ich froh.',              ru:'Если бы она пришла, я был бы рад.',               ex:'käme = KII von kommen'},
+    {de:'Wäre ich doch in den USA!',                 ru:'Был бы я сейчас в США!',                          ex:'Wunschsatz ohne wenn'},
+    {de:'Hätte ich nur mehr Freizeit!',              ru:'Имел бы я больше свободного времени!',            ex:'Hätte + nur = Wunsch'},
+    {de:'An deiner Stelle würde ich…',              ru:'На твоём месте я бы…',                            ex:'An deiner Stelle würde ich mehr schlafen.'},
+    {de:'Du hättest … sollen',                       ru:'Тебе следовало бы…',                              ex:'Du hättest mehr Sport treiben sollen.'},
+    {de:'Wenn er gelernt hätte, hätte er bestanden.',ru:'Если бы он учил, он бы сдал.',                    ex:'Vergangenheit: KII + PP'},
+    {de:'Als ob',                                    ru:'как будто бы',                                     ex:'Er tut so, als ob er alles wüsste.'},
+    {de:'würde + Infinitiv',                         ru:'würde-Ersatzform (для большинства глаголов)',      ex:'ich würde kommen (вместо käme)'},
+    {de:'irrealer Konditionalsatz',                  ru:'нереальное условное предложение',                  ex:'Wenn…, dann… (в обоих — Konjunktiv II)'},
+  ],
+  gramHTML:`
+    <h3>Irreale Bedingungssätze — Aufbau</h3>
+    <table>
+      <tr><th>Nebensatz (Bedingung)</th><th>Hauptsatz (Folge)</th></tr>
+      <tr><td><b>Wenn</b> ich Zeit <b>hätte</b>,</td><td>würde ich reisen.</td></tr>
+      <tr><td><b>Wenn</b> sie mehr lernten,</td><td><b>hätten</b> sie bessere Noten.</td></tr>
+      <tr><td><b>Wenn</b> er Kopfschmerzen <b>hätte</b>,</td><td>sollte er Tabletten nehmen.</td></tr>
+    </table>
+    <h3>Gegenwart und Vergangenheit</h3>
+    <div class="ex-box"><b>Gegenwart:</b> Wenn sie den Weg <b>wüsste</b>, <b>könnte</b> sie schnell in die Stadt kommen.<span class="gl">Если бы она знала дорогу, она смогла бы добраться.</span></div>
+    <div class="ex-box"><b>Vergangenheit:</b> Wenn er mehr <b>gelernt hätte</b>, <b>hätte</b> er die Prüfung <b>bestanden</b>.<span class="gl">Если бы он больше учился, он бы сдал экзамен.</span></div>
+    <h3>Wunschsätze</h3>
+    <div class="ex-box"><b>Wäre ich doch in den USA!</b> = Ich wünsche mir, in den USA zu sein.<span class="gl">Был бы я сейчас в США!</span></div>
+    <div class="ex-box"><b>Hätte ich nur mehr Freizeit!</b><span class="gl">Имел бы я больше свободного времени!</span></div>
+    <div class="tip"><b>würde-Ersatzform:</b> Statt "käme" sagt man meist "würde kommen". Ausnahme: hätte, wäre, könnte, müsste, dürfte, sollte — diese direkt ohne würde!</div>`,
+  exercises:[
+    {id:'l29e1',type:'mc',q:'"Wenn sie mehr Sport ___, wäre sie fitter." (treiben, KII Gegenwart)',
+     options:['triebe','würde treiben','treibt'],
+     answer:1,explain:'Im Alltag: würde + Inf. als Ersatz für den KII: "würde treiben". Direkte Form "triebe" ist veraltet.'},
+    {id:'l29e2',type:'mc',q:'"___ ich einen sicheren Freund!" (Wunschsatz)',
+     options:['Wäre','Hätte','Würde'],
+     answer:1,explain:'KII von "haben" = hätte. Wunsch nach einer Person → "Hätte ich einen Freund!"'},
+    {id:'l29e3',type:'gap',q:'"An seiner Stelle ___ ich mehr zu Fuß gehen." (ich, würde)',
+     accept:['würde'],hint:'würde-Ersatzform: An seiner Stelle ___ ich...',explain:'würde'},
+    {id:'l29e4',type:'listen',
+     audio:'Wenn ich mehr Zeit hätte, würde ich jeden Tag Sport treiben. Hätte ich nur mehr Freizeit! An deiner Stelle würde ich weniger arbeiten und mehr schlafen.',
+     q:'Wie viele irreale Konstruktionen (KII oder würde) hörst du?',
+     options:['2','3','4'],
+     answer:2,explain:'"hätte" · "würde treiben" · "Hätte" · "würde … arbeiten" · "würde … schlafen" — mindestens 4 KII-Formen.'},
+    {id:'l29e5',type:'order',q:'Bilde den irrealen Konditionalsatz:',
+     words:['Wenn','sie','den','Weg','wüsste','könnte','sie','schnell','fahren'],
+     answer:'Wenn sie den Weg wüsste könnte sie schnell fahren'},
+  ]
+},
 ]; // END COURSE
 
 /* ============================================================
@@ -1554,6 +1708,42 @@ const GRAMMAR = [
     <h3>müssen vs. sollen</h3>
     <div class="ex-box"><b>müssen</b> = innere Notwendigkeit: Ich <b>muss</b> jetzt gehen — es ist spät.<span class="gl">должен (внутренняя необходимость)</span></div>
     <div class="ex-box"><b>sollen</b> = Auftrag von außen: Du <b>sollst</b> das Buch lesen (sagt der Lehrer).<span class="gl">должен (чужое поручение)</span></div>`,
+  }
+,{ id:'g14', icon:'📊', title:'Komparativ und Superlativ — Vollständig',
+    desc:'Alle Steigerungsformen, Umlaute, Ausnahmen und Vergleichsmuster.',
+    html:`
+    <h3>Regelmäßige Bildung</h3>
+    <table>
+      <tr><th>Grundform</th><th>Komparativ (+er)</th><th>Superlativ (am…sten)</th></tr>
+      <tr><td>klein</td><td>kleiner</td><td>am kleinsten</td></tr>
+      <tr><td>schnell</td><td>schneller</td><td>am schnellsten</td></tr>
+      <tr><td>billig</td><td>billiger</td><td>am billigsten</td></tr>
+      <tr><td>interessant</td><td>interessanter</td><td>am interessantesten</td></tr>
+    </table>
+    <h3>Mit Umlaut</h3>
+    <table>
+      <tr><th>Grundform</th><th>Komparativ</th><th>Superlativ</th></tr>
+      <tr><td>alt</td><td>älter</td><td>am ältesten</td></tr>
+      <tr><td>jung</td><td>jünger</td><td>am jüngsten</td></tr>
+      <tr><td>groß</td><td>größer</td><td>am größten</td></tr>
+      <tr><td>kalt</td><td>kälter</td><td>am kältesten</td></tr>
+      <tr><td>warm</td><td>wärmer</td><td>am wärmsten</td></tr>
+      <tr><td>lang</td><td>länger</td><td>am längsten</td></tr>
+      <tr><td>stark</td><td>stärker</td><td>am stärksten</td></tr>
+      <tr><td>hoch</td><td>höher</td><td>am höchsten</td></tr>
+    </table>
+    <h3>Unregelmäßig</h3>
+    <table>
+      <tr><th>Grundform</th><th>Komparativ</th><th>Superlativ</th></tr>
+      <tr><td><b>gut</b></td><td><b>besser</b></td><td><b>am besten</b></td></tr>
+      <tr><td><b>viel</b></td><td><b>mehr</b></td><td><b>am meisten</b></td></tr>
+      <tr><td><b>gern</b></td><td><b>lieber</b></td><td><b>am liebsten</b></td></tr>
+      <tr><td>nah</td><td>näher</td><td>am nächsten</td></tr>
+    </table>
+    <h3>Vergleichsmuster</h3>
+    <div class="ex-box">Ungleich: <b>als</b> → Er ist größer <b>als</b> sie.</div>
+    <div class="ex-box">Gleich: <b>so/genauso … wie</b> → Er ist genauso groß <b>wie</b> sie.</div>
+    <div class="ex-box">Verstärkt: <b>viel</b> + Komp → Diese Tasche ist <b>viel</b> teurer.</div>`,
   }];
 
 /* ============================================================
@@ -1602,6 +1792,11 @@ const QUIZ = [
 {q:'"Er ___ sich über den Lärm." (sich ärgern, er)',o:['ärgert','ärgern','ärgerst'],a:0},
 {q:'"Als Kind ___ ich nicht spät aufbleiben." (Erlaubnis, Prät)',o:['konnte','dürfte','durfte'],a:2},
 {q:'"Hier ___ man nicht rauchen." (Erlaubnis/Verbot)',o:['kann','darf','muss'],a:1}
+,{q:'"Sie ist ___ als er." (jung — Komparativ)',o:['jüngere','jünger','am jüngsten'],a:1},
+{q:'"Das ist das ___ Hotel in der Stadt." (teuer — Superlativ als Attribut, Neutrum)',o:['teuere','teuerste','am teuersten'],a:1},
+{q:'"Er kam, ___ mir zu helfen." (gleicher Akteur, Ziel)',o:['damit','um','ohne'],a:1},
+{q:'"Wenn ich mehr Zeit ___, würde ich reisen." (haben, KII)',o:['habe','hatte','hätte'],a:2},
+{q:'"___ ich doch mehr Freizeit!" (Wunschsatz, haben)',o:['Wäre','Hätte','Würde'],a:1}
 ];
 
 /* ============================================================
