@@ -1441,6 +1441,155 @@ const COURSE = [
      answer:'Wenn sie den Weg wüsste könnte sie schnell fahren'},
   ]
 },
+
+/* ── Einheit 30 ─────────────────────────────────────── B1 ── */
+{ id:'l30', tag:'Relativsätze', level:'b1',
+  title:'Relativsätze — der/die/das als Relativpronomen',
+  desc:'Der Mann, der dort steht… — Relativpronomen in allen Fällen.',
+  vocab:[
+    {de:'Nom. M: der',  ru:'который (м.р., подлежащее)',    ex:'Der Mann, <b>der</b> dort steht, ist mein Freund.'},
+    {de:'Akk. M: den',  ru:'которого (м.р., доп.)',          ex:'Der Film, <b>den</b> ich gesehen habe, war gut.'},
+    {de:'Dat. M: dem',  ru:'которому (м.р., кос. доп.)',     ex:'Das Kind, <b>dem</b> ich geholfen habe, ist froh.'},
+    {de:'Gen. M: dessen',ru:'чей (м.р.)',                    ex:'Der Künstler, <b>dessen</b> Bild bekannt ist, lebt hier.'},
+    {de:'Nom./Akk. F: die', ru:'которая (ж.р.)',             ex:'Die Frau, <b>die</b> dort sitzt, kennt mich.'},
+    {de:'Dat. F: der',  ru:'которой (ж.р., кос. доп.)',      ex:'Die Freundin, <b>der</b> ich schreibe, wohnt in Wien.'},
+    {de:'Gen. F: deren',ru:'чья (ж.р.)',                     ex:'Die Schriftstellerin, <b>deren</b> Buch ich lese, ist bekannt.'},
+    {de:'Dat. Pl: denen',ru:'которым (мн.ч., Dativ)',        ex:'Die Schüler, <b>denen</b> ich geholfen habe, sind froh.'},
+    {de:'mit Präposition',ru:'предлог + Relativpronomen',    ex:'Die Uni, <b>in der</b> er studiert, liegt in Berlin.'},
+    {de:'Gen. Pl: deren',ru:'чьи (мн.ч.)',                   ex:'Das sind die Schüler, <b>deren</b> Sachen schon gepackt sind.'},
+  ],
+  gramHTML:`
+    <h3>Relativpronomen — Tabelle</h3>
+    <table>
+      <tr><th>Fall</th><th>Mask. (der)</th><th>Fem. (die)</th><th>Neut. (das)</th><th>Plural (die)</th></tr>
+      <tr><td>Nominativ</td><td>der</td><td>die</td><td>das</td><td>die</td></tr>
+      <tr><td>Akkusativ</td><td><b>den</b></td><td>die</td><td>das</td><td>die</td></tr>
+      <tr><td>Dativ</td><td>dem</td><td>der</td><td>dem</td><td><b>denen</b></td></tr>
+      <tr><td>Genitiv</td><td><b>dessen</b></td><td><b>deren</b></td><td><b>dessen</b></td><td><b>deren</b></td></tr>
+    </table>
+    <p>Wie der bestimmte Artikel — außer: Dat. Pl. <b>denen</b> und Genitiv <b>dessen/deren</b>.</p>
+    <h3>Wichtige Regeln</h3>
+    <div class="ex-box"><b>Verb ans Ende</b> des Relativsatzes: Der Mann, der dort <b>steht</b>, ist mein Freund.</div>
+    <div class="ex-box"><b>Geschlecht = Bezugswort</b>, Fall = Funktion im Relativsatz:<br>
+      Der Film <i>(das Bezugswort, Mask.)</i>, <b>den</b> <i>(Akk. = Objekt)</i> ich gesehen habe, war gut.</div>
+    <div class="ex-box"><b>Mit Präposition:</b> Die Uni, <b>in der</b> er studiert, liegt in Berlin.<span class="gl">Präposition steht vor dem Relativpronomen.</span></div>
+    <div class="tip"><b>Genitiv-Relativsätze:</b> Der Künstler, <b>dessen</b> Bild bekannt ist… = Der Künstler — sein Bild ist bekannt. <b>dessen/deren</b> ersetzt ein Possessivpronomen.</div>`,
+  exercises:[
+    {id:'l30e1',type:'mc',q:'"Das ist der Mann, ___ ich kenne." (kennen jemanden → Akk.)',
+     options:['der','den','dem'],
+     answer:1,explain:'"kennen" + Akkusativ. Bezugswort: der Mann (Mask.) → Akk. Mask. = <b>den</b>.'},
+    {id:'l30e2',type:'mc',q:'"Die Frau, ___ ich geholfen habe, ist glücklich." (helfen + Dativ)',
+     options:['die','der','deren'],
+     answer:1,explain:'"helfen" + Dativ. Bezugswort: die Frau (Fem.) → Dat. Fem. = <b>der</b>.'},
+    {id:'l30e3',type:'gap',q:'"Die Uni, in ___ er studiert, liegt in Berlin." (Dativ Fem.)',
+     accept:['der'],hint:'in + Dativ. die Uni → Fem. → in ___?',explain:'der'},
+    {id:'l30e4',type:'mc',q:'"Die Schüler, ___ Sachen schon gepackt sind, fahren morgen." (Genitiv Pl.)',
+     options:['denen','deren','die'],
+     answer:1,explain:'Genitiv Plural = <b>deren</b>: "deren Sachen" = ihre Sachen (Plural).'},
+    {id:'l30e5',type:'match',q:'Ordne Relativpronomen und Fall/Genus zu:',
+     pairs:[['den','Akkusativ Maskulinum'],['der','Dativ Femininum'],['dessen','Genitiv Mask./Neut.'],['denen','Dativ Plural']]},
+  ]
+},
+/* ── Einheit 31 ─────────────────────────────────────── B2 ── */
+{ id:'l31', tag:'Berufswahl', level:'b2',
+  title:'Lesetext — Berufswahl und Bewerbung',
+  desc:'Einen Job finden: Stellenanzeigen, Bewerbung und Vorstellungsgespräch.',
+  vocab:[
+    {de:'die Berufswahl',          ru:'выбор профессии',             ex:'Die Berufswahl ist eine wichtige Entscheidung.'},
+    {de:'die Fähigkeit (-en)',     ru:'способность, умение',         ex:'Man muss seine Fähigkeiten kennen.'},
+    {de:'die Stelle (-n)',         ru:'рабочее место, должность',    ex:'Er sucht eine sichere Stelle.'},
+    {de:'das Gehalt',              ru:'зарплата',                    ex:'93% der Menschen wollen ein gutes Gehalt.'},
+    {de:'die Bewerbung (-en)',     ru:'заявление на работу, резюме', ex:'Ich schicke meine Bewerbung an die Firma.'},
+    {de:'die Stellenanzeige (-n)', ru:'объявление о вакансии',       ex:'Er hat in der Zeitung eine Anzeige gefunden.'},
+    {de:'das Vorstellungsgespräch',ru:'собеседование',               ex:'Ich gehe morgen zum Vorstellungsgespräch.'},
+    {de:'der Lebenslauf',          ru:'резюме (биография)',           ex:'Schick bitte deinen Lebenslauf mit!'},
+    {de:'gefragt sein',            ru:'быть востребованным',         ex:'IT-Berufe sind sehr gefragt.'},
+    {de:'sinnvoll',                ru:'осмысленный, полезный',        ex:'73% wollen eine sinnvolle Arbeit.'},
+    {de:'selbstständig',           ru:'самостоятельно',              ex:'58% möchten ihre Arbeit selbstständig planen.'},
+    {de:'achten auf',              ru:'обращать внимание на',        ex:'Man soll auf seine Interessen achten.'},
+  ],
+  gramHTML:`
+    <h3>Lesetext: Berufswahl</h3>
+    <div style="background:rgba(124,195,34,0.08);border-left:3px solid var(--lime);padding:14px 18px;border-radius:6px;line-height:1.85;margin-bottom:16px;font-size:15px">
+      <p>Jeder Mensch muss einmal einen Beruf wählen. Bei der <b>Berufswahl</b> soll man vor allem auf seine Interessen und <b>Fähigkeiten</b> achten. Man muss sich fragen: Was macht mir Spaß? Was kann ich gut?</p>
+      <p>Man muss auch wissen, ob der Beruf <b>gefragt</b> ist. Bei einer Umfrage hat man die Menschen gefragt, was für sie bei der Arbeit wichtig ist: 93% wollen ein gutes <b>Gehalt</b>. 88% finden eine sichere <b>Stelle</b> wichtig. 73% wollen, dass ihre Arbeit <b>sinnvoll</b> ist. 58% möchten ihre Arbeit <b>selbstständig</b> planen.</p>
+      <p>Wer eine Arbeit sucht, studiert <b>Stellenanzeigen</b> in Zeitungen oder im Internet. Dann schickt man eine <b>Bewerbung</b> mit seinem <b>Lebenslauf</b>. Wenn der Personalchef die Bewerbung interessant findet, lädt er zum <b>Vorstellungsgespräch</b> ein.</p>
+    </div>
+    <div style="color:var(--muted);font-size:13px">💡 Übung 1 — Lückentext: klick die richtigen Wörter!</div>`,
+  exercises:[
+    {id:'l31e1',type:'cloze',q:'Klick die richtigen Wörter in die Lücken!',
+     parts:['Ich will eine ',' an die Firma schicken. Ich habe in der Zeitung eine interessante ',' gefunden. Bei der Berufswahl muss man auf seine Interessen und Fähigkeiten ',' . Man muss wissen, ob der Beruf ',' ist. Morgen gehe ich zum ',' . Die meisten Menschen wollen ein gutes ',' haben.'],
+     answers:['Bewerbung','Stellenanzeige','achten','gefragt','Vorstellungsgespräch','Gehalt'],
+     distract:['Ausbildung','Werbung','wissen','bekannt','Praktikum','Urlaub']},
+    {id:'l31e2',type:'mc',q:'Wie viel Prozent der Menschen wollen, dass ihre Arbeit sinnvoll ist?',
+     options:['58%','73%','88%'],
+     answer:1,explain:'"73% wollen, dass ihre Arbeit sinnvoll und nützlich ist." — aus dem Text.'},
+    {id:'l31e3',type:'mc',q:'Was schickt man, wenn man sich für eine Stelle bewirbt?',
+     options:['Nur den Lebenslauf','Eine Bewerbung mit Lebenslauf','Eine Stellenanzeige'],
+     answer:1,explain:'"man schickt eine Bewerbung mit seinem Lebenslauf an die Firma."'},
+    {id:'l31e4',type:'gap',q:'"IT-Berufe sind sehr ___ — man findet leicht eine Stelle." (востребованы)',
+     accept:['gefragt'],hint:'gefragt = востребованный (von "fragen" — Passiv-Adj.)',explain:'gefragt'},
+    {id:'l31e5',type:'match',q:'Ordne Begriff und Bedeutung zu:',
+     pairs:[['die Bewerbung','заявление на работу'],['das Vorstellungsgespräch','собеседование'],['das Gehalt','зарплата'],['selbstständig','самостоятельно']]},
+  ]
+},
+/* ── Einheit 32 ─────────────────────────────────────── B1 ── */
+{ id:'l32', tag:'N-Deklination', level:'b1',
+  title:'Schwache Maskulina — N-Deklination',
+  desc:'Der Student / des Studenten — Maskulina, die in allen Fällen außer Nom. -en bekommen.',
+  vocab:[
+    {de:'der Student → des Studenten',    ru:'студент',       ex:'Ich kenne den Studenten. Das ist das Buch des Studenten.'},
+    {de:'der Journalist → des Journalisten', ru:'журналист',  ex:'Er ist ein bekannter Journalist. Ich kenne den Journalisten.'},
+    {de:'der Präsident → des Präsidenten',ru:'президент',     ex:'Der Präsident / den Präsidenten / dem Präsidenten.'},
+    {de:'der Kandidat → des Kandidaten', ru:'кандидат',       ex:'Er wünscht dem Kandidaten Erfolg.'},
+    {de:'der Mensch → des Menschen',      ru:'человек',       ex:'Ich sehe einen Menschen. Er hilft dem Menschen.'},
+    {de:'der Held → des Helden',          ru:'герой',         ex:'Das ist die Geschichte eines Helden.'},
+    {de:'der Bär → des Bären',            ru:'медведь',       ex:'Ich sehe einen Bären.'},
+    {de:'der Pilot → des Piloten',        ru:'пилот',         ex:'Der Pilot / den Piloten / dem Piloten.'},
+    {de:'der Kollege → des Kollegen',     ru:'коллега',       ex:'Er hilft seinem Kollegen.'},
+    {de:'der Biologe → des Biologen',     ru:'биолог',        ex:'Das ist das Buch des Biologen.'},
+    {de:'der Name → des Namens (!)',       ru:'имя (исключение!)', ex:'Wie ist Ihr Name? — des Namens (не -en!)'},
+    {de:'typische Endungen: -e, -ent, -ant, -ist, -at, -ot, -og', ru:'суффиксы → всегда слабое скл.',ex:'Student, Laborant, Journalist, Kandidat, Pilot, Biologe'},
+  ],
+  gramHTML:`
+    <h3>Regel: N-Deklination (schwache Maskulina)</h3>
+    <p>Diese Maskulina bekommen in <b>allen Fällen außer Nominativ Singular</b> die Endung <b>-(e)n</b>:</p>
+    <table>
+      <tr><th>Fall</th><th>der Student</th><th>der Mensch</th></tr>
+      <tr><td>Nominativ</td><td>der Student</td><td>der Mensch</td></tr>
+      <tr><td>Akkusativ</td><td>den Student<b>en</b></td><td>den Mensch<b>en</b></td></tr>
+      <tr><td>Dativ</td><td>dem Student<b>en</b></td><td>dem Mensch<b>en</b></td></tr>
+      <tr><td>Genitiv</td><td>des Student<b>en</b></td><td>des Mensch<b>en</b></td></tr>
+    </table>
+    <h3>Typische Gruppen</h3>
+    <table>
+      <tr><th>Endung</th><th>Beispiele</th></tr>
+      <tr><td>-e</td><td>der Junge, Bär<b>e</b>, Löw<b>e</b>, Kolleg<b>e</b>, Biologe</td></tr>
+      <tr><td>-ent</td><td>der Stud<b>ent</b>, Präsid<b>ent</b>, Doз<b>ent</b></td></tr>
+      <tr><td>-ant</td><td>der Labor<b>ant</b>, Prakt<b>ikant</b></td></tr>
+      <tr><td>-ist</td><td>der Journal<b>ist</b>, Tourist, Poliz<b>ist</b></td></tr>
+      <tr><td>-at</td><td>der Kandid<b>at</b>, Diplomat, Bürokr<b>at</b></td></tr>
+      <tr><td>-ot</td><td>der Pilot, Patriot</td></tr>
+    </table>
+    <div class="tip"><b>Ausnahmen:</b> der Name → des Nam<b>ens</b>; der Herr → des Herr<b>n</b> (nicht -en).</div>`,
+  exercises:[
+    {id:'l32e1',type:'mc',q:'"Ich kenne ___ Journalisten." (Akk. sing.)',
+     options:['der','den','dem'],
+     answer:1,explain:'N-Deklination: Akkusativ → -(e)n. "Ich kenne den Journalisten."'},
+    {id:'l32e2',type:'gap',q:'"Das ist das Buch des ___ (Student)." (Genitiv)',
+     accept:['Studenten'],hint:'N-Deklination: Genitiv → Student + -en.',explain:'Studenten'},
+    {id:'l32e3',type:'mc',q:'"Er hilft dem ___ (Präsident)." (Dativ)',
+     options:['Präsident','Präsidenten','Präsidents'],
+     answer:1,explain:'Dativ → -(e)n: "dem Präsidenten".'},
+    {id:'l32e4',type:'listen',
+     audio:'Der Student kommt aus Polen. Ich kenne den Studenten seit zwei Jahren. Das Buch des Studenten liegt auf dem Tisch.',
+     q:'In welchen Fällen steht "Student" / "Studenten"?',
+     options:['Nom., Akk., Dat.','Nom., Akk., Gen.','Nom., Dat., Gen.'],
+     answer:1,explain:'"Der Student" = Nominativ; "den Studenten" = Akkusativ; "des Studenten" = Genitiv.'},
+    {id:'l32e5',type:'match',q:'Ordne Nominativ und Genitiv zu:',
+     pairs:[['der Pilot','des Piloten'],['der Biologe','des Biologen'],['der Kandidat','des Kandidaten'],['der Kollege','des Kollegen']]},
+  ]
+},
 ]; // END COURSE
 
 /* ============================================================
@@ -1744,6 +1893,28 @@ const GRAMMAR = [
     <div class="ex-box">Ungleich: <b>als</b> → Er ist größer <b>als</b> sie.</div>
     <div class="ex-box">Gleich: <b>so/genauso … wie</b> → Er ist genauso groß <b>wie</b> sie.</div>
     <div class="ex-box">Verstärkt: <b>viel</b> + Komp → Diese Tasche ist <b>viel</b> teurer.</div>`,
+  }
+,{ id:'g15', icon:'🔗', title:'Relativsätze — alle Fälle',
+    desc:'Vollständige Tabelle der Relativpronomen mit Beispielen.',
+    html:`
+    <h3>Relativpronomen-Tabelle</h3>
+    <table>
+      <tr><th>Fall</th><th>Mask. (der)</th><th>Fem. (die)</th><th>Neut. (das)</th><th>Plural (die)</th></tr>
+      <tr><td>Nom.</td><td>der</td><td>die</td><td>das</td><td>die</td></tr>
+      <tr><td>Akk.</td><td><b>den</b></td><td>die</td><td>das</td><td>die</td></tr>
+      <tr><td>Dat.</td><td>dem</td><td>der</td><td>dem</td><td><b>denen</b></td></tr>
+      <tr><td>Gen.</td><td><b>dessen</b></td><td><b>deren</b></td><td><b>dessen</b></td><td><b>deren</b></td></tr>
+    </table>
+    <h3>Beispiele für alle Fälle</h3>
+    <div class="ex-box"><b>Nom. M:</b> Der Mann, <b>der</b> dort steht, ist mein Chef.</div>
+    <div class="ex-box"><b>Akk. M:</b> Der Film, <b>den</b> ich gesehen habe, war toll.</div>
+    <div class="ex-box"><b>Dat. F:</b> Die Kollegin, <b>der</b> ich geholfen habe, ist froh.</div>
+    <div class="ex-box"><b>Gen. M:</b> Der Autor, <b>dessen</b> Buch ich lese, ist bekannt.</div>
+    <div class="ex-box"><b>Gen. F/Pl.:</b> Die Schüler, <b>deren</b> Sachen gepackt sind, fahren bald.</div>
+    <div class="ex-box"><b>Präp + Dat.:</b> Die Stadt, <b>in der</b> er wohnt, ist München.</div>
+    <h3>N-Deklination: Sonderfall im Relativsatz</h3>
+    <div class="ex-box">Der Journalist, <b>den</b> ich kenne, … (Akk. → "den Journalisten" im Relativsatz mit N-Dekl.)</div>
+    <div class="tip"><b>Merkregel:</b> Das Relativpronomen hat das Geschlecht des Bezugsworts, aber den Fall seiner Funktion im Relativsatz.</div>`,
   }];
 
 /* ============================================================
@@ -1797,6 +1968,11 @@ const QUIZ = [
 {q:'"Er kam, ___ mir zu helfen." (gleicher Akteur, Ziel)',o:['damit','um','ohne'],a:1},
 {q:'"Wenn ich mehr Zeit ___, würde ich reisen." (haben, KII)',o:['habe','hatte','hätte'],a:2},
 {q:'"___ ich doch mehr Freizeit!" (Wunschsatz, haben)',o:['Wäre','Hätte','Würde'],a:1}
+,{q:'"Der Film, ___ ich gesehen habe, war gut." (Akk. Mask.)',o:['der','den','dem'],a:1},
+{q:'"Die Uni, ___ er studiert, liegt in Berlin." (Dat. Fem. + Präp.)',o:['der','die','in der'],a:2},
+{q:'"Das Buch ___ Studenten liegt auf dem Tisch." (Genitiv N-Dekl.)',o:['des Student','des Studenten','dem Studenten'],a:1},
+{q:'"Ich kenne ___ Journalisten." (N-Deklination, Akk.)',o:['der','den','dem'],a:1},
+{q:'Was bedeutet "gefragt sein"?',o:['neugierig sein','востребованным быть','известным быть'],a:1}
 ];
 
 /* ============================================================
