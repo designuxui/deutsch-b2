@@ -1590,6 +1590,157 @@ const COURSE = [
      pairs:[['der Pilot','des Piloten'],['der Biologe','des Biologen'],['der Kandidat','des Kandidaten'],['der Kollege','des Kollegen']]},
   ]
 },
+
+/* ── Einheit 33 ─────────────────────────────────────── B1 ── */
+{ id:'l33', tag:'Plusquamperfekt', level:'b1',
+  title:'Plusquamperfekt — eine Zeitstufe früher',
+  desc:'Er hatte gepackt und fuhr los — was passierte zuerst?',
+  vocab:[
+    {de:'hatte + Partizip II',       ru:'haben-Verben im PQP',        ex:'Ich hatte das Buch gelesen.'},
+    {de:'war + Partizip II',         ru:'sein-Verben im PQP',         ex:'Er war nach Berlin gefahren.'},
+    {de:'hatte gepackt',             ru:'(уже) упаковал',             ex:'Er hatte seinen Koffer gepackt und fuhr los.'},
+    {de:'hatte gekauft',             ru:'(уже) купил',                ex:'Ich hatte die Tickets gekauft und fuhr in die Schweiz.'},
+    {de:'war aufgewacht',            ru:'(уже) проснулся',            ex:'Ich war aufgewacht und öffnete das Fenster.'},
+    {de:'hatte bestanden',           ru:'сдал (экзамен)',             ex:'Nachdem er die Prüfung bestanden hatte, feierte er.'},
+    {de:'hatte vorbereitet',         ru:'(уже) подготовил',           ex:'Er hatte alles vorbereitet.'},
+    {de:'nachdem + PQP',             ru:'после того как (PQP → Prät)', ex:'Nachdem ich gegessen hatte, ging ich schlafen.'},
+    {de:'Vorvergangenheit',          ru:'предпрошедшее время',        ex:'PQP drückt aus: das passierte noch früher.'},
+    {de:'Sequenz: PQP → Präteritum', ru:'сначала PQP, потом Prät.',   ex:'Er hatte gelernt → er bestand die Prüfung.'},
+  ],
+  gramHTML:`
+    <h3>Bildung</h3>
+    <table>
+      <tr><th>Person</th><th>mit haben</th><th>mit sein</th></tr>
+      <tr><td>ich</td><td>hatte gelesen</td><td>war gefahren</td></tr>
+      <tr><td>du</td><td>hattest gelesen</td><td>warst gefahren</td></tr>
+      <tr><td>er/sie/es</td><td>hatte gelesen</td><td>war gefahren</td></tr>
+      <tr><td>wir</td><td>hatten gelesen</td><td>waren gefahren</td></tr>
+    </table>
+    <h3>Wann benutzt man das Plusquamperfekt?</h3>
+    <p>Das Plusquamperfekt drückt aus, dass eine Handlung <b>noch früher</b> stattfand als eine andere vergangene Handlung.</p>
+    <div class="ex-box"><b>Er hatte seinen Koffer gepackt</b> und fuhr zum Bahnhof.<span class="gl">Он (уже) упаковал чемодан и поехал на вокзал. ← сначала упаковал</span></div>
+    <div class="ex-box"><b>Nachdem sie fleißig studiert hatten</b>, bestanden sie die Prüfung.<span class="gl">После того как они усердно учились, они сдали экзамен.</span></div>
+    <div class="ex-box">Ich war sehr müde, denn ich <b>hatte die Nacht nicht geschlafen</b>.<span class="gl">Я был очень устал, потому что (перед этим) не спал ночью.</span></div>
+    <div class="tip"><b>Merke:</b> PQP = hatte/war + Partizip II. Gleiche Wahl haben/sein wie beim Perfekt!</div>`,
+  exercises:[
+    {id:'l33e1',type:'mc',q:'"Er ___ seinen Koffer ___ und fuhr dann los." (packen, PQP)',
+     options:['hatte … gepackt','hat … gepackt','war … gepackt'],
+     answer:0,explain:'Plusquamperfekt mit haben: hatte + gepackt. "hatte gepackt" = noch frühere Handlung.'},
+    {id:'l33e2',type:'gap',q:'"Nachdem ich ___ ___ (essen, PQP), ging ich schlafen."',
+     accept:['gegessen hatte','hatte gegessen'],hint:'PQP: hatte/war + Partizip II. essen → gegessen.',explain:'gegessen hatte'},
+    {id:'l33e3',type:'mc',q:'"Sie war sehr müde, denn sie ___ die ganze Nacht ___." (arbeiten, PQP)',
+     options:['hatte … gearbeitet','ist … gearbeitet','war … gearbeitet'],
+     answer:0,explain:'arbeiten → haben-Verb im Perfekt/PQP → "hatte gearbeitet".'},
+    {id:'l33e4',type:'listen',
+     audio:'Nachdem er die Prüfung bestanden hatte, feierte er mit Freunden. Er hatte alles gut vorbereitet und war sehr erleichtert.',
+     q:'Wie viele Plusquamperfekt-Formen hörst du?',
+     options:['1','2','3'],
+     answer:2,explain:'"bestanden hatte" · "hatte vorbereitet" — zwei PQP-Formen.'},
+    {id:'l33e5',type:'order',q:'Bilde den Satz mit Plusquamperfekt:',
+     words:['Nachdem','er','die','Tickets','gekauft','hatte','fuhr','er','los'],
+     answer:'Nachdem er die Tickets gekauft hatte fuhr er los'},
+  ]
+},
+/* ── Einheit 34 ─────────────────────────────────────── A2 ── */
+{ id:'l34', tag:'stellen/stehen', level:'b1',
+  title:'stellen / stehen · legen / liegen · hängen',
+  desc:'Wohin? → Aktion. Wo? → Zustand. Das wichtigste Verbenpar im Deutschen.',
+  vocab:[
+    {de:'stellen (wohin)',   ru:'ставить (куда) — действие',   ex:'Ich stelle die Vase auf den Tisch.'},
+    {de:'stehen (wo)',       ru:'стоять (где) — состояние',    ex:'Die Vase steht auf dem Tisch.'},
+    {de:'legen (wohin)',     ru:'класть (куда) — действие',    ex:'Ich lege das Buch auf den Tisch.'},
+    {de:'liegen (wo)',       ru:'лежать (где) — состояние',    ex:'Das Buch liegt auf dem Tisch.'},
+    {de:'hängen (wohin)',    ru:'вешать (куда) — действие',    ex:'Ich hänge das Bild an die Wand.'},
+    {de:'hängen (wo)',       ru:'висеть (где) — состояние',    ex:'Das Bild hängt an der Wand.'},
+    {de:'setzen (wohin)',    ru:'сажать (куда) — действие',    ex:'Ich setze das Kind auf den Stuhl.'},
+    {de:'sitzen (wo)',       ru:'сидеть (где) — состояние',    ex:'Das Kind sitzt auf dem Stuhl.'},
+    {de:'Akkusativ (wohin)', ru:'Akkusativ nach Wohin-Frage',  ex:'auf den Tisch (Akk.) — ich stelle es dahin.'},
+    {de:'Dativ (wo)',        ru:'Dativ nach Wo-Frage',         ex:'auf dem Tisch (Dat.) — es steht dort.'},
+  ],
+  gramHTML:`
+    <h3>Das System: Aktion ↔ Zustand</h3>
+    <table>
+      <tr><th>Frage</th><th>Verb (Aktion)</th><th>Verb (Zustand)</th><th>Kasus</th></tr>
+      <tr><td>Wohin?</td><td>stellen</td><td>→ stehen</td><td>Akkusativ</td></tr>
+      <tr><td>Wo?</td><td>–</td><td>stehen</td><td>Dativ</td></tr>
+      <tr><td>Wohin?</td><td>legen</td><td>→ liegen</td><td>Akkusativ</td></tr>
+      <tr><td>Wo?</td><td>–</td><td>liegen</td><td>Dativ</td></tr>
+      <tr><td>Wohin?</td><td>hängen</td><td>→ hängen</td><td>Akkusativ</td></tr>
+      <tr><td>Wo?</td><td>–</td><td>hängen</td><td>Dativ</td></tr>
+    </table>
+    <div class="ex-box">Ich <b>stelle</b> die Vase <b>auf den Tisch</b>. → Die Vase <b>steht auf dem Tisch</b>.<span class="gl">Wohin? (Akk) → Wo? (Dat)</span></div>
+    <div class="ex-box">Ich <b>lege</b> das Buch <b>auf den Tisch</b>. → Das Buch <b>liegt auf dem Tisch</b>.<span class="gl">Wohin? (Akk) → Wo? (Dat)</span></div>
+    <div class="ex-box">Ich <b>hänge</b> das Bild <b>an die Wand</b>. → Das Bild <b>hängt an der Wand</b>.<span class="gl">an die (Akk) → an der (Dat)</span></div>
+    <div class="tip"><b>Tipp:</b> Aktion (stellen/legen/hängen) → ich tue etwas → Akkusativ (wohin). Zustand (stehen/liegen/hängen) → etwas ist schon da → Dativ (wo).</div>`,
+  exercises:[
+    {id:'l34e1',type:'mc',q:'"Ich ___ das Buch auf den Tisch." (Aktion — ich tue es)',
+     options:['lege','liege','liegt'],
+     answer:0,explain:'Aktion: legen (wohin?). "Ich lege das Buch auf den Tisch." → Akkusativ.'},
+    {id:'l34e2',type:'mc',q:'"Das Buch ___ auf dem Tisch." (Zustand — es ist schon da)',
+     options:['lege','liegt','legen'],
+     answer:1,explain:'Zustand: liegen (wo?). "Das Buch liegt auf dem Tisch." → Dativ.'},
+    {id:'l34e3',type:'gap',q:'"Ich ___ das Bild an die Wand." (hängen, Aktion)',
+     accept:['hänge'],hint:'Aktion: Ich hänge etwas wohin (Akkusativ).',explain:'hänge'},
+    {id:'l34e4',type:'match',q:'Ordne Aktion und Zustand zu:',
+     pairs:[['stellen (wohin)','stehen (wo)'],['legen (wohin)','liegen (wo)'],['hängen (wohin)','hängen (wo)'],['setzen (wohin)','sitzen (wo)']]},
+    {id:'l34e5',type:'listen',
+     audio:'Ich stelle die Blumen auf den Tisch. Die Blumen stehen jetzt auf dem Tisch. Das Bild hänge ich an die Wand — es hängt dort sehr schön.',
+     q:'Wie viele Aktion-Verben (wohin) hörst du?',
+     options:['1','2','3'],
+     answer:1,explain:'"stelle" und "hänge" sind Aktionsverben (wohin?). "stehen" und "hängt" sind Zustands-verben (wo?).'},
+  ]
+},
+/* ── Einheit 35 ─────────────────────────────────────── A2 ── */
+{ id:'l35', tag:'Ordinalzahlen', level:'b1',
+  title:'Ordinalzahlen — am 5. Mai / im 3. Stock',
+  desc:'Erst-, zweit-, dritt-… Ordnungszahlen bilden und deklinieren.',
+  vocab:[
+    {de:'der erste',    ru:'первый (1.)',    ex:'Das ist das erste Kapitel.'},
+    {de:'der zweite',   ru:'второй (2.)',    ex:'Heute ist der zweite Januar.'},
+    {de:'der dritte',   ru:'третий (3., unregelmäßig!)', ex:'Er wohnt im dritten Stock.'},
+    {de:'der vierte',   ru:'четвёртый (4.)', ex:'Das ist der vierte Versuch.'},
+    {de:'der siebte',   ru:'седьмой (7., unregelmäßig!)', ex:'Am siebten Juli hat er Geburtstag.'},
+    {de:'der achte',    ru:'восьмой (8., unregelmäßig!)', ex:'Am achten März ist Frauentag.'},
+    {de:'der zwanzigste',ru:'двадцатый (20.)', ex:'Am zwanzigsten Mai fahre ich ab.'},
+    {de:'am + Ordinal',  ru:'в дату (Dativ)',  ex:'am fünften März — am 5.3.'},
+    {de:'im + Stock',    ru:'на (каком) этаже', ex:'im dritten Stock — im 3. Stock'},
+    {de:'der wievielte', ru:'какое число?',    ex:'Den wievielten haben wir heute? — Den 15.'},
+  ],
+  gramHTML:`
+    <h3>Bildung der Ordinalzahlen</h3>
+    <table>
+      <tr><th>Zahl</th><th>Ordinal (Stamm)</th><th>Regel</th></tr>
+      <tr><td>1.</td><td>erst-</td><td>unregelmäßig!</td></tr>
+      <tr><td>2.</td><td>zweit-</td><td>regelmäßig</td></tr>
+      <tr><td>3.</td><td>dritt-</td><td>unregelmäßig!</td></tr>
+      <tr><td>4.–19.</td><td>viert-, fünft-, sechst-…</td><td>Grundzahl + <b>-t</b></td></tr>
+      <tr><td>7.</td><td>siebt-</td><td>unregelmäßig (nicht siebent)!</td></tr>
+      <tr><td>8.</td><td>acht-</td><td>unregelmäßig (nicht achtet)!</td></tr>
+      <tr><td>20+</td><td>zwanzigst-, einundzwanzigst-…</td><td>Grundzahl + <b>-st</b></td></tr>
+    </table>
+    <h3>Im Satz: Ordinalzahl + Adjektivendung</h3>
+    <div class="ex-box">Heute ist der <b>fünfte</b> März. (Nominativ)<span class="gl">Сегодня пятое марта.</span></div>
+    <div class="ex-box">Ich fahre am <b>fünften</b> März. (Dativ nach „am")<span class="gl">Я еду пятого марта.</span></div>
+    <div class="ex-box">Er wohnt im <b>dritten</b> Stock.<span class="gl">Он живёт на третьем этаже.</span></div>
+    <div class="tip"><b>Fragen nach dem Datum:</b> „Welcher Tag ist heute?" / „Den wievielten haben wir?" → „Heute ist der 15. März." / „Wir haben den 15."</div>`,
+  exercises:[
+    {id:'l35e1',type:'mc',q:'"Heute ist der ___ März." (3. — wie heißt die Form?)',
+     options:['dritte','drite','dreite'],
+     answer:0,explain:'3. → dritt- (unregelmäßig!) + -e (Nominativ): "der dritte März".'},
+    {id:'l35e2',type:'mc',q:'"Er wohnt im ___ Stock." (7. — Dativ nach "im")',
+     options:['siebenten','siebten','siebsten'],
+     answer:1,explain:'7. → siebt- (unregelmäßig!) + -en (Dativ): "im siebten Stock".'},
+    {id:'l35e3',type:'gap',q:'"Ich fahre am ___ (8.) März nach Berlin." (Dativ nach am)',
+     accept:['achten'],hint:'8. → acht- (unregelmäßig) + -en (Dativ nach am).',explain:'achten'},
+    {id:'l35e4',type:'listen',
+     audio:'Heute ist der erste Dezember. Ich fahre am fünfzehnten Januar nach Wien. Er wohnt im zwanzigsten Stock.',
+     q:'Welche Ordinalzahlen hörst du?',
+     options:['1., 15., 20.','1., 5., 20.','2., 15., 10.'],
+     answer:0,explain:'"ersten" = 1. · "fünfzehnten" = 15. · "zwanzigsten" = 20.'},
+    {id:'l35e5',type:'match',q:'Ordne Zahl und Ordinalform zu:',
+     pairs:[['1.','erst-'],['3.','dritt-'],['7.','siebt-'],['20.','zwanzigst-']]},
+  ]
+},
 ]; // END COURSE
 
 /* ============================================================
@@ -1915,6 +2066,26 @@ const GRAMMAR = [
     <h3>N-Deklination: Sonderfall im Relativsatz</h3>
     <div class="ex-box">Der Journalist, <b>den</b> ich kenne, … (Akk. → "den Journalisten" im Relativsatz mit N-Dekl.)</div>
     <div class="tip"><b>Merkregel:</b> Das Relativpronomen hat das Geschlecht des Bezugsworts, aber den Fall seiner Funktion im Relativsatz.</div>`,
+  }
+,{ id:'g16', icon:'⚙️', title:'Passiv mit Modalverben',
+    desc:'Der Hund muss operiert werden — Modalverb + Partizip II + werden.',
+    html:`
+    <h3>Bildung: Modalverb + Partizip II + werden (Infinitiv)</h3>
+    <table>
+      <tr><th>Aktiv</th><th>Passiv mit Modal</th></tr>
+      <tr><td>Der Arzt muss den Hund operieren.</td><td>Der Hund <b>muss operiert werden</b>.</td></tr>
+      <tr><td>Man kann die Sonnenenergie nutzen.</td><td>Die Sonnenenergie <b>kann genutzt werden</b>.</td></tr>
+      <tr><td>Man darf den Ball nicht berühren.</td><td>Der Ball <b>darf nicht berührt werden</b>.</td></tr>
+      <tr><td>Man sollte das Problem lösen.</td><td>Das Problem <b>sollte gelöst werden</b>.</td></tr>
+    </table>
+    <h3>Im Präteritum</h3>
+    <table>
+      <tr><th>Aktiv (Prät.)</th><th>Passiv mit Modal (Prät.)</th></tr>
+      <tr><td>Er musste das Paket transportieren.</td><td>Das Paket <b>musste transportiert werden</b>.</td></tr>
+      <tr><td>Wir mussten das Auto waschen.</td><td>Das Auto <b>musste gewaschen werden</b>.</td></tr>
+    </table>
+    <div class="ex-box"><b>Nach der Prüfung durfte er in Urlaub fahren.</b> → <b>Nach der Prüfung durfte in Urlaub gefahren werden.</b><span class="gl">После экзамена можно было уехать в отпуск.</span></div>
+    <div class="tip"><b>Wortstellung:</b> Modalverb (Position 2) + … + Partizip II + werden (am Satzende).<br>"Der Hund <b>muss</b> sofort <b>operiert werden</b>."</div>`,
   }];
 
 /* ============================================================
@@ -1973,6 +2144,11 @@ const QUIZ = [
 {q:'"Das Buch ___ Studenten liegt auf dem Tisch." (Genitiv N-Dekl.)',o:['des Student','des Studenten','dem Studenten'],a:1},
 {q:'"Ich kenne ___ Journalisten." (N-Deklination, Akk.)',o:['der','den','dem'],a:1},
 {q:'Was bedeutet "gefragt sein"?',o:['neugierig sein','востребованным быть','известным быть'],a:1}
+,{q:'"Er ___ seinen Koffer ___ und fuhr los." (packen, PQP)',o:['hat … gepackt','hatte … gepackt','war … gepackt'],a:1},
+{q:'"Das Buch ___ auf dem Tisch." (Zustand — Wo?)',o:['lege','liegt','stellt'],a:1},
+{q:'"Ich ___ das Bild an die Wand." (Aktion — Wohin?)',o:['hänge','hängt','liege'],a:0},
+{q:'"Heute ist der ___ März." (3.)',o:['dritte','drite','dreite'],a:0},
+{q:'"Der Hund ___ sofort operiert ___." (müssen, Passiv)',o:['muss … werden','wird … müssen','hat … werden'],a:0}
 ];
 
 /* ============================================================
