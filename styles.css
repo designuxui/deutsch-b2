@@ -146,10 +146,7 @@ body {
   margin-top: 16px; font-size: 15px; color: var(--ink-soft);
   max-width: 560px; line-height: 1.65; font-weight: 350;
 }
-.hero::after {
-  content: ''; display: block; width: 48px; height: 2px;
-  background: var(--accent); margin-top: 24px;
-}
+/* tick drawn by animations.js */
 
 /* ── BADGES ────────────────────────────────── */
 .badge {
@@ -747,12 +744,7 @@ body {
 .lesson-card:hover::after { transform: scaleX(1); }
 
 /* ── TICK MARK ANIMATED ────────────────────── */
-.hero::after {
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform .6s .3s cubic-bezier(.2,.8,.2,1);
-}
-.hero.in-view::after { transform: scaleX(1); }
+/* tick via JS */
 
 /* ── SMOOTH RISE (page view change) ────────── */
 .view {
