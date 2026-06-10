@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;1,300&family=Inter:wght@200;350;400;550&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
 
 :root {
   --color-linen: #fafffa;
@@ -7,7 +7,7 @@
   --color-bark: #232924;
   --color-sage: #516254;
   --color-mist: #c8d2c8;
-  --color-voltage: #2bee4b;
+  --color-voltage: #7CC322;
   --color-moss-glow: #93b799;
   --color-pollen: #c4e4c9;
 
@@ -31,8 +31,8 @@
   --gold-bg: #f5ecc0;
 
   /* typography */
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body:    'Inter', system-ui, sans-serif;
+  --font-display: 'Outfit', system-ui, sans-serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
 
   /* layout */
   --sidebar-w: 260px;
@@ -156,7 +156,7 @@ body {
   vertical-align: middle; margin-left: 6px;
 }
 .badge.b1 { background: var(--gold-bg); color: var(--gold); }
-.badge.b2 { background: rgba(43,238,75,.12); color: var(--ok); border: 1px solid rgba(43,238,75,.3); }
+.badge.b2 { background: rgba(124,195,34,.12); color: var(--ok); border: 1px solid rgba(124,195,34,.3); }
 .badge.b2p { background: var(--blue-bg); color: var(--blue); }
 
 /* ── PROGRESS PATH ─────────────────────────── */
@@ -325,7 +325,7 @@ body {
 .gram ul, .gram ol { padding-left: 20px; margin-bottom: 12px; }
 .gram li { font-size: 14.5px; color: var(--ink-soft); line-height: 1.65; margin-bottom: 4px; }
 .gram .ex-box {
-  background: rgba(43,238,75,.06); border-left: 2px solid var(--accent);
+  background: rgba(124,195,34,.06); border-left: 2px solid var(--accent);
   padding: 12px 18px; margin: 12px 0; font-size: 14px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
 }
 .gram .ex-box b { font-weight: 550; }
@@ -340,7 +340,7 @@ body {
 .gram td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--border-light); }
 .gram td:first-child { font-weight: 550; color: var(--ink); }
 .tip {
-  background: rgba(43,238,75,.07); border: 1px solid rgba(43,238,75,.25);
+  background: rgba(124,195,34,.07); border: 1px solid rgba(124,195,34,.25);
   border-radius: var(--radius-sm); padding: 12px 16px; font-size: 13.5px; margin-top: 16px; line-height: 1.55;
 }
 .tip b { color: var(--ok); }
@@ -380,7 +380,7 @@ body {
   background: var(--bg); border: 1px solid var(--border);
   border-radius: var(--radius-sm); padding: 12px 16px; margin-bottom: 8px; cursor: pointer; transition: .12s;
 }
-.opt:hover { border-color: var(--ink); background: rgba(43,238,75,.04); }
+.opt:hover { border-color: var(--ink); background: rgba(124,195,34,.04); }
 .opt.correct { background: var(--ok-bg); border-color: var(--ok); color: var(--ok); font-weight: 550; }
 .opt.wrong { background: var(--err-bg); border-color: var(--err); color: var(--err); }
 .opt:disabled { cursor: default; }
@@ -390,7 +390,7 @@ body {
   border: 1px solid var(--border); border-radius: var(--radius-sm);
   background: var(--bg); width: 210px; max-width: 100%;
 }
-.gap-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(43,238,75,.15); }
+.gap-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(124,195,34,.15); }
 .gap-input.correct { border-color: var(--ok); background: var(--ok-bg); }
 .gap-input.wrong { border-color: var(--err); background: var(--err-bg); }
 
@@ -403,7 +403,7 @@ body {
 }
 .btn:hover { background: var(--accent); color: var(--ink); border-color: var(--accent); box-shadow: var(--shadow-cta); }
 .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--border); }
-.btn.ghost:hover { background: rgba(43,238,75,.08); border-color: var(--accent); color: var(--ok); }
+.btn.ghost:hover { background: rgba(124,195,34,.08); border-color: var(--accent); color: var(--ok); }
 .btn.sm { padding: 7px 15px; font-size: 12px; }
 .btn.blue { background: var(--blue); border-color: var(--blue); color: #fff; }
 .btn.blue:hover { background: #1240e0; }
@@ -441,14 +441,14 @@ body {
 .bank, .answer-line { display: flex; flex-wrap: wrap; gap: 7px; min-height: 44px; align-content: flex-start; }
 .answer-line {
   border: 1px dashed var(--border-light); border-radius: var(--radius-card);
-  padding: 10px; margin-bottom: 12px; background: rgba(43,238,75,.03);
+  padding: 10px; margin-bottom: 12px; background: rgba(124,195,34,.03);
 }
 .chip {
   font: inherit; font-size: 13.5px; font-weight: 350;
   background: var(--bg); border: 1px solid var(--border);
   border-radius: var(--radius-sm); padding: 8px 14px; cursor: pointer; transition: .13s;
 }
-.chip:hover { background: rgba(43,238,75,.08); border-color: var(--accent); transform: translateY(-1px); }
+.chip:hover { background: rgba(124,195,34,.08); border-color: var(--accent); transform: translateY(-1px); }
 .bank .chip { background: var(--bg); border-color: var(--border-light); }
 
 /* ── MATCH ─────────────────────────────────── */
@@ -460,7 +460,7 @@ body {
   border-radius: var(--radius-sm); padding: 12px 14px; cursor: pointer; transition: .13s;
 }
 .match-item:hover { border-color: var(--border); }
-.match-item.sel { border-color: var(--accent); background: rgba(43,238,75,.07); box-shadow: 0 0 0 2px rgba(43,238,75,.25); }
+.match-item.sel { border-color: var(--accent); background: rgba(124,195,34,.07); box-shadow: 0 0 0 2px rgba(124,195,34,.25); }
 .match-item.matched { background: var(--ok-bg); border-color: var(--ok); color: var(--ok); cursor: default; font-weight: 550; }
 .match-item.flash { animation: nope .4s; }
 @keyframes nope { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-5px)} 75%{transform:translateX(5px)} }
@@ -473,7 +473,7 @@ body {
   background: var(--bg); border: 1px solid var(--border);
   border-radius: 999px; padding: 7px 16px; cursor: pointer; transition: .13s;
 }
-.deck-pick button:hover { background: rgba(43,238,75,.08); border-color: var(--accent); }
+.deck-pick button:hover { background: rgba(124,195,34,.08); border-color: var(--accent); }
 .deck-pick button.active { background: var(--ink); color: var(--color-linen); border-color: var(--ink); }
 .flash-wrap { max-width: 500px; margin: 0 auto; }
 .flash-progress { text-align: center; color: var(--ink-soft); font-weight: 350; font-size: 12px; margin-bottom: 16px; letter-spacing: .04em; text-transform: uppercase; }
@@ -512,7 +512,7 @@ body {
   padding: 10px 13px; border: 1px solid var(--border-light);
   border-radius: var(--radius-sm); background: var(--bg); flex: 1; min-width: 120px;
 }
-.addbar input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(43,238,75,.12); }
+.addbar input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(124,195,34,.12); }
 
 /* ── QUIZ ──────────────────────────────────── */
 .quiz-q { font-family: var(--font-display); font-weight: 300; font-size: 22px; margin-bottom: 18px; line-height: 1.2; letter-spacing: -.02em; }
@@ -544,9 +544,9 @@ body {
 .cloze-slot {
   display: inline-block; min-width: 96px; padding: 3px 12px; border-radius: var(--radius-sm);
   border: 1px dashed var(--accent); cursor: pointer; margin: 2px 4px; text-align: center;
-  background: rgba(43,238,75,.05); transition: background .15s; vertical-align: middle;
+  background: rgba(124,195,34,.05); transition: background .15s; vertical-align: middle;
 }
-.cloze-slot:not(.slot-empty):hover { background: rgba(43,238,75,.14); }
+.cloze-slot:not(.slot-empty):hover { background: rgba(124,195,34,.14); }
 .cloze-slot.slot-ok { background: var(--ok-bg); border: 1px solid var(--ok); color: var(--ok); }
 .cloze-slot.slot-err { background: var(--err-bg); border: 1px solid var(--err); color: var(--err); }
 .cloze-bank { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 8px; padding: 14px; background: rgba(18,22,19,.03); border-radius: var(--radius-sm); min-height: 44px; }
@@ -757,7 +757,7 @@ body {
 }
 .btn.lime:hover, .btn.know:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-cta), 0 0 0 4px rgba(43,238,75,.12);
+  box-shadow: var(--shadow-cta), 0 0 0 4px rgba(124,195,34,.12);
 }
 
 /* ── PROGRESS BAR ANIMATE ──────────────────── */

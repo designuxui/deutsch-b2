@@ -146,7 +146,7 @@
         if (!tick) {
           tick = document.createElement('span');
           tick.className = 'anim-tick';
-          tick.style.cssText = 'display:block;width:0px;height:2px;background:#2bee4b;margin-top:24px;';
+          tick.style.cssText = 'display:block;width:0px;height:2px;background:#7CC322;margin-top:24px;';
           hero.appendChild(tick);
           /* remove CSS ::after */
           hero.style.setProperty('--no-after', '1');
