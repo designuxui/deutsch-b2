@@ -2,14 +2,41 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Deutsch B2 · Berufliches Deutsch</title>
+<meta name="description" content="Interaktiver Selbstlernkurs Deutsch B2 — 41 Einheiten, Grammatik-Module, Vokabeltrainer und Hörübungen.">
+<meta name="theme-color" content="#0B0B0B">
+
+<!-- Favicons -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/apple-touch-icon.png">
+
+<!-- OG / Social -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Deutsch B2 · Berufliches Deutsch">
+<meta property="og:description" content="Interaktiver Selbstlernkurs: 41 Einheiten · 17 Grammatikmodule · Vokabeltrainer · Hörübungen">
+<meta property="og:image" content="https://deutsch-b2.vercel.app/og-image.svg">
+<meta property="og:url" content="https://deutsch-b2.vercel.app">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://deutsch-b2.vercel.app/og-image.svg">
+
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<!-- Mobile top bar (hidden on desktop) -->
+<header class="mob-bar" id="mob-bar">
+  <div class="mob-brand">
+    <span class="mob-b2">B2</span>
+    <span class="mob-title">Berufliches Deutsch</span>
+  </div>
+</header>
+
 <div class="shell">
   <aside class="sidebar">
     <div class="brand">
@@ -30,6 +57,31 @@
   </aside>
   <main class="content" id="content"></main>
 </div>
+
+<!-- Mobile bottom nav (hidden on desktop) -->
+<nav class="mob-nav" id="mob-nav">
+  <button class="mni active" data-action="nav" data-view="home">
+    <svg class="mni-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+    <span class="mni-label">Start</span>
+  </button>
+  <button class="mni" data-action="nav" data-view="course">
+    <svg class="mni-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+    <span class="mni-label">Kurs</span>
+  </button>
+  <button class="mni" data-action="nav" data-view="grammar">
+    <svg class="mni-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 6h16M4 10h16M4 14h10M4 18h7"/></svg>
+    <span class="mni-label">Grammatik</span>
+  </button>
+  <button class="mni" data-action="nav" data-view="vocab">
+    <svg class="mni-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+    <span class="mni-label">Vokabeln</span>
+  </button>
+  <button class="mni" data-action="nav" data-view="quiz">
+    <svg class="mni-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+    <span class="mni-label">Test</span>
+  </button>
+</nav>
+
 <input type="file" accept=".pdf" id="pdfFileInput" style="display:none" aria-hidden="true">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" crossorigin="anonymous"></script>
 <script src="app.js"></script>

@@ -2536,6 +2536,12 @@ function renderNav(){
 }
 function render(){
   renderNav();
+  // Sync mobile bottom nav active state
+  const _mv=state.view;
+  document.querySelectorAll('.mni').forEach(b=>{
+    const bv=b.dataset.view;
+    b.classList.toggle('active',bv===_mv||(bv==='home'&&_mv==='dashboard'));
+  });
   const v=state.view;
   if(v==='dashboard')renderDashboard();
   else if(v==='reader')renderReader();

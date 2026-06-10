@@ -463,19 +463,123 @@ body{
   background:var(--lime);border-radius:2px;margin-top:16px;
 }
 
+/* ── MOBILE TOP BAR ──────────────────────────── */
+.mob-bar{
+  display:none;
+  align-items:center;
+  height:52px;min-height:52px;
+  padding:0 16px;
+  background:var(--sidebar);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  position:fixed;top:0;left:0;right:0;z-index:200;
+}
+.mob-brand{display:flex;align-items:center;gap:10px}
+.mob-b2{
+  font-family:'Outfit',sans-serif;font-weight:800;font-size:15px;
+  background:var(--lime);color:var(--black);
+  padding:3px 8px;border-radius:6px;letter-spacing:-.3px;
+}
+.mob-title{color:var(--white);font-weight:600;font-size:14px;letter-spacing:.01em}
+
+/* ── MOBILE BOTTOM NAV ───────────────────────── */
+.mob-nav{
+  display:none;
+  position:fixed;bottom:0;left:0;right:0;
+  height:64px;
+  background:var(--sidebar);
+  border-top:1px solid rgba(255,255,255,.08);
+  z-index:200;
+  padding-bottom:env(safe-area-inset-bottom);
+}
+.mni{
+  flex:1;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:4px;
+  font-size:10.5px;font-weight:600;letter-spacing:.02em;
+  color:rgba(255,255,255,.45);
+  background:none;border:none;cursor:pointer;
+  padding:8px 4px;transition:color .15s;
+  text-transform:uppercase;
+}
+.mni.active{color:var(--lime)}
+.mni:active{opacity:.7}
+.mni-icon{width:22px;height:22px;stroke-width:2.2;flex-shrink:0}
+.mni-label{font-size:9.5px;font-weight:700;letter-spacing:.04em}
+
 /* ── RESPONSIVE ──────────────────────────────── */
 @media(max-width:720px){
-  .shell{flex-direction:column}
-  .sidebar{width:100%;height:auto;padding:10px 12px;flex-direction:row;flex-wrap:wrap}
-  .brand{padding:4px 0;border:none}
-  .navlist{flex-direction:row;display:flex;padding:0;overflow-x:auto;flex:none}
-  .nav-section{display:none}
-  .navitem{padding:7px 10px;font-size:12px;white-space:nowrap}
-  .sidefoot{display:none}
-  .content{height:calc(100vh - 110px)}
-  .page{padding:20px 18px 60px}
+  /* Show mobile chrome */
+  .mob-bar{display:flex}
+  .mob-nav{display:flex}
+
+  /* Hide desktop sidebar */
+  .sidebar{display:none}
+
+  /* Shell becomes single-column, pushed down by fixed header */
+  .shell{flex-direction:column;margin-top:52px}
+
+  /* Content fills remaining height */
+  .content{
+    height:calc(100vh - 52px - 64px);
+    background:var(--paper);
+  }
+
+  /* Page padding — extra bottom for nav bar */
+  .page{padding:18px 14px 80px}
+
+  /* Cards: 1 column, bigger text */
+  .grid{grid-template-columns:1fr;gap:12px}
+  .lesson-card{padding:18px 16px}
+  .lesson-card h3{font-size:17px;line-height:1.25}
+  .lesson-card .desc{font-size:14px;line-height:1.5}
+  .lesson-card .tag{font-size:11px}
+  .lesson-card .meta{font-size:12.5px}
+
+  /* Readable font sizes throughout */
+  body{font-size:16px}
+  .ex .q{font-size:16px;line-height:1.5}
+  .opt{font-size:15.5px;padding:14px 16px;min-height:48px}
+  .btn{font-size:15px;min-height:46px}
+  .chip{font-size:14.5px;padding:9px 14px;min-height:42px}
+  .feedback{font-size:14.5px}
+
+  /* Gap fill input */
+  .gap-input{font-size:16px;padding:12px 14px}
+
+  /* Grammar / lesson */
+  .hero h1{font-size:26px}
+  .hero p{font-size:15px}
+  .lesson-head h1{font-size:22px}
+  .tabs{gap:2px}
+  .tab{font-size:13px;padding:9px 14px}
+
+  /* Match grid */
   .match-grid{grid-template-columns:1fr}
+  .match-left,.match-right{font-size:14.5px;padding:12px 14px}
+
+  /* Cloze */
+  .cloze-passage{font-size:15px;line-height:2.8}
+  .cloze-slot{font-size:14.5px;min-width:80px;padding:4px 10px}
+
+  /* Flashcard */
+  .flashcard{font-size:22px;min-height:160px}
+
+  /* Stats row */
+  .stat-row{gap:8px}
+  .stat .v{font-size:22px}
+
+  /* Path row */
   .path-row{flex-wrap:wrap;gap:8px}
+  .path-step{min-width:60px}
+
+  /* Quiz */
+  .quiz-q{font-size:17px;line-height:1.5}
+
+  /* Table responsive */
+  table{font-size:13px}
+  th,td{padding:7px 8px}
+
+  /* Section label */
+  .section-label h2{font-size:16px}
 }
 
 /* ── Cloze exercise ──────────────────────────────────────── */
