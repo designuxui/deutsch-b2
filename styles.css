@@ -624,3 +624,163 @@ body {
   .section-label h2 { font-size: 18px; }
   .gram table { font-size: 12.5px; }
 }
+
+/* ══════════════════════════════════════════════
+   NEWFORM ANIMATIONS
+══════════════════════════════════════════════ */
+
+/* ── LOADING SCREEN ────────────────────────── */
+#loader {
+  position: fixed; inset: 0; z-index: 9999;
+  background: var(--color-obsidian-ink);
+  display: flex; align-items: center; justify-content: center;
+  pointer-events: all;
+}
+#loader.hidden { pointer-events: none; }
+
+.loader-inner {
+  text-align: center;
+}
+.loader-wordmark {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(32px, 6vw, 72px);
+  letter-spacing: -.03em;
+  color: var(--color-linen);
+  line-height: 1;
+  margin-bottom: 40px;
+}
+.loader-wordmark span { color: var(--color-voltage); }
+
+.loader-bar-wrap {
+  width: 240px; height: 1px;
+  background: rgba(255,255,255,.1);
+  margin: 0 auto 20px;
+  overflow: hidden;
+  border-radius: 1px;
+}
+.loader-bar {
+  height: 100%; width: 0%;
+  background: var(--color-voltage);
+  border-radius: 1px;
+  transition: width .05s linear;
+}
+.loader-pct {
+  font-size: 11px; font-weight: 550;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: var(--color-sage);
+}
+
+/* ── TEXT REVEAL (split lines) ─────────────── */
+.reveal-text {
+  overflow: hidden;
+  display: block;
+}
+.reveal-text .line {
+  display: block;
+  transform: translateY(105%);
+  opacity: 0;
+}
+
+/* ── FADE UP (cards, sections) ─────────────── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+/* ── STAGGER CHILDREN ──────────────────────── */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* ── PAGE TRANSITION OVERLAY ───────────────── */
+#page-transition {
+  position: fixed; inset: 0; z-index: 8000;
+  background: var(--color-obsidian-ink);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  pointer-events: none;
+}
+
+/* ── CURSOR (desktop only) ─────────────────── */
+@media (pointer: fine) {
+  #cursor {
+    position: fixed; z-index: 9998;
+    width: 8px; height: 8px;
+    background: var(--color-voltage);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform .1s, width .2s, height .2s, background .2s;
+    mix-blend-mode: difference;
+  }
+  #cursor.expanded {
+    width: 40px; height: 40px;
+    background: var(--color-voltage);
+    opacity: .3;
+  }
+  body { cursor: none; }
+  a, button, [role="button"], .lesson-card, .gram-card, .opt, .chip, .match-item, .navitem {
+    cursor: none;
+  }
+}
+
+/* ── NAV ITEM HOVER LINE ───────────────────── */
+.navitem .nav-line {
+  position: absolute; bottom: 0; left: 14px; right: 14px;
+  height: 1px; background: var(--color-voltage);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .3s cubic-bezier(.2,.8,.2,1);
+}
+.navitem:hover .nav-line,
+.navitem.active .nav-line { transform: scaleX(1); }
+
+/* ── LESSON CARD HOVER ─────────────────────── */
+.lesson-card::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 2px; background: var(--color-voltage);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .4s cubic-bezier(.2,.8,.2,1);
+}
+.lesson-card:hover::after { transform: scaleX(1); }
+
+/* ── TICK MARK ANIMATED ────────────────────── */
+.hero::after {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .6s .3s cubic-bezier(.2,.8,.2,1);
+}
+.hero.in-view::after { transform: scaleX(1); }
+
+/* ── SMOOTH RISE (page view change) ────────── */
+.view {
+  animation: none; /* override — GSAP handles this now */
+}
+
+/* ── VOLTAGE GLOW ON ACTIVE BUTTON ─────────── */
+.btn.lime, .btn.know {
+  transition: box-shadow .25s, transform .15s;
+}
+.btn.lime:hover, .btn.know:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-cta), 0 0 0 4px rgba(43,238,75,.12);
+}
+
+/* ── PROGRESS BAR ANIMATE ──────────────────── */
+.bar-fill {
+  transition: width .8s cubic-bezier(.2,.8,.2,1);
+}
+.pfill {
+  transition: width .8s cubic-bezier(.2,.8,.2,1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #loader { display: none; }
+  .reveal-text .line { transform: none; opacity: 1; }
+  .fade-up { opacity: 1; transform: none; }
+  .stagger-children > * { opacity: 1; transform: none; }
+  #cursor { display: none; }
+  body { cursor: auto; }
+}

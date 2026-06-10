@@ -30,6 +30,16 @@
 <body>
 
 <!-- Mobile top bar (hidden on desktop) -->
+
+<!-- Loading screen -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <div class="loader-wordmark">DEUTSCH<span> · B2</span></div>
+    <div class="loader-bar-wrap"><div class="loader-bar" id="loader-bar"></div></div>
+    <div class="loader-pct" id="loader-pct">0%</div>
+  </div>
+</div>
+
 <header class="mob-bar" id="mob-bar">
   <div class="mob-brand">
     <span class="mob-b2">Deutsch<span> B2</span></span>
@@ -82,7 +92,10 @@
 </nav>
 
 <input type="file" accept=".pdf" id="pdfFileInput" style="display:none" aria-hidden="true">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" crossorigin="anonymous"></script>
+<script src="animations.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
