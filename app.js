@@ -2013,6 +2013,294 @@ const COURSE = [
      pairs:[['entfachen','разжигать'],['vertreiben','прогонять'],['aufstellen','устанавливать'],['der Brauch','обычай']]},
   ]
 },
+
+{ id:'l42', tag:'Grammatik B2', level:'b2',
+  title:'Vergleichssätze: als, wie, je…desto, als ob',
+  explain:`<h3>Vergleichssätze</h3>
+<h4>1. Gleichheit und Ungleichheit</h4>
+<table><tr><th>Konstruktion</th><th>Bedeutung</th><th>Beispiel</th></tr>
+<tr><td><b>so + Adj. + wie</b></td><td>gleich (=)</td><td>Die Aufgabe war <b>so schwer wie</b> erwartet.</td></tr>
+<tr><td><b>nicht so + Adj. + wie</b></td><td>kleiner (&lt;)</td><td>Nicht <b>so schwer wie</b> befürchtet.</td></tr>
+<tr><td><b>Komparativ + als</b></td><td>größer (&gt;)</td><td>Die Prüfung dauerte <b>länger als</b> erwartet.</td></tr></table>
+<h4>2. Je…desto/umso — Proportionalsatz</h4>
+<p><b>Je</b> + Komparativ + Nebensatz, <b>desto/umso</b> + Komparativ + Hauptsatz</p>
+<p>• <em>Je mehr ich übe, desto besser wird mein Deutsch.</em><br>• <em>Je länger man im Ausland lebt, umso besser beherrscht man die Sprache.</em></p>
+<h4>3. Als ob / Als — irreale Vergleiche</h4>
+<table><tr><th>Konstruktion</th><th>Beispiel</th></tr>
+<tr><td>als ob + Konj. II (Verb am Ende)</td><td>Max tut so, <b>als ob</b> er alles wüsste.</td></tr>
+<tr><td>als + Konj. II (Verb an 2. Stelle)</td><td>Max tut so, <b>als</b> wüsste er alles.</td></tr></table>`,
+  exercises:[
+    {id:'l42e1',type:'mc',q:'Die Prüfung dauerte länger, ___ ich erwartet hatte.',options:['wie','als','ob','dass'],answer:1,explain:'"Als" bei Ungleichheit (länger = Komparativ).'},
+    {id:'l42e2',type:'mc',q:'Die Anreise war genauso kompliziert, ___ ich gedacht habe.',options:['als','wie','ob','desto'],answer:1,explain:'"So…wie" bei Gleichheit.'},
+    {id:'l42e3',type:'mc',q:'Die Aufgaben waren nicht so schwer, ___ ich befürchtet hatte.',options:['als','dass','wie','umso'],answer:2,explain:'"Nicht so…wie" = Gleichheitskonstruktion mit Negation.'},
+    {id:'l42e4',type:'gap',q:'Je mehr Vokabeln ich lerne, ___ größer wird mein Wortschatz.',accept:['desto','umso'],hint:'Je…___ (zwei Möglichkeiten)',explain:'"Desto" oder "umso" — beide korrekt.'},
+    {id:'l42e5',type:'gap',q:'Je öfter Markus übt, ___ schneller lernt er.',accept:['desto','umso'],hint:'Je…___',explain:'"Desto/umso" + Komparativ + Verb.'},
+    {id:'l42e6',type:'order',q:'Bilde den Satz: je / länger / man / im Ausland / ist / desto / besser / beherrscht / man / die Sprache',words:['Je','länger','man','im Ausland','ist',',','desto','besser','beherrscht','man','die Sprache','.'],answer:'Je länger man im Ausland ist , desto besser beherrscht man die Sprache .',explain:'Je-Satz: Verb am Ende. Desto-Satz: Verb nach dem Komparativ.'},
+    {id:'l42e7',type:'mc',q:'Max tut so, als ob er alles ___.',options:['weiß','wusste','wüsste','gewusst hat'],answer:2,explain:'Nach "als ob" steht Konjunktiv II: wissen → wüsste.'},
+    {id:'l42e8',type:'mc',q:'Sie sieht aus, ___ würde es gleich regnen.',options:['als ob','als','wie ob','ob'],answer:1,explain:'"Als" + Konjunktiv II direkt (Verb an 2. Stelle).'},
+    {id:'l42e9',type:'gap',q:'Meine Kollegin benimmt sich, als ob sie die Chefin ___.',accept:['wäre'],hint:'sein → Konjunktiv II',explain:'"Als ob" + Konjunktiv II: sein → wäre.'},
+    {id:'l42e10',type:'match',q:'Ordne die Vergleichsart der Konstruktion zu:',pairs:[['so … wie','Gleichheit (=)'],['Komparativ + als','Ungleichheit (≠)'],['je … desto','Proportional'],['als ob + Konj. II','Irrealer Vergleich']]},
+  ]
+},
+{ id:'l43', tag:'Grammatik B1-B2', level:'b1',
+  title:'Negation — kein, nicht, nie, nichts, nirgends',
+  explain:`<h3>Negation im Deutschen</h3>
+<h4>1. <em>kein</em> — negiert Nomen mit unbestimmtem Artikel oder ohne Artikel</h4>
+<table><tr><th>Positiv</th><th>Negation</th></tr><tr><td>Das ist ein Tisch.</td><td>Das ist <b>kein</b> Tisch.</td></tr><tr><td>Er hat Zeit.</td><td>Er hat <b>keine</b> Zeit.</td></tr></table>
+<h4>2. <em>nicht</em> — negiert Verben, Adjektive, Adverbien</h4>
+<table><tr><th>Was</th><th>Beispiel</th></tr><tr><td>Verb (Satzende)</td><td>Ich arbeite <b>nicht</b>.</td></tr><tr><td>Adjektiv/Adverb</td><td>Das ist <b>nicht</b> richtig.</td></tr><tr><td>Nomen mit best. Artikel</td><td>Ich mag <b>nicht</b> den Film.</td></tr></table>
+<h4>3. Weitere Negationswörter</h4>
+<table><tr><th>Wort</th><th>Bedeutung</th><th>Beispiel</th></tr><tr><td><b>nie/niemals</b></td><td>never</td><td>Ich gehe <b>nie</b> ins Casino.</td></tr><tr><td><b>nichts</b></td><td>nothing</td><td>Ich verstehe <b>nichts</b>.</td></tr><tr><td><b>niemand</b></td><td>nobody</td><td><b>Niemand</b> war zu Hause.</td></tr><tr><td><b>nirgends</b></td><td>nowhere</td><td>Ich finde es <b>nirgends</b>.</td></tr><tr><td><b>noch nicht</b></td><td>not yet</td><td>Ich bin <b>noch nicht</b> fertig.</td></tr><tr><td><b>nicht mehr</b></td><td>no longer</td><td>Er wohnt <b>nicht mehr</b> hier.</td></tr></table>`,
+  exercises:[
+    {id:'l43e1',type:'mc',q:'Das ist ___ Problem. (unbestimmter Artikel)',options:['nicht','kein','keinen','nichts'],answer:1,explain:'"Kein" negiert Nomen mit unbestimmtem Artikel.'},
+    {id:'l43e2',type:'mc',q:'Er kommt heute ___ zur Arbeit.',options:['kein','keine','nicht','nichts'],answer:2,explain:'"Nicht" negiert das Verb.'},
+    {id:'l43e3',type:'gap',q:'Ich habe ___ Zeit.',accept:['keine'],hint:'kein- + Endung (f.)',explain:'"Zeit" ist feminin ohne Artikel → keine Zeit.'},
+    {id:'l43e4',type:'mc',q:'Ohne ihre Brille kann Julia ___ sehen.',options:['nicht','nichts','kein','niemals'],answer:1,explain:'"Nichts" negiert alles.'},
+    {id:'l43e5',type:'mc',q:'Ich bin ___ fertig. (not yet)',options:['nicht mehr','noch nicht','kein','nie'],answer:1,explain:'"Noch nicht" = not yet.'},
+    {id:'l43e6',type:'mc',q:'Die Schüler haben sich ___ auf die Prüfungen gefreut.',options:['kein','keine','nicht','nichts'],answer:2,explain:'"Nicht" negiert das Verb.'},
+    {id:'l43e7',type:'gap',q:'Er wohnt ___ mehr in Berlin.',accept:['nicht'],hint:'___ mehr',explain:'"Nicht mehr" = no longer.'},
+    {id:'l43e8',type:'mc',q:'Ihr müsst heute ___ Hausaufgaben machen.',options:['nicht','kein','keine','nichts'],answer:2,explain:'"Hausaufgaben" Plural ohne Artikel → keine.'},
+    {id:'l43e9',type:'match',q:'Ordne Negationswort und Bedeutung:',pairs:[['nichts','ничего'],['niemand','никто'],['nirgends','нигде'],['nicht mehr','больше не'],['noch nicht','ещё не']]},
+    {id:'l43e10',type:'gap',q:'Jan kann ___ einfach aufhören, an Julia zu denken.',accept:['nicht'],hint:'"nicht" negiert "einfach"',explain:'"Nicht" vor dem Wort, das negiert wird.'},
+  ]
+},
+{ id:'l44', tag:'Kommunikation B1', level:'b1',
+  title:'Redemittel — Höfliche Kommunikation im Gespräch',
+  explain:`<h3>Redemittel für höfliche Kommunikation</h3>
+<h4>1. Nachfragen & Bitten um Wiederholung</h4>
+<table><tr><th>Situation</th><th>Ausdruck</th></tr><tr><td>Nicht verstanden</td><td><b>Entschuldigung, könnten Sie das wiederholen?</b></td></tr><tr><td>Zu schnell</td><td><b>Könnten Sie bitte langsamer sprechen?</b></td></tr><tr><td>Kurz</td><td><b>Wie bitte? / Entschuldigung?</b></td></tr></table>
+<h4>2. Meinung & Diskurs</h4>
+<table><tr><th>Funktion</th><th>Ausdruck</th></tr><tr><td>Meinung</td><td><b>Meiner Meinung nach …</b></td></tr><tr><td>Einerseits/andererseits</td><td><b>Einerseits … andererseits …</b></td></tr><tr><td>Zustimmung</td><td><b>Da stimme ich zu.</b></td></tr><tr><td>Widerspruch</td><td><b>Da bin ich anderer Meinung.</b></td></tr><tr><td>Fazit</td><td><b>Zusammenfassend möchte ich sagen, dass …</b></td></tr></table>
+<h4>3. Diskursmarker</h4>
+<p><b>Übrigens</b> · <b>Außerdem</b> · <b>Jedenfalls</b> · <b>Ehrlich gesagt</b> · <b>Eigentlich</b> · <b>Sozusagen</b></p>`,
+  exercises:[
+    {id:'l44e1',type:'mc',q:'Dein Gesprächspartner spricht zu schnell. Was sagst du?',options:['Ich verstehe gar nichts!','Könnten Sie bitte langsamer sprechen?','Sprechen Sie laut!','Was meinen Sie?'],answer:1,explain:'Höfliche Bitte mit Konjunktiv II.'},
+    {id:'l44e2',type:'mc',q:'Du hast die Frage nicht verstanden. Was sagst du?',options:['Das ist falsch!','Wie bitte? Könnten Sie das wiederholen?','Ich will nicht antworten.','Nein danke.'],answer:1,explain:'"Wie bitte?" — klassische Nachfrage.'},
+    {id:'l44e3',type:'gap',q:'___ gesagt, ich bin damit nicht einverstanden.',accept:['Ehrlich','Offen'],hint:'Ehrlich/Offen ___',explain:'"Ehrlich gesagt" — Diskursmarker.'},
+    {id:'l44e4',type:'mc',q:'Du willst deine Meinung äußern. Wie beginnst du?',options:['Es ist so dass…','Meiner Meinung nach…','Ich sage dir…','Vielleicht…'],answer:1,explain:'"Meiner Meinung nach" + Verb normal.'},
+    {id:'l44e5',type:'order',q:'Bilde den Satz mit einerseits/andererseits:',words:['Einerseits','gibt','es','viele','Vorteile',',','andererseits','aber','auch','Nachteile','.'],answer:'Einerseits gibt es viele Vorteile , andererseits aber auch Nachteile .',explain:'Verb an 2. Stelle nach Einerseits.'},
+    {id:'l44e6',type:'mc',q:'Du willst einen Raum betreten. Was sagst du?',options:['Ich komme rein!','Darf ich hereinkommen?','Kann ich da?','Ich gehe jetzt rein.'],answer:1,explain:'"Darf ich hereinkommen?" — höflich.'},
+    {id:'l44e7',type:'match',q:'Ordne Redemittel und Funktion:',pairs:[['Meiner Meinung nach…','Meinung äußern'],['Könnten Sie wiederholen?','Nachfragen'],['Zusammenfassend…','Fazit ziehen'],['Übrigens…','Thema wechseln']]},
+    {id:'l44e8',type:'gap',q:'___ möchte ich sagen, dass das Projekt ein Erfolg war.',accept:['Zusammenfassend'],hint:'Zusammen___',explain:'"Zusammenfassend" — Standardformel für Abschlüsse.'},
+    {id:'l44e9',type:'mc',q:'Mit welchem Ausdruck widersprichst du höflich?',options:['Das ist falsch!','Da bin ich anderer Meinung.','Nein!','Das stimmt nicht.'],answer:1,explain:'"Da bin ich anderer Meinung" — höflicher Widerspruch.'},
+    {id:'l44e10',type:'mc',q:'Was bedeutet "Jedenfalls"?',options:['вообще','кстати','в любом случае','честно говоря'],answer:2,explain:'"Jedenfalls" = in any case.'},
+  ]
+},
+{ id:'l45', tag:'Grammatik B2', level:'b2',
+  title:'Infinitiv mit und ohne zu',
+  explain:`<h3>Infinitiv mit und ohne <em>zu</em></h3>
+<h4>OHNE zu — 4 Fälle</h4>
+<table><tr><th>Nach</th><th>Beispiel</th></tr><tr><td><b>Modalverben</b></td><td>Ich <b>kann</b> spielen.</td></tr><tr><td><b>Bewegungsverben</b> (gehen, fahren…)</td><td>Wir <b>gehen</b> schwimmen.</td></tr><tr><td><b>Wahrnehmungsverben</b> (sehen, hören…)</td><td>Ich <b>höre</b> ihn spielen.</td></tr><tr><td><b>lassen, bleiben, machen</b></td><td>Er <b>lässt</b> das Auto reparieren.</td></tr></table>
+<h4>MIT zu — Hauptfälle</h4>
+<table><tr><th>Nach</th><th>Beispiel</th></tr><tr><td>Vollverben</td><td>Ich vergaß, sie anzu<b>rufen</b>.</td></tr><tr><td>Adjektiv + sein</td><td>Es ist schön, Deutsch <b>zu lernen</b>.</td></tr><tr><td>brauchen + Negation</td><td>Du <b>brauchst</b> das nicht <b>zu</b> tun.</td></tr></table>
+<h4>Trennbare Verben: zu ZWISCHEN Präfix und Verb</h4>
+<p>an<b>zu</b>rufen · fern<b>zu</b>sehen · auf<b>zu</b>hören · ein<b>zu</b>kaufen</p>`,
+  exercises:[
+    {id:'l45e1',type:'mc',q:'Max macht es viel Spaß, am Wochenende mit Freunden ___.',options:['einzukaufen','einkaufen','zu einkaufen','kaufen ein'],answer:0,explain:'Nach "Spaß machen" zu-Infinitiv. Trennbar: ein|zu|kaufen.'},
+    {id:'l45e2',type:'mc',q:'Sie ___ das Mädchen weinen. (Wahrnehmungsverb)',options:['sieht zu','sieht','lässt','hört'],answer:1,explain:'Nach "sehen" Infinitiv OHNE zu.'},
+    {id:'l45e3',type:'gap',q:'Er hat versucht, 3 kg ___. (abnehmen)',accept:['abzunehmen'],hint:'ab|zu|nehmen',explain:'"Versuchen" + zu-Infinitiv.'},
+    {id:'l45e4',type:'mc',q:'Wir ___ heute an den See schwimmen.',options:['gehen zu','fahren zu','fahren','müssen zu'],answer:2,explain:'Bewegungsverb "fahren" + Infinitiv OHNE zu.'},
+    {id:'l45e5',type:'gap',q:'Ich habe keine Lust, fern___. (fernsehen)',accept:['fernzusehen'],hint:'fern|zu|sehen',explain:'"Keine Lust haben" + zu-Infinitiv.'},
+    {id:'l45e6',type:'mc',q:'Du ___ das nicht tun. (brauchen + Negation)',options:['brauchst zu','brauchst nicht zu','brauchst nicht','musst nicht zu'],answer:1,explain:'"Brauchst nicht zu tun" — zu bleibt!'},
+    {id:'l45e7',type:'mc',q:'Er hat Angst davor, seinen Arbeitsplatz ___.',options:['verlieren','zu verlieren','verlieren zu','verlierend'],answer:1,explain:'"Angst haben davor" + zu-Infinitiv.'},
+    {id:'l45e8',type:'gap',q:'Marianne hat vor, nach Australien ___. (auswandern)',accept:['auszuwandern'],hint:'aus|zu|wandern',explain:'"Vorhaben" + zu-Infinitiv.'},
+    {id:'l45e9',type:'match',q:'Infinitiv mit oder ohne zu?',pairs:[['Ich lasse das Auto reparieren.','OHNE zu (lassen)'],['Ich versuche, früh aufzustehen.','MIT zu (versuchen)'],['Sie hört ihn singen.','OHNE zu (hören)'],['Es ist verboten, hier zu parken.','MIT zu (sein + Adj.)']]},
+    {id:'l45e10',type:'gap',q:'Es fällt ihm schwer, keinen Alkohol mehr ___. (trinken)',accept:['zu trinken'],hint:'zu + Infinitiv',explain:'"Es fällt schwer" + zu-Infinitiv.'},
+  ]
+},
+{ id:'l46', tag:'Grammatik B2', level:'b2',
+  title:'Genitivus partitivus — einer meiner Freunde',
+  explain:`<h3>Genitivus partitivus — Разделительный Genitiv</h3>
+<p>Конструкция «один из…»</p>
+<table><tr><th>Падеж</th><th>m/n</th><th>f</th><th>Пример</th></tr><tr><td>Nominativ</td><td>einer</td><td>eine</td><td><b>Einer</b> meiner Freunde kommt.</td></tr><tr><td>Akkusativ</td><td>einen/eines</td><td>eine</td><td>Wir treffen <b>einen</b> unserer Kollegen.</td></tr><tr><td>Dativ</td><td>einem</td><td>einer</td><td>bei <b>einem</b> der neuen Cafés</td></tr></table>`,
+  exercises:[
+    {id:'l46e1',type:'mc',q:'___ seiner Kinder ist schon in die Schule gegangen. (Nom. n.)',options:['Eine','Einer','Eines','Einem'],answer:2,explain:'"Kinder" — Neutrum. Nominativ Neutrum → eines.'},
+    {id:'l46e2',type:'mc',q:'Wir haben ___ unserer alten Freunde getroffen. (Akk. m.)',options:['einer','eines','einen','einem'],answer:2,explain:'Akkusativ Maskulin → einen.'},
+    {id:'l46e3',type:'gap',q:'___ meiner Kollegen hat eine Beförderung erhalten. (Nom. m.)',accept:['Einer'],hint:'Nominativ Maskulin',explain:'Nominativ Maskulin → einer.'},
+    {id:'l46e4',type:'mc',q:'Wir waren in ___ dieser neuen Cafés. (Dativ n.)',options:['einer','eines','einem','einen'],answer:2,explain:'Dativ Neutrum → einem.'},
+    {id:'l46e5',type:'gap',q:'___ unserer Nachbarinnen ist berühmt geworden. (Nom. f.)',accept:['Eine'],hint:'Nominativ Feminin',explain:'Nominativ Feminin → eine.'},
+    {id:'l46e6',type:'mc',q:'Er hat ___ der Wörter vergessen. (Akk. n.)',options:['eine','eines','einen','einem'],answer:1,explain:'Akkusativ Neutrum → eines.'},
+    {id:'l46e7',type:'gap',q:'Wir haben ___ dieser Ideen verwendet. (Akk. f.)',accept:['eine'],hint:'Akkusativ Feminin',explain:'Akkusativ Feminin → eine.'},
+    {id:'l46e8',type:'order',q:'Ordne den Satz:',words:['Einer','meiner','Kollegen','hat','eine','Beförderung','erhalten','.'],answer:'Einer meiner Kollegen hat eine Beförderung erhalten .',explain:'Nominativ: einer meiner Kollegen.'},
+    {id:'l46e9',type:'match',q:'Ordne Form dem Kasus:',pairs:[['einer (m.)','Nominativ Maskulin'],['eine (f.)','Nominativ/Akkusativ Feminin'],['eines (n.)','Nominativ/Akkusativ Neutrum'],['einem (m./n.)','Dativ Maskulin/Neutrum']]},
+    {id:'l46e10',type:'gap',q:'In ___ der ärmsten Länder der Welt gelebt. (Dativ n.)',accept:['einem'],hint:'Dativ Neutrum',explain:'Dativ Neutrum → einem.'},
+  ]
+},
+{ id:'l47', tag:'Grammatik B2', level:'b2',
+  title:'Reflexive Verben mit Präpositionen + Pronominaladverbien',
+  explain:`<h3>Reflexive Verben mit Präpositionen</h3>
+<table><tr><th>Verb</th><th>Präposition</th><th>Beispiel</th></tr><tr><td>sich interessieren</td><td>für + Akk.</td><td>Er interessiert sich <b>für</b> Kunst.</td></tr><tr><td>sich freuen</td><td>über + Akk.</td><td>Sie freut sich <b>über</b> das Geschenk.</td></tr><tr><td>sich vorbereiten</td><td>auf + Akk.</td><td>Wir bereiten uns <b>auf</b> die Prüfung vor.</td></tr><tr><td>sich kümmern</td><td>um + Akk.</td><td>Ich kümmere mich <b>um</b> die Katze.</td></tr><tr><td>sich beschäftigen</td><td>mit + Dat.</td><td>Er beschäftigt sich <b>mit</b> Musik.</td></tr><tr><td>sich erinnern</td><td>an + Akk.</td><td>Ich erinnere mich <b>an</b> den Urlaub.</td></tr><tr><td>abhängen</td><td>von + Dat.</td><td>Es hängt <b>von</b> dir ab.</td></tr></table>
+<h4>Pronominaladverbien da(r)+ / wo(r)+</h4>
+<table><tr><th>Frage</th><th>Antwort</th></tr><tr><td>Wofür?</td><td><b>dafür</b></td></tr><tr><td>Worauf?</td><td><b>darauf</b></td></tr><tr><td>Womit?</td><td><b>damit</b></td></tr><tr><td>Wovon?</td><td><b>davon</b></td></tr><tr><td>Worüber?</td><td><b>darüber</b></td></tr></table>
+<p>⚠️ Vor Vokal: <b>dar</b>über, <b>dar</b>an, <b>dar</b>auf — aber: <b>da</b>für, <b>da</b>mit</p>`,
+  exercises:[
+    {id:'l47e1',type:'mc',q:'Er interessiert sich ___ Geschichte.',options:['an','für','mit','auf'],answer:1,explain:'"Sich interessieren für."'},
+    {id:'l47e2',type:'mc',q:'Wir bereiten uns ___ die Prüfung vor.',options:['für','mit','auf','an'],answer:2,explain:'"Sich vorbereiten auf."'},
+    {id:'l47e3',type:'gap',q:'Wofür interessiert er sich? — Er interessiert sich ___.',accept:['dafür'],hint:'da + für',explain:'"Dafür" = für + das.'},
+    {id:'l47e4',type:'gap',q:'Worauf wartet ihr? — Wir warten ___.',accept:['darauf'],hint:'dar + auf',explain:'"Darauf" — vor Vokal: dar-.'},
+    {id:'l47e5',type:'mc',q:'Es hängt ___ dem Wetter ab.',options:['auf','an','von','für'],answer:2,explain:'"Abhängen von."'},
+    {id:'l47e6',type:'gap',q:'Womit beschäftigt sie sich? — Sie beschäftigt sich ___.',accept:['damit'],hint:'da + mit',explain:'"Damit" = mit + dem/der.'},
+    {id:'l47e7',type:'mc',q:'Die Mutter sorgt ___ ihre Katze.',options:['um','für','an','mit'],answer:1,explain:'"Sorgen für."'},
+    {id:'l47e8',type:'gap',q:'Worüber freust du dich? — Ich freue mich ___ das Geschenk.',accept:['darüber','über'],hint:'über / dar+über',explain:'"Freuen über."'},
+    {id:'l47e9',type:'match',q:'Ordne Verb und Präposition:',pairs:[['sich erinnern','an + Akk.'],['sich beschäftigen','mit + Dat.'],['sich kümmern','um + Akk.'],['abhängen','von + Dat.']]},
+    {id:'l47e10',type:'gap',q:'Woran denkt er? — Er denkt ___ seine Arbeit.',accept:['daran','an'],hint:'an / dar+an',explain:'"Denken an."'},
+  ]
+},
+{ id:'l48', tag:'Grammatik B1', level:'b1',
+  title:'Starke Verben — Drei Grundformen',
+  explain:`<h3>Starke Verben: Infinitiv → Präteritum → Partizip II</h3>
+<table><tr><th>Infinitiv</th><th>Präteritum</th><th>Partizip II</th><th>Перевод</th></tr>
+<tr><td>trinken</td><td>trank</td><td>getrunken</td><td>пить</td></tr>
+<tr><td>schreiben</td><td>schrieb</td><td>geschrieben</td><td>писать</td></tr>
+<tr><td>lesen</td><td>las</td><td>gelesen</td><td>читать</td></tr>
+<tr><td>fahren</td><td>fuhr</td><td>gefahren</td><td>ехать</td></tr>
+<tr><td>schlafen</td><td>schlief</td><td>geschlafen</td><td>спать</td></tr>
+<tr><td>finden</td><td>fand</td><td>gefunden</td><td>находить</td></tr>
+<tr><td>geben</td><td>gab</td><td>gegeben</td><td>давать</td></tr>
+<tr><td>nehmen</td><td>nahm</td><td>genommen</td><td>брать</td></tr>
+<tr><td>sprechen</td><td>sprach</td><td>gesprochen</td><td>говорить</td></tr>
+<tr><td>kommen</td><td>kam</td><td>gekommen</td><td>приходить</td></tr>
+<tr><td>gehen</td><td>ging</td><td>gegangen</td><td>идти</td></tr>
+<tr><td>halten</td><td>hielt</td><td>gehalten</td><td>останавливаться</td></tr>
+<tr><td>singen</td><td>sang</td><td>gesungen</td><td>петь</td></tr>
+<tr><td>schweigen</td><td>schwieg</td><td>geschwiegen</td><td>молчать</td></tr>
+<tr><td>schlagen</td><td>schlug</td><td>geschlagen</td><td>ударять</td></tr></table>`,
+  exercises:[
+    {id:'l48e1',type:'match',q:'Infinitiv → Präteritum:',pairs:[['trinken','trank'],['schreiben','schrieb'],['finden','fand'],['gehen','ging'],['halten','hielt']]},
+    {id:'l48e2',type:'match',q:'Infinitiv → Partizip II:',pairs:[['sprechen','gesprochen'],['singen','gesungen'],['nehmen','genommen'],['schlafen','geschlafen'],['kommen','gekommen']]},
+    {id:'l48e3',type:'gap',q:'lesen → ___ → gelesen',accept:['las'],hint:'e → a',explain:'"Lesen" → las.'},
+    {id:'l48e4',type:'gap',q:'fahren → fuhr → ___',accept:['gefahren'],hint:'ge- + Stamm + -en',explain:'"Gefahren."'},
+    {id:'l48e5',type:'mc',q:'Partizip II von "geben"?',options:['gegeben','gegebt','gab','gegabt'],answer:0,explain:'"Geben" → gab → gegeben.'},
+    {id:'l48e6',type:'mc',q:'Präteritum von "schlafen"?',options:['schlafete','schlief','schlieft','geschlafen'],answer:1,explain:'"Schlafen" → schlief.'},
+    {id:'l48e7',type:'gap',q:'schweigen → ___ → geschwiegen',accept:['schwieg'],hint:'schwei- → schwie-',explain:'"Schweigen" → schwieg.'},
+    {id:'l48e8',type:'mc',q:'Partizip II von "kommen"?',options:['gekommt','kommt','gekommen','gekomen'],answer:2,explain:'"Kommen" → kam → gekommen.'},
+    {id:'l48e9',type:'gap',q:'nehmen → nahm → ___',accept:['genommen'],hint:'ge- + nomm- + -en',explain:'"Nehmen" → genommen.'},
+    {id:'l48e10',type:'match',q:'Ordne vollständige Grundformen:',pairs:[['geben → gab → ___','gegeben'],['singen → sang → ___','gesungen'],['schlagen → schlug → ___','geschlagen'],['finden → fand → ___','gefunden']]},
+  ]
+},
+{ id:'l49', tag:'Grammatik B2', level:'b2',
+  title:'Modalverben im Präteritum — konnte, musste, wollte',
+  explain:`<h3>Modalverben im Präteritum</h3>
+<table><tr><th>Infinitiv</th><th>Präsens</th><th>Präteritum</th><th>Bedeutung</th></tr>
+<tr><td>können</td><td>kann</td><td><b>konnte</b></td><td>мочь</td></tr>
+<tr><td>müssen</td><td>muss</td><td><b>musste</b></td><td>должен</td></tr>
+<tr><td>wollen</td><td>will</td><td><b>wollte</b></td><td>хотеть</td></tr>
+<tr><td>dürfen</td><td>darf</td><td><b>durfte</b></td><td>разрешено</td></tr>
+<tr><td>sollen</td><td>soll</td><td><b>sollte</b></td><td>должен (по поручению)</td></tr>
+<tr><td>mögen</td><td>mag</td><td><b>mochte</b></td><td>нравиться</td></tr></table>
+<p>• Ich <b>konnte</b> gestern nicht kommen. • Er <b>musste</b> viel lernen. • Sie <b>wollte</b> nach Berlin fahren.</p>`,
+  exercises:[
+    {id:'l49e1',type:'mc',q:'Ich ___ gestern nicht zu dir kommen.',options:['kann','konnte','könnte','gekonnt'],answer:1,explain:'"Konnte" — Präteritum von können.'},
+    {id:'l49e2',type:'gap',q:'Vor einem Jahr ___ du noch nicht schwimmen. (können)',accept:['konntest'],hint:'konn- + -test',explain:'"Du konntest."'},
+    {id:'l49e3',type:'mc',q:'Er ___ nicht hören — er hatte Kopfhörer. (не хотел)',options:['wollte nicht','musste nicht','durfte nicht','konnte nicht'],answer:0,explain:'"Wollte nicht" = не хотел.'},
+    {id:'l49e4',type:'gap',q:'Letzte Woche ___ ich viel lernen. (müssen)',accept:['musste'],hint:'müssen → muss- + -te',explain:'"Musste."'},
+    {id:'l49e5',type:'mc',q:'Als Kind ___ ich bis 22 Uhr fernsehen. (разрешалось)',options:['konnte','wollte','durfte','sollte'],answer:2,explain:'"Durfte" = разрешалось.'},
+    {id:'l49e6',type:'gap',q:'Der Arzt sagte, ich ___ im Bett bleiben. (sollen)',accept:['sollte'],hint:'sollen → soll- + -te',explain:'"Sollte" — по поручению.'},
+    {id:'l49e7',type:'mc',q:'Mein Bruder ___ lange keine Arbeit finden.',options:['wollte nicht','konnte nicht','musste nicht','durfte nicht'],answer:1,explain:'"Konnte nicht" = не мог.'},
+    {id:'l49e8',type:'gap',q:'Wir ___ nach Paris fahren, aber die Pläne änderten sich. (wollen)',accept:['wollten'],hint:'woll- + -ten',explain:'"Wollten."'},
+    {id:'l49e9',type:'match',q:'Präsens → Präteritum:',pairs:[['kann','konnte'],['muss','musste'],['will','wollte'],['darf','durfte'],['soll','sollte']]},
+    {id:'l49e10',type:'gap',q:'Ich ___ nicht anrufen — mein Handy war kaputt.',accept:['konnte'],hint:'können → konnte',explain:'"Konnte nicht."'},
+  ]
+},
+{ id:'l50', tag:'Grammatik B2', level:'b2',
+  title:'Zustandspassiv — Das Fenster ist geöffnet',
+  explain:`<h3>Zustandspassiv — sein + Partizip II</h3>
+<table><tr><th>Vorgangspassiv</th><th>Zustandspassiv</th></tr><tr><td>Die Tür <b>wird geschlossen</b>.</td><td>Die Tür <b>ist geschlossen</b>.</td></tr><tr><td>Der Koffer <b>wird gepackt</b>.</td><td>Der Koffer <b>ist gepackt</b>.</td></tr></table>
+<h4>Bildung: sein (konjugiert) + Partizip II</h4>
+<table><tr><th>Subjekt</th><th>Beispiel</th></tr><tr><td>m.</td><td>Der Koffer ist <b>gepackt</b>.</td></tr><tr><td>f.</td><td>Die Tür ist <b>geschlossen</b>.</td></tr><tr><td>n.</td><td>Das Buch ist <b>übersetzt</b>.</td></tr><tr><td>Pl.</td><td>Die Hausaufgaben sind <b>gemacht</b>.</td></tr></table>`,
+  exercises:[
+    {id:'l50e1',type:'gap',q:'Ich packe meinen Koffer. → Der Koffer ist ___.',accept:['gepackt'],hint:'packen → ge-pack-t',explain:'"Gepackt."'},
+    {id:'l50e2',type:'gap',q:'Wir kaufen die Jacke. → Die Jacke ist ___.',accept:['gekauft'],hint:'kaufen → ge-kauf-t',explain:'"Gekauft."'},
+    {id:'l50e3',type:'mc',q:'Die Hausaufgabe ___ gemacht.',options:['wird','ist','hat','sein'],answer:1,explain:'Zustandspassiv: sein + PII.'},
+    {id:'l50e4',type:'gap',q:'Ich lese das Buch. → Das Buch ist ___.',accept:['gelesen'],hint:'lesen → gelesen (stark)',explain:'"Gelesen."'},
+    {id:'l50e5',type:'gap',q:'Die Arbeiter bauen das Haus. → Das Haus ist ___.',accept:['gebaut'],hint:'bauen → ge-bau-t',explain:'"Gebaut."'},
+    {id:'l50e6',type:'mc',q:'Die Tickets ___ gekauft — wir können losfahren!',options:['sind','werden','haben','wurden'],answer:0,explain:'Zustandspassiv: sind gekauft.'},
+    {id:'l50e7',type:'gap',q:'Ich schreibe den Brief. → Der Brief ist ___.',accept:['geschrieben'],hint:'schreiben → geschrieben',explain:'"Geschrieben."'},
+    {id:'l50e8',type:'mc',q:'"wird geöffnet" vs "ist geöffnet" — was ist der Unterschied?',options:['Kein Unterschied','wird = Handlung | ist = Zustand/Ergebnis','ist = Handlung | wird = Zustand','Nur stilistisch'],answer:1,explain:'"Wird" = Vorgang. "Ist" = Zustand.'},
+    {id:'l50e9',type:'match',q:'Bilde Partizip II:',pairs:[['reparieren','repariert'],['schließen','geschlossen'],['verkaufen','verkauft'],['essen','gegessen']]},
+    {id:'l50e10',type:'gap',q:'Die Pizza ist ___. (essen)',accept:['gegessen'],hint:'essen → gegessen',explain:'"Gegessen" — fertig aufgegessen.'},
+  ]
+},
+{ id:'l51', tag:'Grammatik B1', level:'b1',
+  title:'Zeitangaben — im Frühling, an diesem Montag, abends',
+  explain:`<h3>Zeitangaben im Deutschen</h3>
+<table><tr><th>Russisch</th><th>Deutsch</th></tr><tr><td>Весной</td><td><b>im Frühling</b></td></tr><tr><td>Зимой</td><td><b>im Winter</b></td></tr><tr><td>Утром</td><td><b>morgens</b> / am Morgen</td></tr><tr><td>Вечером</td><td><b>abends</b> / am Abend</td></tr><tr><td>В понедельник</td><td><b>am Montag</b></td></tr><tr><td>В эту среду</td><td><b>an diesem Mittwoch</b></td></tr><tr><td>На прошлой неделе</td><td><b>letzte Woche</b> (kein Artikel!)</td></tr><tr><td>Сегодня вечером</td><td><b>heute Abend</b></td></tr><tr><td>В этом году</td><td><b>in diesem Jahr</b></td></tr></table>`,
+  exercises:[
+    {id:'l51e1',type:'match',q:'Ordne Zeitangaben:',pairs:[['Весной','im Frühling'],['Зимой','im Winter'],['Вечером','abends'],['Сегодня вечером','heute Abend']]},
+    {id:'l51e2',type:'gap',q:'___ Montag habe ich einen Termin.',accept:['Am'],hint:'Wochentage: a__',explain:'"Am Montag."'},
+    {id:'l51e3',type:'mc',q:'В эту среду = ?',options:['an dieser Mittwoch','an diesem Mittwoch','in diesem Mittwoch','diesem Mittwoch'],answer:1,explain:'"An diesem Mittwoch" — Dativ.'},
+    {id:'l51e4',type:'gap',q:'___ trinke ich Kaffee. (Утром)',accept:['Morgens','Am Morgen'],hint:'morgens oder am Morgen',explain:'"Morgens" — Adverb.'},
+    {id:'l51e5',type:'mc',q:'На прошлой неделе = ?',options:['an letzter Woche','letzte Woche','in der letzten Woche','an der letzten Woche'],answer:1,explain:'"Letzte Woche" — ohne Präposition!'},
+    {id:'l51e6',type:'gap',q:'___ Winter fahre ich nach Österreich. (Этой зимой)',accept:['Diesen','Im'],hint:'Diesen / Im',explain:'"Diesen Winter" oder "Im Winter."'},
+    {id:'l51e7',type:'mc',q:'Сегодня вечером = ?',options:['abends heute','heute Abend','am heute Abend','diesen Abend'],answer:1,explain:'"Heute Abend" — feste Verbindung.'},
+    {id:'l51e8',type:'match',q:'Соотнеси:',pairs:[['Утром','morgens'],['Днём','mittags'],['Вечером','abends'],['Ночью','nachts']]},
+    {id:'l51e9',type:'gap',q:'Завтра утром = ___ habe ich ein Treffen.',accept:['Morgen früh'],hint:'morgen + früh',explain:'"Morgen früh."'},
+    {id:'l51e10',type:'mc',q:'В этом году = ?',options:['im diesem Jahr','in dieses Jahr','in diesem Jahr','an diesem Jahr'],answer:2,explain:'"In diesem Jahr."'},
+  ]
+},
+{ id:'l52', tag:'Grammatik B2', level:'b2',
+  title:'Vorgangspassiv — wird/wurde/ist worden',
+  explain:`<h3>Vorgangspassiv — werden + Partizip II</h3>
+<table><tr><th>Zeitform</th><th>Formel</th><th>Beispiel</th></tr><tr><td><b>Präsens</b></td><td>wird + PII</td><td>Der Brief <b>wird geschrieben</b>.</td></tr><tr><td><b>Präteritum</b></td><td>wurde + PII</td><td>Der Brief <b>wurde geschrieben</b>.</td></tr><tr><td><b>Perfekt</b></td><td>ist + PII + worden</td><td>Der Brief <b>ist geschrieben worden</b>.</td></tr><tr><td><b>Futur I</b></td><td>wird + PII + werden</td><td>Der Brief <b>wird geschrieben werden</b>.</td></tr></table>
+<h4>Aktiv → Passiv</h4>
+<table><tr><th>Aktiv</th><th>Passiv</th></tr><tr><td>Der Arzt operiert den Patienten.</td><td>Der Patient <b>wird operiert</b>.</td></tr><tr><td>Man baute hier ein Haus.</td><td>Hier <b>wurde</b> ein Haus <b>gebaut</b>.</td></tr></table>`,
+  exercises:[
+    {id:'l52e1',type:'mc',q:'Präsens Passiv: Die Rechnung ___ bezahlt.',options:['ist','wird','wurde','worden'],answer:1,explain:'Präsens Passiv = wird + PII.'},
+    {id:'l52e2',type:'mc',q:'Präteritum Passiv: Das Auto ___ repariert.',options:['wird','ist','wurde','war'],answer:2,explain:'Präteritum Passiv = wurde + PII.'},
+    {id:'l52e3',type:'gap',q:'Perfekt Passiv: Der Brief ist geschrieben ___.',accept:['worden'],hint:'ist + PII + ___',explain:'"Worden" — nicht "geworden"!'},
+    {id:'l52e4',type:'mc',q:'"Man baut hier ein Haus." → Passiv:',options:['Hier ist ein Haus gebaut.','Hier wird ein Haus gebaut.','Hier wurde ein Haus gebaut.','Ein Haus baut hier.'],answer:1,explain:'Aktiv Präsens → Passiv Präsens.'},
+    {id:'l52e5',type:'gap',q:'Der Patient ___ vom Arzt operiert. (Präsens)',accept:['wird'],hint:'Präsens Passiv',explain:'"Wird operiert."'},
+    {id:'l52e6',type:'mc',q:'"Die Polizei verhaftete den Dieb." → Passiv:',options:['Der Dieb wurde verhaftet.','Der Dieb wird verhaftet.','Der Dieb ist verhaftet.','Der Dieb war verhaftet.'],answer:0,explain:'Präteritum → wurde verhaftet.'},
+    {id:'l52e7',type:'gap',q:'Das Buch ___ von Schiller geschrieben worden. (Perfekt)',accept:['ist'],hint:'Perfekt: ___ + PII + worden',explain:'"Ist…worden."'},
+    {id:'l52e8',type:'mc',q:'"Die Tür WIRD geschlossen" vs "IST geschlossen":',options:['Kein Unterschied','wird = Handlung | ist = Zustand','ist = Handlung | wird = Zustand','Nur stilistisch'],answer:1,explain:'"Wird" = Vorgang. "Ist" = Ergebnis.'},
+    {id:'l52e9',type:'match',q:'Zeitform → Formel:',pairs:[['Präsens','wird + PII'],['Präteritum','wurde + PII'],['Perfekt','ist + PII + worden'],['Futur I','wird + PII + werden']]},
+    {id:'l52e10',type:'order',q:'Perfekt Passiv:',words:['Das','Fenster','ist','geöffnet','worden','.'],answer:'Das Fenster ist geöffnet worden .',explain:'Perfekt Passiv: ist + PII + worden.'},
+  ]
+},
+{ id:'l53', tag:'Grammatik B2', level:'b2',
+  title:'Passiv mit Modalverben — muss repariert werden',
+  explain:`<h3>Passiv mit Modalverben</h3>
+<p>Modalverb + Partizip II + werden (Infinitiv)</p>
+<table><tr><th>Aktiv</th><th>Passiv mit Modal</th></tr><tr><td>Der Arzt muss den Hund operieren.</td><td>Der Hund <b>muss operiert werden</b>.</td></tr><tr><td>Man kann die Energie nutzen.</td><td>Die Energie <b>kann genutzt werden</b>.</td></tr><tr><td>Man darf den Ball nicht berühren.</td><td>Der Ball <b>darf nicht berührt werden</b>.</td></tr></table>
+<h4>Nebensatz: PII + werden + Modalverb</h4>
+<p><em>Er sagt, dass das Auto <b>repariert werden muss</b>.</em></p>`,
+  exercises:[
+    {id:'l53e1',type:'mc',q:'Der Hund ___ operiert werden. (müssen)',options:['ist','muss','wird','hat'],answer:1,explain:'Passiv mit Modal: muss + PII + werden.'},
+    {id:'l53e2',type:'gap',q:'Die Energie kann genutzt ___.',accept:['werden'],hint:'Modal + PII + ___',explain:'"Werden" am Satzende.'},
+    {id:'l53e3',type:'mc',q:'"Man muss die Regeln befolgen." → Passiv:',options:['Die Regeln müssen befolgt sein.','Die Regeln müssen befolgt werden.','Die Regeln wurden befolgt.','Die Regeln sind befolgt worden.'],answer:1,explain:'Modal Passiv: müssen + PII + werden.'},
+    {id:'l53e4',type:'gap',q:'Das Auto musste gestern repariert ___.',accept:['werden'],hint:'musste + PII + ___',explain:'Auch im Präteritum: werden.'},
+    {id:'l53e5',type:'mc',q:'Nebensatz: "Er sagt, dass das Problem gelöst werden ___."',options:['wird','muss','kann','soll'],answer:1,explain:'Nebensatz: PII + werden + Modalverb.'},
+    {id:'l53e6',type:'mc',q:'"Der Ball darf nicht berührt werden." → Aktiv:',options:['Man darf den Ball nicht berühren.','Man berührt den Ball nicht.','Der Ball wird nicht berührt.','Man hat den Ball nicht berührt.'],answer:0,explain:'Passiv mit Modal → Aktiv: man + Modal + Inf.'},
+    {id:'l53e7',type:'order',q:'Hauptsatz:',words:['Das','Auto','muss','heute','repariert','werden','.'],answer:'Das Auto muss heute repariert werden .',explain:'Modal an Pos. 2, PII + werden ans Ende.'},
+    {id:'l53e8',type:'gap',q:'Hier ___ nicht geraucht werden. (dürfen)',accept:['darf'],hint:'dürfen → er/es/sie ___',explain:'"Darf nicht geraucht werden."'},
+    {id:'l53e9',type:'match',q:'Aktiv → Passiv mit Modal:',pairs:[['Man muss es machen.','Es muss gemacht werden.'],['Man kann es nutzen.','Es kann genutzt werden.'],['Man darf es nicht öffnen.','Es darf nicht geöffnet werden.'],['Man soll es prüfen.','Es soll geprüft werden.']]},
+    {id:'l53e10',type:'gap',q:'Ich weiß, dass diese Aufgabe gelöst werden ___.',accept:['muss','kann','soll'],hint:'Modalverb ans Ende',explain:'Nebensatz: PII + werden + Modal.'},
+  ]
+},
+{ id:'l54', tag:'Grammatik B2', level:'b2',
+  title:'Alle Zeitformen — Übersicht B2 mit Futur II',
+  explain:`<h3>Alle Zeitformen im Überblick</h3>
+<table><tr><th>Zeitform</th><th>Bildung</th><th>Verwendung</th><th>Beispiel</th></tr>
+<tr><td><b>Präsens</b></td><td>Grundform</td><td>jetzt, immer</td><td>Ich lerne Deutsch.</td></tr>
+<tr><td><b>Präteritum</b></td><td>Stamm +-te / Vokalwechsel</td><td>Erzähltexte</td><td>Er arbeitete. / Sie fuhr.</td></tr>
+<tr><td><b>Perfekt</b></td><td>haben/sein + PII</td><td>Gespräch</td><td>Ich habe gegessen.</td></tr>
+<tr><td><b>Plusquamperfekt</b></td><td>hatte/war + PII</td><td>Vorvergangenheit</td><td>Nachdem er gegessen hatte…</td></tr>
+<tr><td><b>Futur I</b></td><td>werden + Inf.</td><td>Zukunft, Vermutung</td><td>Ich werde kommen.</td></tr>
+<tr><td><b>Futur II</b></td><td>werden + PII + haben/sein</td><td>Abgeschl. Zukunft / Vermutung</td><td>Er wird gegessen haben.</td></tr></table>
+<p style="font-family:var(--font-mono);font-size:12px;background:var(--color-background-secondary);padding:10px;border-radius:8px">Plusqpf ◄─ Perfekt/Prät ◄─ [JETZT] ─► Futur I ─► Futur II ✓</p>`,
+  exercises:[
+    {id:'l54e1',type:'mc',q:'Futur II Bildung: werden + ___ + haben/sein',options:['Infinitiv','Partizip I','Partizip II','Stamm'],answer:2,explain:'Futur II = werden + Partizip II + haben/sein.'},
+    {id:'l54e2',type:'gap',q:'Bis morgen werde ich die Aufgabe erledigt ___.',accept:['haben'],hint:'erledigen → hat erledigt → Futur II mit ___',explain:'"Erledigt haben."'},
+    {id:'l54e3',type:'gap',q:'Bis nächste Woche wird er nach Berlin gereist ___.',accept:['sein'],hint:'reisen → ist gereist → Futur II mit ___',explain:'"Gereist sein."'},
+    {id:'l54e4',type:'mc',q:'"Er wird das vergessen haben." Was bedeutet das?',options:['Er vergisst es gerade','Er wird es vergessen','Er hat es wahrscheinlich vergessen','Er vergass es'],answer:2,explain:'Futur II als Vermutung über Vergangenheit.'},
+    {id:'l54e5',type:'mc',q:'Plusquamperfekt: "Nachdem sie ___ hatte, ging sie schlafen."',options:['gegessen','aß','essen','isst'],answer:0,explain:'Plusquamperfekt = hatte/war + PII.'},
+    {id:'l54e6',type:'match',q:'Zeitform → Beispiel:',pairs:[['Präteritum','Er fuhr nach Berlin.'],['Perfekt','Er ist nach Berlin gefahren.'],['Plusquamperfekt','Er war nach Berlin gefahren.'],['Futur I','Er wird nach Berlin fahren.'],['Futur II','Er wird nach Berlin gefahren sein.']]},
+    {id:'l54e7',type:'mc',q:'"Bis Freitag werde ich den Bericht geschrieben haben." — Zeitform?',options:['Perfekt','Futur I','Futur II','Plusquamperfekt'],answer:2,explain:'"Werde…geschrieben haben" = Futur II.'},
+    {id:'l54e8',type:'gap',q:'Sie ___ morgen schon angekommen sein. (Futur II)',accept:['wird'],hint:'werden → sie ___',explain:'"Sie wird angekommen sein."'},
+    {id:'l54e9',type:'mc',q:'Wann Plusquamperfekt?',options:['Gegenwart','Nähere Vergangenheit','Ereignis VOR einem anderen in der Vergangenheit','Zukunft'],answer:2,explain:'Plusquamperfekt = Vorvergangenheit.'},
+    {id:'l54e10',type:'order',q:'Futur II:',words:['Bis','morgen','werde','ich','gelernt','haben','.'],answer:'Bis morgen werde ich gelernt haben .',explain:'Futur II: werden + PII + haben.'},
+  ]
+},
 ]; // END COURSE
 
 /* ============================================================
@@ -2456,6 +2744,42 @@ const QUIZ = [
 {q:'Gegenteil von "der Eingang":',o:['der Ausgang','die Abfahrt','das Girokonto'],a:0},
 {q:'"Am 30. April wird das ___ entfacht." (Maifest)',o:['Maibaum','Maifeuer','Volkstanz'],a:1},
 {q:'"Ich habe meine Karte sperren ___." (lassen, Perfekt)',o:['gelassen','lassen','gesperrt'],a:1}
+
+,{q:'Die Prüfung dauerte länger, ___ ich erwartet hatte.',o:['wie','als','ob','dass'],a:1}
+,{q:'Je mehr man Deutsch spricht, desto ___.',o:['wird man sicherer','sicher wird man','wird man sicher','sicherer wird man'],a:3}
+,{q:'Max tut so, als ob er alles ___.',o:['weiß','wusste','wüsste','gewusst hat'],a:2}
+,{q:'Das ist ___ Problem. (unbestimmter Artikel)',o:['nicht','kein','keinen','nichts'],a:1}
+,{q:'Er wohnt ___ mehr in Berlin.',o:['kein','keine','nicht','nichts'],a:2}
+,{q:'Könnten Sie bitte ___ sprechen? (zu schnell)',o:['schneller','lauter','langsamer','deutlicher'],a:2}
+,{q:'___ meiner Kollegen hat eine Beförderung erhalten. (Nom. m.)',o:['Eine','Einer','Eines','Einem'],a:1}
+,{q:'Wir waren in ___ dieser neuen Cafés. (Dativ n.)',o:['einer','eines','einem','einen'],a:2}
+,{q:'Max macht es viel Spaß, am Wochenende mit Freunden ___.',o:['einzukaufen','einkaufen','zu einkaufen','kaufen ein'],a:0}
+,{q:'Du ___ das nicht tun. (brauchen + Negation)',o:['brauchst zu','brauchst nicht zu','brauchst nicht','musst nicht zu'],a:1}
+,{q:'Er interessiert sich ___ Geschichte.',o:['an','für','mit','auf'],a:1}
+,{q:'Wofür interessiert er sich? — Er interessiert sich ___.',o:['darüber','dafür','daran','davon'],a:1}
+,{q:'trinken → trank → ___',o:['getrunken','getrinkt','getrunk','getranken'],a:0}
+,{q:'Partizip II von "geben"?',o:['gegeben','gegebt','gab','gegabt'],a:0}
+,{q:'Ich ___ gestern nicht zu dir kommen.',o:['kann','konnte','könnte','sollte'],a:1}
+,{q:'Als Kind ___ ich bis 22 Uhr fernsehen. (разрешалось)',o:['konnte','wollte','durfte','sollte'],a:2}
+,{q:'"Der Koffer ist gepackt" — das ist:',o:['Vorgangspassiv','Aktiv Perfekt','Zustandspassiv','Futur Passiv'],a:2}
+,{q:'Die Hausaufgabe ___ gemacht. (Zustandspassiv)',o:['wird','ist','hat','sein'],a:1}
+,{q:'Präsens Passiv: Die Rechnung ___ bezahlt.',o:['ist','wird','wurde','worden'],a:1}
+,{q:'Perfekt Passiv: Der Brief ist geschrieben ___.',o:['geworden','worden','wird','war'],a:1}
+,{q:'Der Hund ___ operiert werden. (müssen)',o:['ist','muss','wird','hat'],a:1}
+,{q:'"Man muss die Regeln befolgen." → Passiv:',o:['Die Regeln müssen befolgt sein.','Die Regeln müssen befolgt werden.','Die Regeln wurden befolgt.','Die Regeln sind befolgt worden.'],a:1}
+,{q:'Futur II: werden + ___ + haben/sein',o:['Infinitiv','Partizip I','Partizip II','Stamm'],a:2}
+,{q:'"Bis morgen werde ich den Bericht geschrieben haben." — Zeitform?',o:['Perfekt','Futur I','Futur II','Plusquamperfekt'],a:2}
+,{q:'Im Frühling = ?',o:['an Frühling','in Frühling','im Frühling','am Frühling'],a:2}
+,{q:'"Letzte Woche" — welche Präposition?',o:['an','in','keine Präposition','am'],a:2}
+,{q:'Das Gegenteil von "billig"?',o:['arm','teuer','wenig','schlecht'],a:1}
+,{q:'lesen → ___ → gelesen',o:['laste','las','liese','list'],a:1}
+,{q:'___ ich sechs Jahre alt war, bin ich in die Schule gekommen.',o:['Wie','Wenn','Als','Wann'],a:2}
+,{q:'Herr Ehrlicher nimmt ein Taxi, ___ nicht zu spät zu kommen.',o:['damit','weil','–','um'],a:3}
+,{q:'Zieh ___ einen Pullover an, es ist kalt.',o:['sie','dir','dich','sich'],a:1}
+,{q:'Nachdem ich das Essen ___, sehe ich fern.',o:['machte','mache','gemacht habe','gemacht hatte'],a:2}
+,{q:'"Der Koffer ist gepackt." vs "Der Koffer wird gepackt." — was stimmt?',o:['Kein Unterschied','wird = Handlung, ist = Zustand','ist = Handlung, wird = Zustand','Nur Stilistik'],a:1}
+,{q:'Wenn ich jetzt Urlaub hätte, ___ ich nach Spanien fahren.',o:['wurde','hätte','würde','wäre'],a:2}
+,{q:'Berlin ist ___ Stadt Deutschlands.',o:['größte','die größte','am größten','größten'],a:1}
 ];
 
 /* ============================================================
