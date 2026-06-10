@@ -2934,16 +2934,26 @@ function renderDashboard(){
 ============================================================ */
 function renderCourseList(){
   const levels={b1:'B1 – Mittelstufe',b2:'B2 – Obere Mittelstufe',b2p:'B2+ – Fortgeschritten'};
-  let html=`<div class="page view"><div class="hero"><div class="eyebrow">Kurs</div><h1>Alle ${COURSE.length} Einheiten</h1><p>Wortschatz mit Aussprache, Grammatik, Übungen und Höraufgaben.</p></div>`;
-  ['b1','b2','b2p'].forEach(lvl=>{
-    const ls=COURSE.filter(l=>l.level===lvl);
-    html+=`<div class="section-label"><h2>${levels[lvl]}</h2><div class="rule"></div><div class="count">${ls.length} Einheiten</div></div><div class="grid">`;
-    html+=ls.map((l,i)=>{const p=lPct(l);const gi=COURSE.indexOf(l);return `<button class="lesson-card" data-action="open-lesson" data-id="${l.id}">
-      <span class="idx">${gi+1}</span><span class="tag">${l.tag}</span>
-      <h3>${l.title}</h3><div class="desc">${l.desc}</div>
-      <div class="meta"><span>${l.vocab.length} Vokabeln</span><span>${l.exercises.length} Übungen</span>${LVLBADGE[l.level]}</div>
-      <div class="bar-track"><div class="bar-fill ${p.pct===100?'done':''}" style="width:${p.pct}%"></div></div>
-      <span class="pct-label">${p.pct===100?'✓ abgeschlossen':p.pct+'% erledigt'}</span></button>`;}).join('');
+  const total=COURSE.filter(Boolean).length;
+  let html='<div class="page view"><div class="hero"><div class="eyebrow">Kurs</div><h1>Alle '+total+' Einheiten</h1><p>Wortschatz, Grammatik, Übungen und Höraufgaben.</p></div>';
+  ['b1','b2','b2p'].forEach(function(lvl){
+    const ls=COURSE.filter(function(l){return l.level===lvl;});
+    if(!ls.length)return;
+    html+='<div class="section-label"><h2>'+levels[lvl]+'</h2><div class="rule"></div><div class="count">'+ls.length+' Einheiten</div></div><div class="grid">';
+    ls.forEach(function(l){
+      const p=lPct(l);const gi=COURSE.indexOf(l);
+      const vc=(l.vocab||[]).length;
+      const dc=l.desc||'';
+      html+='<button class="lesson-card" data-action="open-lesson" data-id="'+l.id+'">';
+      html+='<span class="idx">'+(gi+1)+'</span><span class="tag">'+l.tag+'</span>';
+      html+='<h3>'+l.title+'</h3>';
+      if(dc)html+='<div class="desc">'+dc+'</div>';
+      html+='<div class="meta">';
+      if(vc)html+='<span>'+vc+' Vokabeln</span>';
+      html+='<span>'+l.exercises.length+' Übungen</span>'+LVLBADGE[l.level]+'</div>';
+      html+='<div class="bar-track"><div class="bar-fill '+(p.pct===100?'done':'')+'" style="width:'+p.pct+'%"></div></div>';
+      html+='<span class="pct-label">'+(p.pct===100?'✓ abgeschlossen':p.pct+'% erledigt')+'</span></button>';
+    });
     html+='</div>';
   });
   html+='</div>';
@@ -2952,21 +2962,25 @@ function renderCourseList(){
 
 function renderLesson(){
   const l=lById(state.lesson);
-  content.innerHTML=`<div class="page view">
-    <button class="back" data-action="nav" data-view="course">← Alle Einheiten</button>
-    <div class="lesson-head"><span class="tag">${l.tag}</span>${LVLBADGE[l.level]}<h1>${l.title}</h1><p>${l.desc}</p></div>
-    <div class="tabs">
-      <button class="tab ${state.tab==='vocab'?'active':''}" data-action="lesson-tab" data-tab="vocab">Wortschatz</button>
-      <button class="tab ${state.tab==='grammar'?'active':''}" data-action="lesson-tab" data-tab="grammar">Grammatik</button>
-      <button class="tab ${state.tab==='exercises'?'active':''}" data-action="lesson-tab" data-tab="exercises">Übungen</button>
-    </div>
-    <div id="tabbody"></div></div>`;
+  const hasVocab=(l.vocab||[]).length>0;
+  const hasGram=!!(l.gramHTML||l.explain);
+  if(state.tab==='vocab'&&!hasVocab)state.tab=hasGram?'grammar':'exercises';
+  let tabs='';
+  if(hasVocab)tabs+='<button class="tab '+(state.tab==='vocab'?'active':'')+'" data-action="lesson-tab" data-tab="vocab">Wortschatz</button>';
+  if(hasGram)tabs+='<button class="tab '+(state.tab==='grammar'?'active':'')+'" data-action="lesson-tab" data-tab="grammar">Grammatik</button>';
+  tabs+='<button class="tab '+(state.tab==='exercises'?'active':'')+'" data-action="lesson-tab" data-tab="exercises">Übungen</button>';
+  const dc=l.desc||'';
+  content.innerHTML='<div class="page view">'
+    +'<button class="back" data-action="nav" data-view="course">← Alle Einheiten</button>'
+    +'<div class="lesson-head"><span class="tag">'+l.tag+'</span>'+LVLBADGE[l.level]+'<h1>'+l.title+'</h1>'+(dc?'<p>'+dc+'</p>':'')+'</div>'
+    +'<div class="tabs">'+tabs+'</div><div id="tabbody"></div></div>';
   renderTab(l);
 }
 function renderTab(l){
   const b=$('#tabbody');
   if(state.tab==='vocab'){
-    b.innerHTML=l.vocab.map((v,i)=>`<div class="vocab-item">
+    const vocab=l.vocab||[];if(!vocab.length){b.innerHTML='<p style="color:var(--sub)">Kein Wortschatz für diese Einheit.</p>';return;}
+    b.innerHTML=vocab.map((v,i)=>`<div class="vocab-item">
       <button class="spk" data-action="speak" data-text="${esc(cWord(v.de))}" title="Normal">${SPK}</button>
       <div style="flex:1"><div class="de">${v.de}</div>
       <div class="ru" id="rv-${l.id}-${i}" style="display:none">${v.ru}</div>
@@ -2976,7 +2990,7 @@ function renderTab(l){
     </div>`).join('')
     +`<div class="btn-row"><button class="btn ghost" data-action="study-deck" data-id="${l.id}">Als Karteikarten üben →</button></div>`;
   }else if(state.tab==='grammar'){
-    b.innerHTML=`<div class="gram">${l.gramHTML}</div>`;
+    b.innerHTML='<div class="gram">'+(l.gramHTML||l.explain||'')+'</div>';
   }else{
     b.innerHTML=l.exercises.map(renderEx).join('');
     l.exercises.forEach(setupEx);
@@ -3122,11 +3136,11 @@ function markDone(id){const k=$('#ex-'+id+' .kicker');if(k&&!k.querySelector('.d
 /* ============================================================
    VOCAB TRAINER
 ============================================================ */
-function allW(){const o=[];COURSE.filter(Boolean).forEach(l=>l.vocab.forEach(v=>o.push({...v,key:l.id+'·'+v.de})));return o;}
+function allW(){const o=[];COURSE.filter(Boolean).forEach(function(l){(l.vocab||[]).forEach(function(v){o.push(Object.assign({},v,{key:l.id+'·'+v.de}));});});return o;}
 function deckW(){
   if(state.deck==='all')return allW();
   if(state.deck==='personal')return state.personal.map(p=>({de:p.de,ru:p.ru,ex:p.ex||'',key:'p·'+p.id}));
-  const l=lById(state.deck);return l?l.vocab.map(v=>({...v,key:l.id+'·'+v.de})):[];
+  const l=lById(state.deck);return l?(l.vocab||[]).map(function(v){return Object.assign({},v,{key:l.id+'·'+v.de});}):[];
 }
 function buildDeck(){state.flash={queue:shuffle(deckW()),pos:0,flipped:false,deckId:state.deck};}
 function renderVocab(){
