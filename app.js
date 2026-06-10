@@ -1873,6 +1873,146 @@ const COURSE = [
      pairs:[['neugierig','любопытный'],['aufessen','съесть всё'],['nicken','кивать'],['sich ansehen','рассматривать']]},
   ]
 },
+
+/* ── Einheit 39 ─────────────────────────────────────── B1 ── */
+{ id:'l39', tag:'Bank', level:'b1',
+  title:'Am Bankschalter — Bankwortschatz',
+  desc:'Konto eröffnen, überweisen, Geldautomat — Bankgespräche auf Deutsch.',
+  vocab:[
+    {de:'das Girokonto (-konten)',    ru:'текущий/расчётный счёт',      ex:'Ich möchte ein Girokonto eröffnen.'},
+    {de:'eröffnen',                   ru:'открывать (счёт)',             ex:'Was brauche ich, um ein Konto zu eröffnen?'},
+    {de:'die Überweisung (-en)',       ru:'банковский перевод',           ex:'Ich mache eine Überweisung von 200 Euro.'},
+    {de:'überweisen',                 ru:'переводить (деньги)',           ex:'Ich überweise das Geld auf dein Konto.'},
+    {de:'die Kontonummer',            ru:'номер счёта',                  ex:'Wie ist Ihre Kontonummer?'},
+    {de:'die IBAN',                   ru:'IBAN (международный номер счёта)', ex:'Die IBAN beginnt in Deutschland mit DE.'},
+    {de:'Geld abheben',              ru:'снимать деньги',               ex:'Ich hebe am Geldautomaten Geld ab.'},
+    {de:'der Geldautomat (-en)',       ru:'банкомат',                    ex:'Wo ist der nächste Geldautomat?'},
+    {de:'die Kreditkarte (-n)',        ru:'кредитная карта',             ex:'Kann ich mit Kreditkarte zahlen?'},
+    {de:'das Online-Banking',         ru:'интернет-банкинг',            ex:'Mit Online-Banking kann ich jederzeit überweisen.'},
+    {de:'der Dauerauftrag',           ru:'постоянное платёжное поручение', ex:'Ich richte einen Dauerauftrag für die Miete ein.'},
+    {de:'das Konto sperren',          ru:'заблокировать счёт',          ex:'Ich habe meine Karte sperren lassen.'},
+  ],
+  gramHTML:`
+    <h3>Am Bankschalter — typische Sätze</h3>
+    <div class="ex-box"><b>Ich möchte ein Girokonto eröffnen.</b><span class="gl">Я хотел бы открыть текущий счёт.</span></div>
+    <div class="ex-box"><b>Was benötige ich dafür?</b> — Sie brauchen Ihren Reisepass und eine Meldeadresse.<span class="gl">Что для этого нужно? — Паспорт и прописка.</span></div>
+    <div class="ex-box"><b>Ich möchte 200 Euro auf dieses Konto überweisen.</b><span class="gl">Я хочу перевести 200 евро на этот счёт.</span></div>
+    <div class="ex-box"><b>Kann ich mein Konto online verwalten?</b> — Ja, über unser Online-Banking-Portal.<span class="gl">Можно ли управлять счётом онлайн?</span></div>
+    <h3>lassen im Bankkontext</h3>
+    <div class="ex-box"><b>Ich habe meine Karte sperren lassen.</b> = Die Bank hat die Karte gesperrt (nicht ich selbst).<span class="gl">Я заблокировал карту (через банк).</span></div>
+    <div class="tip"><b>Achtung:</b> In Deutschland eröffnet man das Konto in einer <b>Bankfiliale</b> oder online. Man braucht Personalausweis/Reisepass und eine <b>Anmeldebestätigung</b> (регистрация по месту жительства).</div>`,
+  exercises:[
+    {id:'l39e1',type:'mc',q:'"Ich möchte ein ___ eröffnen." (текущий счёт)',
+     options:['Kreditkarte','Girokonto','Dauerauftrag'],
+     answer:1,explain:'"das Girokonto" = текущий/расчётный счёт. "Ich möchte ein Girokonto eröffnen."'},
+    {id:'l39e2',type:'gap',q:'"Ich ___ jeden Monat 500 Euro Miete ___ mein Konto." (überweisen)',
+     accept:['überweise'],hint:'überweisen → ich überweise (Präsens)',explain:'überweise'},
+    {id:'l39e3',type:'mc',q:'"Ich habe meine Karte sperren ___." (lassen, Perfekt)',
+     options:['gelassen','lassen','gesperrt'],
+     answer:1,explain:'lassen im Perfekt → "lassen" bleibt Infinitiv: "habe sperren lassen".'},
+    {id:'l39e4',type:'listen',
+     audio:'Guten Tag, ich möchte ein Girokonto eröffnen. Was brauche ich dafür? Sie benötigen Ihren Reisepass und eine Meldebestätigung. Kann ich das Konto auch online verwalten? Ja, über unser Online-Banking.',
+     q:'Was braucht man laut Dialog, um ein Konto zu eröffnen?',
+     options:['Nur Reisepass','Reisepass und Meldebestätigung','Nur Kreditkarte'],
+     answer:1,explain:'"Sie benötigen Ihren Reisepass und eine Meldebestätigung."'},
+    {id:'l39e5',type:'match',q:'Ordne Begriff und Bedeutung zu:',
+     pairs:[['die Überweisung','банковский перевод'],['abheben','снимать деньги'],['der Dauerauftrag','постоянное платёжное поручение'],['die IBAN','международный номер счёта']]},
+  ]
+},
+/* ── Einheit 40 ─────────────────────────────────────── A2 ── */
+{ id:'l40', tag:'Antonyme', level:'b1',
+  title:'Antonyme — Gegensätzliche Wörter',
+  desc:'Die wichtigsten Gegenteile — am Flughafen, unterwegs und im Alltag.',
+  vocab:[
+    {de:'die Frage ↔ die Antwort',     ru:'вопрос ↔ ответ',              ex:'Ich habe eine Frage. Was ist die Antwort?'},
+    {de:'fragen ↔ antworten',          ru:'спрашивать ↔ отвечать',        ex:'Er fragt — sie antwortet.'},
+    {de:'kalt ↔ warm',                 ru:'холодный ↔ тёплый',            ex:'Im Winter ist es kalt, im Sommer warm.'},
+    {de:'alt ↔ jung',                  ru:'старый ↔ молодой',             ex:'Er ist alt, sie ist noch jung.'},
+    {de:'billig ↔ teuer',              ru:'дешёвый ↔ дорогой',            ex:'Das Hotel ist billig, die Wohnung ist teuer.'},
+    {de:'ziehen ↔ schieben',           ru:'тянуть ↔ толкать',             ex:'Ziehen Sie die Tür! — Nein, schieben!'},
+    {de:'klein ↔ groß',                ru:'маленький ↔ большой',          ex:'Das Kind ist klein, der Vater groß.'},
+    {de:'leicht ↔ schwer',             ru:'лёгкий ↔ тяжёлый',            ex:'Der Koffer ist leicht — nein, sehr schwer!'},
+    {de:'links ↔ rechts',              ru:'слева ↔ справа',               ex:'Links ist der Eingang, rechts der Ausgang.'},
+    {de:'früh ↔ spät',                 ru:'рано ↔ поздно',                ex:'Der Zug kommt früh an — nein, sehr spät!'},
+    {de:'der Ausgang ↔ der Eingang',   ru:'выход ↔ вход',                 ex:'Eingang links, Ausgang rechts.'},
+    {de:'geöffnet ↔ geschlossen',      ru:'открыт ↔ закрыт',             ex:'Das Geschäft ist geöffnet. — Nein, geschlossen!'},
+    {de:'frei ↔ besetzt',              ru:'свободно ↔ занято',            ex:'Ist dieser Platz frei? — Leider besetzt.'},
+    {de:'die Abfahrt ↔ die Ankunft',   ru:'отправление ↔ прибытие',       ex:'Abfahrt: 10:00 — Ankunft: 12:30.'},
+  ],
+  gramHTML:`
+    <h3>Antonyme — am häufigsten verwendet</h3>
+    <table>
+      <tr><th>Wort</th><th>Gegenteil</th><th>Russisch</th></tr>
+      <tr><td>alt</td><td>jung / neu</td><td>старый ↔ молодой / новый</td></tr>
+      <tr><td>billig</td><td>teuer</td><td>дешёвый ↔ дорогой</td></tr>
+      <tr><td>ziehen</td><td>schieben</td><td>тянуть ↔ толкать</td></tr>
+      <tr><td>der Eingang</td><td>der Ausgang</td><td>вход ↔ выход</td></tr>
+      <tr><td>die Abfahrt</td><td>die Ankunft</td><td>отправление ↔ прибытие</td></tr>
+      <tr><td>geöffnet</td><td>geschlossen</td><td>открыт ↔ закрыт</td></tr>
+      <tr><td>frei</td><td>besetzt</td><td>свободно ↔ занято</td></tr>
+    </table>
+    <div class="tip"><b>Am Flughafen/Bahnhof:</b> Eingang/Ausgang · Abfahrt/Ankunft · frei/besetzt — diese Paare sind unverzichtbar für Reisen!</div>`,
+  exercises:[
+    {id:'l40e1',type:'match',q:'Ordne die Antonyme zu:',
+     pairs:[['alt','jung'],['billig','teuer'],['Eingang','Ausgang'],['frei','besetzt']]},
+    {id:'l40e2',type:'mc',q:'"Ist dieser Platz ___?" — "Nein, er ist leider ___."',
+     options:['geöffnet … geschlossen','frei … besetzt','früh … spät'],
+     answer:1,explain:'"Ist der Platz frei?" — "Nein, er ist besetzt." — klassisches Paar.'},
+    {id:'l40e3',type:'gap',q:'"Der Zug kommt sehr ___ an — er hat 30 Minuten Verspätung." (Gegenteil von früh)',
+     accept:['spät'],hint:'früh ↔ ?',explain:'spät'},
+    {id:'l40e4',type:'listen',
+     audio:'Entschuldigung, wo ist der Eingang? Der Ausgang ist rechts, der Eingang links. Ist der Platz hier frei? Leider besetzt. Wann ist die Abfahrt? Um 10 Uhr — die Ankunft ist um 12:30.',
+     q:'Wie viele Antonyme-Paare hörst du?',
+     options:['2','3','4'],
+     answer:2,explain:'"Eingang/Ausgang" · "frei/besetzt" · "Abfahrt/Ankunft" — 3 Paare.'},
+    {id:'l40e5',type:'mc',q:'"Das Hotel ist sehr ___ — nur 40 Euro die Nacht!" (дешёвый)',
+     options:['teuer','billig','schwer'],
+     answer:1,explain:'"billig" = дешёвый. Gegenteil: "teuer".'},
+  ]
+},
+/* ── Einheit 41 ─────────────────────────────────────── B1 ── */
+{ id:'l41', tag:'Maifest', level:'b1',
+  title:'Lesetext — Maifest in Deutschland',
+  desc:'Maifeuer, Maibaum und Volkstänze — Frühlingstraditionen in Deutschland.',
+  vocab:[
+    {de:'das Maifest',                 ru:'майский праздник',            ex:'Das Maifest ist ein Fest des Frühlings.'},
+    {de:'das Maifeuer',                ru:'майский костёр',              ex:'Am 30. April wird das Maifeuer entfacht.'},
+    {de:'der Maibaum',                 ru:'майское дерево',              ex:'Am 1. Mai stellt man einen Maibaum auf.'},
+    {de:'entfachen',                   ru:'разжигать (огонь)',            ex:'Man entfacht ein Feuer, um böse Geister zu vertreiben.'},
+    {de:'vertreiben',                  ru:'прогонять, изгонять',          ex:'Das Feuer vertreibt böse Geister.'},
+    {de:'der Volkstanz (-"e)',          ru:'народный танец',              ex:'In der Nacht wird mit Volkstänzen in den Mai getanzt.'},
+    {de:'schmücken',                   ru:'украшать',                    ex:'Der Maibaum wird mit bunten Girlanden geschmückt.'},
+    {de:'die Girlande (-n)',           ru:'гирлянда',                    ex:'Bunte Girlanden und Figuren schmücken den Maibaum.'},
+    {de:'aufstellen',                  ru:'устанавливать',               ex:'Man stellt den Maibaum in der Ortschaft auf.'},
+    {de:'der Brauch (-"e)',            ru:'обычай, традиция',             ex:'Es ist Brauch, über das Feuer zu springen.'},
+    {de:'die Lebensfreude',            ru:'радость жизни',               ex:'Das Maifest ist ein Fest der Lebensfreude.'},
+    {de:'erstmalig',                   ru:'впервые',                     ex:'Erstmalig wurde der Maibaum in Bayern aufgestellt.'},
+  ],
+  gramHTML:`
+    <h3>Lesetext: Maifest in Deutschland</h3>
+    <div style="background:rgba(124,195,34,0.08);border-left:3px solid var(--lime);padding:14px 18px;border-radius:6px;line-height:1.9;margin-bottom:16px;font-size:15px">
+      <p>Das Maifest teilt sich in zwei Episoden. Am <b>30. April</b> wird abends das <b>Maifeuer</b> entfacht, um nach alter Tradition böse Geister zu <b>vertreiben</b>. Wenn das Feuer fast erloschen ist, ist es in manchen Orten Brauch, dass ein junges Paar gemeinsam über das Feuer springt. In der Nacht vom 30. April auf den ersten Mai wird mit diversen <b>Volkstänzen</b> in den Mai getanzt.</p>
+      <p>Am ersten Mai wird dann ein <b>Maibaum</b> — geschmückt mit bunten <b>Girlanden</b> und Figuren — in den Ortschaften <b>aufgestellt</b>. Dieser wurde <b>erstmalig</b> in Bayern des 18. Jahrhunderts als Symbol für den unabhängigen bayrischen Staat aufgestellt.</p>
+      <p>Das Maifest ist also ein Fest des Frühlings, der <b>Lebensfreude</b> und der Unabhängigkeit.</p>
+    </div>
+    <div style="color:var(--muted);font-size:13px">💡 Achte auf das Passiv: „wird entfacht" · „wird aufgestellt" · „wird geschmückt"</div>`,
+  exercises:[
+    {id:'l41e1',type:'cloze',q:'Klick die richtigen Wörter in die Lücken!',
+     parts:['Am 30. April wird das ',' entfacht, um böse Geister zu ',' . Am 1. Mai wird ein ',' aufgestellt. Er wird mit bunten ',' geschmückt. Das Maifest ist ein Fest der ','.'],
+     answers:['Maifeuer','vertreiben','Maibaum','Girlanden','Lebensfreude'],
+     distract:['Maibaum','entfachen','Maifeuer','Kerzen','Tradition']},
+    {id:'l41e2',type:'mc',q:'Wann wird das Maifeuer entfacht?',
+     options:['Am 1. Mai morgens','Am Abend des 30. April','Am letzten Sonntag im April'],
+     answer:1,explain:'"Am 30. April wird abends das Maifeuer entfacht."'},
+    {id:'l41e3',type:'mc',q:'Was symbolisierte der erste Maibaum in Bayern?',
+     options:['Den Frühling und die Natur','Den unabhängigen bayrischen Staat','Die christliche Tradition'],
+     answer:1,explain:'"als Symbol für den unabhängigen bayrischen Staat" — aus dem Text.'},
+    {id:'l41e4',type:'gap',q:'"Der Maibaum wird mit bunten Girlanden ___." (schmücken, Passiv Präsens)',
+     accept:['geschmückt'],hint:'Passiv: wird + Partizip II.',explain:'geschmückt'},
+    {id:'l41e5',type:'match',q:'Ordne Wort und Bedeutung zu:',
+     pairs:[['entfachen','разжигать'],['vertreiben','прогонять'],['aufstellen','устанавливать'],['der Brauch','обычай']]},
+  ]
+},
 ]; // END COURSE
 
 /* ============================================================
@@ -2311,6 +2451,11 @@ const QUIZ = [
 {q:'"Ich mag ___ Kaffee als Tee." (mögen + Vergleich)',o:['mehr','besser','lieber'],a:2},
 {q:'"Mir gefällt München ___ als Berlin." (gefallen + Vergleich)',o:['lieber','besser','mehr'],a:1},
 {q:'"Das ist ___ Buch, das er mir empfohlen hat." (Nom. Neut.)',o:['derselbe','dieselbe','dasselbe'],a:2}
+,{q:'"Ich möchte ein ___ eröffnen." (текущий счёт)',o:['Kreditkarte','Girokonto','Dauerauftrag'],a:1},
+{q:'"Ist dieser Platz ___?" — "Leider ___."',o:['frei … besetzt','alt … jung','früh … spät'],a:0},
+{q:'Gegenteil von "der Eingang":',o:['der Ausgang','die Abfahrt','das Girokonto'],a:0},
+{q:'"Am 30. April wird das ___ entfacht." (Maifest)',o:['Maibaum','Maifeuer','Volkstanz'],a:1},
+{q:'"Ich habe meine Karte sperren ___." (lassen, Perfekt)',o:['gelassen','lassen','gesperrt'],a:1}
 ];
 
 /* ============================================================
