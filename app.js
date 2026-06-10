@@ -1,6 +1,6 @@
 /* ================================================================
    Deutsch B2 – Berufliches Deutsch  |  v2.0
-   10 Einheiten · Grammatik-Modul · Hörübungen · B1→B2+ Lernpfad
+   Einheiten · Grammatik-Module · Hörübungen · B1→B2+ Lernpfad
    Kursinhalt: original, eigens geschrieben. PDF: nur lokal angezeigt.
 ================================================================ */
 
@@ -9,7 +9,7 @@ if (window.pdfjsLib)
     'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
 /* ============================================================
-   COURSE DATA  —  10 Einheiten B1/B2/B2+
+   COURSE DATA  —  Einheiten B1/B2/B2+
 ============================================================ */
 const COURSE = [
 
@@ -2384,7 +2384,7 @@ const GRAMMAR = [
   }];
 
 /* ============================================================
-   QUIZ — 15 Fragen quer durch alle Einheiten
+   QUIZ — Fragen quer durch alle Einheiten
 ============================================================ */
 const QUIZ = [
   {q:'„___ Sie mir bitte helfen?" (höflichste Form)',o:['Können','Könnten','Wollen'],a:1},
@@ -2572,7 +2572,7 @@ function renderDashboard(){
   content.innerHTML=`<div class="page view">
     <div class="hero"><div class="eyebrow">Berufliches Deutsch · B1 → B2+</div>
     <h1>Berufliches Deutsch — <em>Dein Kurs.</em></h1>
-    <p>10 Einheiten · 6 Grammatikmodule · Hörübungen mit Aussprache · Fortschritt wird im Browser gespeichert.</p></div>
+    <p>${COURSE.length} Einheiten · ${GRAMMAR.length} Grammatikmodule · Hörübungen mit Aussprache · Fortschritt wird im Browser gespeichert.</p></div>
     <div class="stat-row">
       <div class="stat"><div class="v">${state.xp}</div><div class="l">XP</div></div>
       <div class="stat"><div class="v">${state.completed.size}</div><div class="l">Übungen</div></div>
@@ -2590,7 +2590,7 @@ function renderDashboard(){
       <div class="path-sep">→</div>
       <div class="path-step"><div class="plabel">B2+</div><div class="pval ${b2pdone===b2ptot?'done':''}">${b2pdone}/${b2ptot}</div></div>
     </div>
-    <div class="section-label"><h2>Zuletzt geöffnet</h2><div class="rule"></div><div class="count"><button class="btn sm ghost" data-action="nav" data-view="course">Alle 10 Einheiten →</button></div></div>
+    <div class="section-label"><h2>Zuletzt geöffnet</h2><div class="rule"></div><div class="count"><button class="btn sm ghost" data-action="nav" data-view="course">Alle ${COURSE.length} Einheiten →</button></div></div>
     <div class="grid">${cards}</div>
     <div class="btn-row" style="margin-top:22px">
       <button class="btn" data-action="nav" data-view="reader">📖 Lehrbuch öffnen</button>
@@ -2604,7 +2604,7 @@ function renderDashboard(){
 ============================================================ */
 function renderCourseList(){
   const levels={b1:'B1 – Mittelstufe',b2:'B2 – Obere Mittelstufe',b2p:'B2+ – Fortgeschritten'};
-  let html='<div class="page view"><div class="hero"><div class="eyebrow">Kurs</div><h1>Alle 10 Einheiten</h1><p>Wortschatz mit Aussprache, Grammatik, Übungen und Höraufgaben.</p></div>';
+  let html=`<div class="page view"><div class="hero"><div class="eyebrow">Kurs</div><h1>Alle ${COURSE.length} Einheiten</h1><p>Wortschatz mit Aussprache, Grammatik, Übungen und Höraufgaben.</p></div>`;
   ['b1','b2','b2p'].forEach(lvl=>{
     const ls=COURSE.filter(l=>l.level===lvl);
     html+=`<div class="section-label"><h2>${levels[lvl]}</h2><div class="rule"></div><div class="count">${ls.length} Einheiten</div></div><div class="grid">`;
@@ -2866,7 +2866,7 @@ function delPersonal(id){state.personal=state.personal.filter(p=>p.id!==id);save
 function renderQuiz(){
   if(!state.quiz){content.innerHTML=`<div class="page view"><div class="hero" style="max-width:560px">
     <div class="eyebrow">Abschlusstest</div><h1>Bist du bereit?</h1>
-    <p>${QUIZ.length} Fragen quer durch alle 10 Einheiten und 6 Grammatikmodule. Sofortiges Feedback.</p></div>
+    <p>${QUIZ.length} Fragen quer durch alle ${COURSE.length} Einheiten und ${GRAMMAR.length} Grammatikmodule. Sofortiges Feedback.</p></div>
     <div class="btn-row"><button class="btn" data-action="quiz-start">Test starten →</button></div></div>`;return;}
   const q=state.quiz;if(q.i>=QUIZ.length){renderQuizResult();return;}
   const item=QUIZ[q.i];

@@ -99,7 +99,7 @@ body{
 
 /* ── CONTENT ─────────────────────────────────── */
 .content{flex:1;overflow:auto;position:relative;background:var(--paper)}
-.page{max-width:880px;margin:0 auto;padding:42px 40px 90px;position:relative;z-index:1}
+.page{max-width:1400px;margin:0 auto;padding:30px 40px 90px;position:relative;z-index:1}
 .view{animation:rise .36s cubic-bezier(.2,.7,.2,1) both}
 @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 
@@ -114,7 +114,7 @@ body{
   font-size:clamp(26px,4vw,42px);line-height:1.04;letter-spacing:-.02em;
 }
 .hero h1 em{font-style:normal;color:var(--lime-dark);font-weight:700}
-.hero p{margin-top:12px;font-size:15.5px;color:var(--ink-soft);max-width:540px;line-height:1.6}
+.hero p{margin-top:12px;font-size:15.5px;color:var(--ink-soft);max-width:660px;line-height:1.6}
 
 /* ── BADGES ──────────────────────────────────── */
 .badge{
@@ -150,10 +150,10 @@ body{
 .section-label .count{font-size:12.5px;color:var(--ink-faint);font-weight:600}
 
 /* ── CARDS ───────────────────────────────────── */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(264px,1fr));gap:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
 .lesson-card{
   background:var(--card);border:2px solid var(--black);
-  border-radius:14px;padding:20px;cursor:pointer;
+  border-radius:14px;padding:24px 22px;cursor:pointer;
   transition:.18s;
   box-shadow:3px 3px 0 var(--line);
   position:relative;overflow:hidden;text-align:left;font:inherit;color:inherit;
@@ -164,7 +164,7 @@ body{
   transform:translate(-1px,-1px);
 }
 .lesson-card .idx{
-  font-family:'Outfit',sans-serif;font-weight:700;font-size:52px;
+  font-family:'Outfit',sans-serif;font-weight:700;font-size:58px;
   line-height:.8;color:var(--paper-2);
   position:absolute;top:10px;right:14px;
 }
@@ -175,8 +175,8 @@ body{
   padding:3px 9px;border-radius:4px;margin-bottom:12px;
   border:1px solid var(--lime-mid);
 }
-.lesson-card h3{font-family:'Outfit',sans-serif;font-weight:700;font-size:17px;line-height:1.15;margin-bottom:6px;max-width:84%}
-.lesson-card .desc{font-size:12.5px;color:var(--ink-soft);margin-bottom:13px}
+.lesson-card h3{font-family:'Outfit',sans-serif;font-weight:700;font-size:19px;line-height:1.2;margin-bottom:8px;max-width:84%}
+.lesson-card .desc{font-size:13.5px;color:var(--ink-soft);margin-bottom:14px}
 .lesson-card .meta{display:flex;gap:12px;font-size:11.5px;color:var(--ink-faint);font-weight:600;margin-bottom:11px;flex-wrap:wrap}
 .bar-track{height:5px;background:var(--paper-2);border-radius:999px;overflow:hidden;border:1px solid var(--line)}
 .bar-fill{height:100%;background:var(--lime);border-radius:999px;transition:width .5s}
@@ -473,7 +473,7 @@ body{
   .navitem{padding:7px 10px;font-size:12px;white-space:nowrap}
   .sidefoot{display:none}
   .content{height:calc(100vh - 110px)}
-  .page{padding:20px 16px 60px}
+  .page{padding:20px 18px 60px}
   .match-grid{grid-template-columns:1fr}
   .path-row{flex-wrap:wrap;gap:8px}
 }
