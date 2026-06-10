@@ -2893,7 +2893,7 @@ function renderDashboard(){
 
   const cards=COURSE.slice(0,4).map((l,i)=>{const p=lPct(l);return `
     <button class="lesson-card" data-action="open-lesson" data-id="${l.id}">
-      <span class="idx">${i+1}</span><span class="tag">${l.tag}</span>
+      <span class="tag">${l.tag}</span>
       <h3>${l.title}</h3>
       <div class="bar-track"><div class="bar-fill ${p.pct===100?'done':''}" style="width:${p.pct}%"></div></div>
       <span class="pct-label">${p.pct===100?'✓ fertig':p.pct+'%'}</span>
@@ -2945,7 +2945,7 @@ function renderCourseList(){
       const vc=(l.vocab||[]).length;
       const dc=l.desc||'';
       html+='<button class="lesson-card" data-action="open-lesson" data-id="'+l.id+'">';
-      html+='<span class="idx">'+(gi+1)+'</span><span class="tag">'+l.tag+'</span>';
+      html+='<span class="tag">'+l.tag+'</span>';
       html+='<h3>'+l.title+'</h3>';
       if(dc)html+='<div class="desc">'+dc+'</div>';
       html+='<div class="meta">';
