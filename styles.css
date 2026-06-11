@@ -550,45 +550,46 @@ body {
 
 /* ── MOBILE TOP BAR ────────────────────────── */
 .mob-bar {
-  display: none; align-items: center; height: 52px; min-height: 52px;
-  padding: 0 20px; background: var(--color-obsidian-ink);
-  border-bottom: 1px solid rgba(255,255,255,.08);
+  display: none; align-items: center; height: 56px; min-height: 56px;
+  padding: 0 20px; background: var(--bg);
+  border-bottom: 1px solid var(--border-light);
   position: fixed; top: 0; left: 0; right: 0; z-index: 200;
 }
 .mob-brand { display: flex; align-items: center; gap: 10px; }
 .mob-b2 {
-  font-family: var(--font-display); font-weight: 300; font-size: 18px;
-  color: var(--color-linen); letter-spacing: -.02em;
+  font-family: var(--font-display); font-weight: 700; font-size: 20px;
+  color: var(--ink); letter-spacing: -.02em;
 }
 .mob-b2 span { color: var(--accent); }
-.mob-title { color: rgba(255,255,255,.5); font-weight: 400; font-size: 16px; }
+.mob-title { color: var(--ink-soft); font-weight: 400; font-size: 15px; }
 
 /* ── MOBILE BOTTOM NAV ─────────────────────── */
 .mob-nav {
   display: none; position: fixed; bottom: 0; left: 0; right: 0;
-  height: 64px; background: var(--color-obsidian-ink);
-  border-top: 1px solid rgba(255,255,255,.07); z-index: 200;
+  height: 68px; background: var(--bg);
+  border-top: 1px solid var(--border-light); z-index: 200;
   padding-bottom: env(safe-area-inset-bottom);
 }
 .mni {
   flex: 1; display: flex; flex-direction: column; align-items: center;
   justify-content: center; gap: 4px; font-size: 11px; font-weight: 600;
-  letter-spacing: .06em; color: rgba(255,255,255,.3);
+  letter-spacing: .06em; color: var(--ink-soft);
   background: none; border: none; cursor: pointer; padding: 8px 4px;
-  transition: color .15s; text-transform: uppercase;
+  transition: color .15s, background .15s; text-transform: uppercase;
+  border-radius: 8px;
 }
 .mni.active { color: var(--accent); }
 .mni:active { opacity: .7; }
-.mni-icon { width: 22px; height: 22px; stroke-width: 2; flex-shrink: 0; }
-.mni-label { font-size: 10px; font-weight: 550; letter-spacing: .06em; }
+.mni-icon { width: 24px; height: 24px; stroke-width: 2; flex-shrink: 0; }
+.mni-label { font-size: 11px; font-weight: 600; letter-spacing: .04em; }
 
 /* ── RESPONSIVE ────────────────────────────── */
 @media (max-width: 720px) {
   .mob-bar { display: flex; }
   .mob-nav { display: flex; }
   .sidebar { display: none; }
-  .shell { flex-direction: column; margin-top: 52px; }
-  .content { height: calc(100vh - 52px - 64px); }
+  .shell { flex-direction: column; margin-top: 56px; }
+  .content { height: calc(100vh - 56px - 68px); }
   .page { padding: 20px 18px 90px; }
   .grid { grid-template-columns: 1fr; gap: 12px; }
   .lesson-card { padding: 20px 18px; }
@@ -775,10 +776,26 @@ body {
 
 /* ── MOBILE BACKGROUND ────────────────────── */
 @media (max-width: 720px) {
-  .content, .shell, body {
-    background: #f3f4f2;
+  body, .shell, .content, .page {
+    background: #f2f3f1;
   }
-  .page {
-    background: #f3f4f2;
+  /* Cards stay white for contrast against grey bg */
+  .lesson-card, .gram-card, .ex, .vocab-item,
+  .gram, .flashcard, .stat, .path-row, .addbar,
+  .listen-box, .answer-line {
+    background: #ffffff;
   }
+  /* lesson-card border softer on mobile */
+  .lesson-card, .gram-card {
+    border-color: #dde0dd;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  }
+  /* page padding tighter */
+  .page { padding: 20px 16px 90px; }
+  /* hero h1 smaller on small phones */
+  .hero h1 { font-size: 36px; }
+  /* section label */
+  .section-label h2 { font-size: 20px; }
+  /* lesson card h3 */
+  .lesson-card h3 { font-size: 18px; }
 }
