@@ -120,7 +120,6 @@ body {
 .page {
   max-width: 1400px; margin: 0 auto;
   padding: 40px 52px 100px;
-  overflow-x: hidden;
 }
 .view { animation: rise .32s cubic-bezier(.2,.7,.2,1) both; }
 @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
@@ -307,9 +306,6 @@ body {
 .gram {
   border: 1px solid var(--border); border-radius: var(--radius-card); padding: 30px 32px;
   background: var(--bg);
-  overflow-x: hidden;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
 }
 .gram h3 {
   font-family: var(--font-display); font-weight: 700; font-size: 22px;
@@ -364,8 +360,6 @@ body {
   border: 1px solid var(--border); border-radius: var(--radius-card);
   padding: 24px 26px; margin-bottom: 14px; background: var(--bg);
   transition: border-color .15s;
-  overflow-x: hidden;
-  word-wrap: break-word;
 }
 .ex:hover { border-color: var(--color-mist); }
 .ex .kicker {
@@ -816,29 +810,32 @@ body {
     overflow-x: hidden;
   }
 
-  /* tables: scroll horizontally if needed */
-  .gram table,
-  table {
-    display: block;
+  /* tables: gram block scrolls, table stays full natural width */
+  .gram {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    max-width: 100%;
-    font-size: 14px;
+    padding: 18px 16px;
   }
-  .gram th, .gram td,
-  th, td {
-    padding: 8px 10px;
-    min-width: 80px;
+  .gram table {
+    display: table;
+    width: max-content;
+    min-width: 100%;
+    font-size: 15px;
+  }
+  .gram th, .gram td {
+    padding: 10px 14px;
+    white-space: nowrap;
+  }
+  /* long cells that must wrap */
+  .gram td:last-child {
     white-space: normal;
-    word-break: break-word;
+    min-width: 140px;
   }
 
-  /* all text blocks */
+  /* text blocks readable */
   .gram p, .gram li, .gram .ex-box, .tip {
     font-size: 15px;
-    line-height: 1.6;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    line-height: 1.65;
   }
 
   /* ex block */
